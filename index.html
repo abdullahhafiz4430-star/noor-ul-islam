@@ -9,85 +9,103 @@
 
 <style>
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
- margin:0;
- background:#f5f4ec;
- color:#173c2e;
+ margin:0;background:#f5f4ec;color:#173c2e;
  font-family:serif;
 }
 header{
  background:linear-gradient(135deg,#043d2e,#087653);
- color:white;
- text-align:center;
- padding:25px 15px;
+ color:white;text-align:center;padding:24px 12px;
 }
 .logo{font-size:34px;color:#f1d486;font-weight:bold}
 header p{margin:8px 0 0}
 nav{
- display:flex;justify-content:center;gap:18px;
+ display:flex;justify-content:center;gap:17px;
  flex-wrap:wrap;padding:14px;background:#07563f;
 }
 nav a{color:white;text-decoration:none;font-size:15px}
 .hero{
- text-align:center;padding:42px 18px;
+ text-align:center;padding:40px 18px;
  background:linear-gradient(145deg,#064e3b,#0b7957);
  color:white;
 }
 .hero h1{color:#f1d486;font-size:32px}
 .hero p{line-height:2;font-size:17px}
-section{max-width:950px;margin:auto;padding:30px 16px}
-h2{text-align:center;color:#07563f;margin-bottom:25px}
-.intro{text-align:center;line-height:2;color:#52665b}
-.quran-grid{
- display:grid;
- grid-template-columns:repeat(2,minmax(0,1fr));
- gap:16px;
-}
-.quran-card{
- background:white;border:1px solid #dfd3ae;
- border-radius:18px;padding:20px 13px;
- text-align:center;box-shadow:0 5px 18px #0000000c;
-}
-.quran-icon{font-size:43px;margin-bottom:10px}
-.quran-card h3{color:#07563f;font-size:21px}
-.quran-card p{font-size:14px;line-height:2;color:#59695f}
 .btn{
  display:inline-block;background:#d9b85e;color:#173c2e;
- padding:11px 18px;border-radius:25px;
+ padding:11px 20px;border-radius:25px;
  text-decoration:none;font-weight:bold;border:0;
  margin-top:8px;font-family:inherit;cursor:pointer;
 }
-.details{
- display:none;margin-top:20px;padding:20px;
- background:#fff;border:1px solid #dfd3ae;
- border-radius:16px;line-height:2;
-}
-.details.show{display:block}
+section{max-width:1000px;margin:auto;padding:30px 16px}
+h2{text-align:center;color:#07563f;margin-bottom:12px;font-size:27px}
+.intro{text-align:center;line-height:2;color:#52665b}
 .bismillah{
- text-align:center;font-size:29px;color:#986f20;
- padding:12px;
+ text-align:center;font-size:28px;color:#986f20;padding:15px;
+}
+.quran-grid{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:15px;margin-top:24px;
+}
+.quran-card{
+ background:white;border:1px solid #dfd3ae;
+ border-radius:18px;padding:20px 12px;text-align:center;
+ box-shadow:0 5px 18px #0000000c;
+}
+.book-line{
+ display:flex;align-items:center;justify-content:center;
+ gap:8px;margin-bottom:10px;
+}
+.book-icon{font-size:35px}
+.tajweed{
+ background:#e3f2e8;color:#08734f;border-radius:20px;
+ padding:5px 10px;font-size:12px;font-weight:bold;
+}
+.quran-card h3{color:#07563f;font-size:20px;margin:8px 0}
+.quran-card p{font-size:14px;line-height:1.9;color:#59695f}
+.status{
+ display:inline-block;background:#f2efe5;color:#786b4c;
+ padding:7px 10px;border-radius:20px;font-size:12px;
+ margin-top:8px;
+}
+.active-link{
+ display:inline-block;background:#d9b85e;color:#173c2e;
+ padding:10px 15px;border-radius:22px;
+ text-decoration:none;font-weight:bold;margin-top:8px;
 }
 .notice{
  background:#eaf2ec;border-radius:13px;
- padding:14px;text-align:center;line-height:2;
+ padding:16px;text-align:center;line-height:2;
+ margin-top:20px;
+}
+.translation-box{
+ background:white;border:1px solid #dfd3ae;
+ border-radius:18px;padding:20px;margin-top:25px;
+ text-align:center;line-height:2;
 }
 .grid{
- display:grid;grid-template-columns:repeat(2,1fr);gap:12px;
+ display:grid;grid-template-columns:repeat(2,1fr);
+ gap:13px;margin-top:20px;
 }
 .card{
  background:white;border:1px solid #e7dfc5;
- border-radius:14px;padding:18px 10px;text-align:center;
+ border-radius:15px;padding:18px 10px;text-align:center;
 }
-.card .symbol{font-size:28px}
+.symbol{font-size:30px}
 .card h3{color:#07563f}
-.card p{font-size:14px;color:#52665b}
+.card p{font-size:14px;color:#52665b;line-height:1.8}
 footer{
  background:#064e3b;color:white;text-align:center;
  padding:25px;line-height:2;margin-top:25px;
 }
-@media(max-width:480px){
- .quran-grid{grid-template-columns:1fr}
- .hero h1{font-size:27px}
+@media(min-width:650px){
+ .quran-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .grid{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:380px){
+ .quran-card{padding:15px 8px}
+ .quran-card h3{font-size:17px}
 }
 </style>
 </head>
@@ -116,53 +134,87 @@ footer{
  <h2>القرآن الکریم</h2>
  <div class="bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
  <p class="intro">
- قرآن مجید پڑھنے کے لیے اپنی پسند کا طریقہ منتخب کریں۔
+ اپنے پسندیدہ قرآن مجید کے نسخے کا انتخاب کریں۔
  </p>
 
  <div class="quran-grid">
 
   <div class="quran-card">
-   <div class="quran-icon">📖</div>
-   <h3>16 لائن قرآن مجید</h3>
-   <p>مستند 16 لائن تجویدی قرآن مجید</p>
-   <p>30 پارے • 114 سورتیں • رنگین تجوید</p>
-   <button class="btn" onclick="showDetails('mushaf')">
-    قرآن مجید پڑھیں
-   </button<a class="btn"
-href="https://www.tajweediquran.com/16-line-quran"
-target="_blank"
-rel="noopener">
- قرآن مجید پڑھیں
-</a>>
+   <div class="book-line">
+    <span class="book-icon">📖</span>
+    <span class="tajweed">تجویدی</span>
+   </div>
+   <h3>11 لائن قرآن مجید</h3>
+   <p>11 لائن والا قرآن مجید</p>
+   <span class="status">نسخہ شامل ہونا باقی ہے</span>
   </div>
 
   <div class="quran-card">
-   <div class="quran-icon">📚</div>
-   <h3>آیت بہ آیت قرآن</h3>
-   <p>عربی آیت کے ساتھ ترجمہ اور تفسیر</p>
-   <p>اردو • پشتو • عربی • انگریزی</p>
-   <button class="btn" onclick="showDetails('translation')">
-    قرآن ترجمے کے ساتھ پڑھیں
-   </button>
+   <div class="book-line">
+    <span class="book-icon">📖</span>
+    <span class="tajweed">تجویدی</span>
+   </div>
+   <h3>12 لائن قرآن مجید</h3>
+   <p>12 لائن والا قرآن مجید</p>
+   <span class="status">نسخہ شامل ہونا باقی ہے</span>
+  </div>
+
+  <div class="quran-card">
+   <div class="book-line">
+    <span class="book-icon">📖</span>
+    <span class="tajweed">تجویدی</span>
+   </div>
+   <h3>13 لائن قرآن مجید</h3>
+   <p>13 لائن والا قرآن مجید</p>
+   <span class="status">نسخہ شامل ہونا باقی ہے</span>
+  </div>
+
+  <div class="quran-card">
+   <div class="book-line">
+    <span class="book-icon">📖</span>
+    <span class="tajweed">تجویدی</span>
+   </div>
+   <h3>15 لائن قرآن مجید</h3>
+   <p>15 لائن والا قرآن مجید</p>
+   <span class="status">نسخہ شامل ہونا باقی ہے</span>
+  </div>
+
+  <div class="quran-card">
+   <div class="book-line">
+    <span class="book-icon">📖</span>
+    <span class="tajweed">تجویدی</span>
+   </div>
+   <h3>16 لائن قرآن مجید</h3>
+   <p>16 لائن والا قرآن مجید</p>
+   <a class="active-link"
+      href="https://www.tajweediquran.com/16-line-quran"
+      target="_blank" rel="noopener">
+      قرآن مجید پڑھیں
+   </a>
+  </div>
+
+  <div class="quran-card">
+   <div class="book-line">
+    <span class="book-icon">📖</span>
+    <span class="tajweed">تجویدی</span>
+   </div>
+   <h3>18 لائن قرآن مجید</h3>
+   <p>18 لائن والا قرآن مجید</p>
+   <span class="status">نسخہ شامل ہونا باقی ہے</span>
   </div>
 
  </div>
 
- <div class="details" id="mushaf">
-  <h3>16 لائن تجویدی قرآن مجید</h3>
-  <p>یہاں مستند 16 لائن قرآن کے اصل صفحات شامل کیے جائیں گے۔</p>
-  <div class="notice">
-   قرآن کے صفحات ابھی شامل نہیں ہوئے۔ مجاز اور مستند نسخہ حاصل ہونے کے بعد یہاں مطالعہ، زوم اور بک مارک کی سہولت شامل ہوگی۔
+ <div class="translation-box">
+  <div class="book-line">
+   <span class="book-icon">📚</span>
   </div>
- </div>
-
- <div class="details" id="translation">
   <h3>آیت بہ آیت قرآن مجید</h3>
-  <p>اس حصے میں ہر آیت عربی متن کے ساتھ الگ دکھائی جائے گی۔</p>
-  <div class="notice">
-   یہاں مستند عربی متن، منتخب ترجمہ، تفسیر اور آڈیو شامل کیے جائیں گے۔ مواد کی تصدیق کے بعد ہی اسے شائع کیا جائے گا۔
-  </div>
+  <p>عربی آیت کے ساتھ ترجمہ اور تفسیر</p>
+  <p>اردو • پشتو • عربی • انگریزی</p>
+  <span class="status">مستند قرآنی مواد شامل ہونا باقی ہے</span>
  </div>
+
 </section>
 
 <section id="hadith">
@@ -175,38 +227,47 @@ rel="noopener">
 <section id="services">
  <h2>اسلامی سہولیات</h2>
  <div class="grid">
+
   <div class="card">
    <div class="symbol">📖</div>
    <h3>تفسیر</h3><p>مستند تفاسیر</p>
   </div>
+
   <div class="card">
    <div class="symbol">📚</div>
    <h3>فقہ</h3><p>اسلامی مسائل</p>
   </div>
+
   <div class="card">
    <div class="symbol">🕌</div>
    <h3>نماز کے اوقات</h3><p>مقام کے مطابق اوقات</p>
   </div>
+
   <div class="card">
    <div class="symbol">🔊</div>
    <h3>اذان</h3><p>اذان کی سہولت</p>
   </div>
+
   <div class="card">
    <div class="symbol">🤲</div>
-   <h3>دعائیں</h3><p>روزمرہ کی مسنون دعائیں</p>
+   <h3>دعائیں</h3><p>مسنون دعائیں</p>
   </div>
+
   <div class="card">
    <div class="symbol">📿</div>
    <h3>اذکار</h3><p>صبح و شام کے اذکار</p>
   </div>
+
   <div class="card">
    <div class="symbol">🧭</div>
    <h3>قبلہ</h3><p>قبلہ معلوم کرنے کی سہولت</p>
   </div>
+
   <div class="card">
    <div class="symbol">🌙</div>
    <h3>سیرت النبی ﷺ</h3><p>مستند اسلامی تاریخ</p>
   </div>
+
  </div>
 </section>
 
@@ -215,18 +276,6 @@ rel="noopener">
  <p>علم حاصل کریں، عمل کریں اور دوسروں تک پہنچائیں۔</p>
  <p>اللہ تعالیٰ اس کوشش کو قبول فرمائے۔ آمین</p>
 </footer>
-
-<script>
-function showDetails(id){
- document.querySelectorAll('.details').forEach(function(item){
-  item.classList.remove('show');
- });
- document.getElementById(id).classList.add('show');
- document.getElementById(id).scrollIntoView({
-  behavior:'smooth',block:'center'
- });
-}
-</script>
 
 </body>
 </html>
