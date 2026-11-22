@@ -4,435 +4,449 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#176b45">
+<meta name="theme-color" content="#075c42">
 <title>نور الاسلام | Noor-ul-Islam</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
- --primary:#176b45;
- --secondary:#c5a34a;
- --bg:#f3f7f3;
- --card:#ffffff;
- --text:#183b2d;
- --muted:#748078;
- --border:#e3ebe4;
- --soft:#e8f2eb;
- --shadow:0 5px 22px rgba(20,70,45,.08);
+ --green:#075c42;
+ --deep:#064632;
+ --gold:#c9a44c;
+ --cream:#fbf9f1;
+ --white:#ffffff;
+ --text:#263b32;
+ --muted:#718078;
+ --border:#e9e5d8;
+ --soft:#f1f5ef;
+ --shadow:0 5px 22px rgba(15,65,45,.08);
 }
 *{box-sizing:border-box}
 body{
- margin:0;background:var(--bg);color:var(--text);
+ margin:0;background:var(--cream);color:var(--text);
  font-family:'Noto Nastaliq Urdu',serif;
- transition:.25s;background-color:.25s;
  padding-bottom:100px;
 }
-button,input,textarea,select{font:inherit}
+button,input,select,textarea{font:inherit}
 button{cursor:pointer}
-.app{max-width:900px;margin:auto;min-height:100vh}
 header{
- background:var(--primary);color:white;padding:15px 17px;
- display:flex;align-items:center;justify-content:space-between;
- position:sticky;top:0;z-index:20;
- box-shadow:0 3px 12px #0002;
-}
-.brand{display:flex;align-items:center;gap:10px}
-.brand-logo{
- width:43px;height:43px;border-radius:14px;
- background:#ffffff20;border:1px solid #ffffff55;
- display:grid;place-items:center;font-size:25px;color:#f5d98a;
-}
-.brand h1{font-size:19px;margin:0;font-weight:700}
-.brand small{display:block;font:11px Inter,sans-serif;opacity:.85}
-.menu-btn{
- border:1px solid #ffffff55;background:#ffffff18;color:white;
- width:43px;height:43px;border-radius:13px;font-size:25px;
-}
-main{padding:17px 15px 25px}
-.page{display:none;animation:appear .25s ease}
-.page.active{display:block}
-@keyframes appear{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
-h2{font-size:23px;color:var(--primary);margin:5px 0 15px}
-h3{margin:0 0 8px;font-size:17px}
-p{line-height:2;color:var(--muted);margin:8px 0}
-.card{
- background:var(--card);border:1px solid var(--border);
- border-radius:20px;padding:17px;margin-bottom:14px;
+ background:linear-gradient(135deg,var(--deep),var(--green));
+ color:white;padding:17px 16px 20px;
+ border-radius:0 0 25px 25px;
  box-shadow:var(--shadow);
 }
-.hero{
- background:linear-gradient(135deg,var(--primary),#24583e);
- color:white;border-radius:23px;padding:24px 20px;
- margin-bottom:17px;position:relative;overflow:hidden;
+.topbar{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{
+ width:46px;height:46px;border:1px solid var(--gold);
+ border-radius:15px;display:grid;place-items:center;
+ color:var(--gold);font-size:25px;
 }
-.hero:after{
- content:"۞";position:absolute;left:10px;top:-22px;
- font-size:120px;color:#ffffff12;
+.brand h1{font-size:21px;margin:0;color:#fff}
+.brand small{display:block;font:11px Inter,sans-serif;color:#e8d9ac}
+.menu-btn{
+ background:#ffffff1c;border:1px solid #ffffff40;
+ color:white;border-radius:12px;width:43px;height:43px;font-size:23px;
 }
-.hero h2{color:white;font-size:27px;margin:0 0 8px}
-.hero p{color:#ffffffd9;max-width:85%}
+.header-note{text-align:center;margin-top:14px;color:#f3e9c9;font-size:12px}
+main{max-width:650px;margin:auto;padding:17px 14px}
+.page{display:none;animation:appear .2s ease}
+.page.active{display:block}
+@keyframes appear{from{opacity:.5;transform:translateY(5px)}to{opacity:1;transform:none}}
+.section-title{font-size:20px;color:var(--green);margin:8px 0 13px}
+.sub-title{font-size:16px;color:var(--green);margin:17px 0 10px}
+.muted{color:var(--muted);font-size:12px}
 .date-card{
- display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;
+ background:white;border:1px solid var(--border);
+ border-radius:17px;padding:13px;text-align:center;
+ box-shadow:var(--shadow);margin-bottom:14px;
 }
-.date-item{
- background:var(--card);border:1px solid var(--border);
- border-radius:16px;padding:13px;text-align:center;box-shadow:var(--shadow);
+.date-card strong{display:block;color:var(--green);font-size:15px}
+.date-card span{font-size:12px;color:var(--muted)}
+.hero{
+ background:linear-gradient(135deg,#0a6549,#0c8058);
+ color:white;border-radius:20px;padding:20px;
+ position:relative;overflow:hidden;margin-bottom:15px;
 }
-.date-item strong{display:block;color:var(--primary);font-size:14px}
-.date-item span{font:12px Inter,sans-serif;color:var(--muted)}
-.section-title{
- display:flex;justify-content:space-between;align-items:center;
- margin:20px 2px 12px;
+.hero:after{content:"☪";position:absolute;left:12px;top:-18px;
+ font-size:100px;color:#ffffff12}
+.hero h2{font-size:21px;margin:0 0 5px}
+.hero p{font-size:12px;color:#e4eddf;margin:0}
+.info-card{
+ background:white;border:1px solid var(--border);
+ border-radius:17px;padding:15px;margin-bottom:13px;
+ box-shadow:var(--shadow);
 }
-.section-title h3{color:var(--primary);margin:0}
-.daily-card{border-right:4px solid var(--secondary)}
-.daily-label{color:var(--primary);font-size:13px;font-weight:bold}
-.daily-text{font-size:16px;line-height:2.1;margin-top:10px}
-.daily-note{font-size:12px;color:var(--muted)}
-.status-card{
- background:linear-gradient(135deg,#fff8e8,#f7f0db);
- color:#66501d;border:1px solid #ead9a8;
- border-radius:19px;padding:18px;text-align:center;
+.info-card h3{margin:0 0 8px;color:var(--green);font-size:16px}
+.info-card p{font-size:13px;line-height:2;margin:4px 0}
+.arabic{font-family:'Amiri',serif;font-size:25px;line-height:2.1;text-align:center;color:var(--deep);direction:rtl}
+.translation{font-size:14px;line-height:2;color:var(--text);margin-top:8px}
+.tag{display:inline-block;background:#edf4ed;color:var(--green);padding:4px 10px;border-radius:20px;font-size:11px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.tile{
+ background:white;border:1px solid var(--border);border-radius:16px;
+ min-height:105px;padding:13px 9px;text-align:center;
+ color:var(--green);box-shadow:var(--shadow);
+ transition:.2s;
 }
-.status-card button{margin-top:10px}
-.primary-btn,.secondary-btn,.small-btn{
- border:0;border-radius:12px;padding:11px 17px;
- background:var(--primary);color:white;font-weight:bold;
+.tile:active{transform:scale(.97)}
+.tile .symbol{font-size:27px;display:block;margin-bottom:5px}
+.tile strong{font-size:13px;display:block}
+.tile small{font-size:10px;color:var(--muted)}
+.big-tile{min-height:120px}
+.action{
+ background:var(--green);color:white;border:0;border-radius:12px;
+ padding:10px 16px;font-size:13px;
 }
-.secondary-btn{background:var(--soft);color:var(--primary);border:1px solid var(--border)}
-.small-btn{padding:8px 12px;font-size:13px}
-.grid{
- display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
- gap:12px;
+.action.gold{background:var(--gold);color:#25372d}
+.action.light{background:#edf4ed;color:var(--green)}
+.field{
+ width:100%;padding:11px;border:1px solid var(--border);
+ border-radius:11px;background:white;margin:5px 0 12px;
+ outline-color:var(--green);font-size:13px;
 }
 .book-card{
- min-height:126px;background:var(--card);
- border:1px solid var(--border);border-radius:18px;
- padding:15px 10px;text-align:center;box-shadow:var(--shadow);
- display:flex;flex-direction:column;align-items:center;justify-content:center;
- gap:7px;color:var(--text);transition:.2s;
+ background:white;border:1px solid var(--border);
+ border-radius:14px;padding:13px;text-align:center;
+ box-shadow:var(--shadow);min-height:83px;
 }
-.book-card:active{transform:scale(.97)}
-.book-icon{font-size:29px}
-.book-card strong{font-size:15px;color:var(--primary)}
-.book-card small{font-size:11px;color:var(--muted)}
-.feature-box{
- display:flex;align-items:center;gap:14px;text-align:right;
- width:100%;background:var(--card);border:1px solid var(--border);
- border-radius:18px;padding:17px;margin-bottom:13px;
- box-shadow:var(--shadow);color:var(--text);
-}
-.feature-icon{
- flex:0 0 54px;height:54px;border-radius:15px;
- background:var(--soft);display:grid;place-items:center;font-size:27px;
-}
-.feature-box strong{color:var(--primary);font-size:16px}
-.feature-box p{font-size:12px;margin:3px 0 0}
-.search{
- width:100%;border:1px solid var(--border);border-radius:13px;
- padding:13px;background:var(--card);color:var(--text);margin:8px 0 15px;
- outline-color:var(--primary);
-}
-select,.field{
- width:100%;border:1px solid var(--border);border-radius:12px;
- padding:12px;background:var(--card);color:var(--text);margin:5px 0 12px;
-}
-.row{display:flex;gap:9px;align-items:center}
-.row>*{flex:1;min-width:0}
-.notice{
- background:var(--soft);border:1px solid var(--border);
- padding:13px;border-radius:14px;font-size:13px;line-height:2;
- margin:12px 0;
-}
-.arabic{
- font-size:23px;line-height:2.2;text-align:center;
- color:var(--primary);padding:14px 4px;
-}
-.empty{text-align:center;padding:25px;color:var(--muted)}
+.book-card strong{display:block;color:var(--green);font-size:13px}
+.book-card small{color:var(--muted);font-size:10px}
 .bottom-nav{
- position:fixed;bottom:0;left:0;right:0;z-index:30;
- background:var(--card);border-top:1px solid var(--border);
- box-shadow:0 -5px 20px #0000000b;
+ position:fixed;bottom:0;left:0;right:0;z-index:20;
+ background:#fff;border-top:1px solid var(--border);
+ box-shadow:0 -5px 20px #123b2510;
  display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
- padding:7px 4px calc(7px + env(safe-area-inset-bottom));
- max-width:900px;margin:auto;
+ align-items:end;padding:7px 3px max(8px,env(safe-area-inset-bottom));
+ direction:rtl;
 }
-.nav-item{
- border:0;background:transparent;color:var(--muted);
- min-width:0;padding:4px 0;display:flex;flex-direction:column;
- align-items:center;justify-content:center;gap:3px;
- border-radius:13px;font-size:10px;
+.nav-btn{
+ border:0;background:transparent;color:#77857d;
+ min-width:0;padding:6px 1px;border-radius:12px;
+ display:flex;flex-direction:column;align-items:center;gap:3px;
+ font-size:10px;white-space:nowrap;
 }
-.nav-icon{font-size:21px;line-height:1.3}
-.nav-item.active{
- background:var(--soft);color:var(--primary);
- font-weight:bold;outline:1px solid var(--border);
+.nav-btn .ico{font-size:20px;line-height:1.2}
+.nav-btn.selected{background:#eaf3ec;color:var(--green);font-weight:bold}
+.nav-btn.home-nav{color:white;background:var(--green);border:3px solid #e5d4a4;
+ min-height:62px;margin:0 1px;padding:6px 2px;
+ border-radius:17px 17px 13px 13px;transform:translateY(-7px);
+ box-shadow:0 4px 12px #075c4233}
+.nav-btn.home-nav .ico{font-size:25px}
+.nav-btn.home-nav.selected{background:var(--deep)}
+.drawer-backdrop{
+ display:none;position:fixed;inset:0;background:#0007;z-index:30
 }
-.nav-item.home{
- transform:translateY(-10px);background:var(--primary);
- color:white;border-radius:17px;min-height:62px;
- box-shadow:0 5px 13px #0002;
- border:3px solid var(--bg);
-}
-.nav-item.home .nav-icon{font-size:25px}
-.nav-item.home.active{background:var(--primary);color:white}
-.drawer-bg{
- display:none;position:fixed;inset:0;background:#0008;z-index:50;
-}
-.drawer-bg.open{display:block}
+.drawer-backdrop.open{display:block}
 .drawer{
- position:absolute;top:0;bottom:0;right:0;width:min(310px,85%);
- background:var(--card);padding:20px;overflow:auto;
- box-shadow:-5px 0 25px #0002;
+ position:absolute;right:0;top:0;bottom:0;width:min(310px,85vw);
+ background:var(--cream);padding:20px;overflow:auto;
+ border-radius:20px 0 0 20px;
 }
-.drawer-head{
- background:var(--primary);color:white;border-radius:17px;
- padding:20px;margin-bottom:18px;
+.drawer-head{display:flex;justify-content:space-between;align-items:center;color:var(--green)}
+.drawer-head button{border:0;background:#e9eee8;border-radius:9px;padding:7px 12px}
+.theme-list{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.theme-dot{height:34px;border-radius:10px;border:2px solid white;box-shadow:0 0 0 1px #ddd}
+.counter{font-size:38px;color:var(--green);text-align:center;margin:12px}
+footer{text-align:center;font-size:11px;color:var(--muted);padding:22px}
+.floating-contact{
+ position:fixed;left:15px;bottom:92px;z-index:15;
+ width:53px;height:53px;border-radius:50%;
+ background:linear-gradient(145deg,var(--gold),#f1d58a);
+ color:var(--deep);border:3px solid white;
+ box-shadow:0 5px 18px #0002;font-size:24px;
+ display:grid;place-items:center;
 }
-.drawer-head h2{color:white;margin:0}
-.drawer-item{
- display:flex;align-items:center;gap:12px;width:100%;
- text-align:right;border:0;border-bottom:1px solid var(--border);
- background:transparent;color:var(--text);padding:14px 5px;
+.notice{background:#fff8e7;border:1px solid #ead9a9;color:#715b2b;
+ padding:12px;border-radius:12px;font-size:12px;line-height:2}
+.hidden{display:none!important}
+body.english{font-family:Inter,sans-serif;direction:ltr}
+body.english .arabic{font-family:Amiri,serif;direction:rtl}
+body.english header,body.english .bottom-nav{direction:ltr}
+body.english .drawer{right:auto;left:0;border-radius:0 20px 20px 0}
+@media(min-width:600px){
+ main{padding:22px}
+ .bottom-nav{padding-left:max(calc((100% - 600px)/2),10px);padding-right:max(calc((100% - 600px)/2),10px)}
 }
-.drawer-item span{font-size:20px}
-.theme-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin:12px 0}
-.theme-choice{
- border:2px solid var(--border);background:var(--card);
- border-radius:12px;padding:7px 2px;text-align:center;
- color:var(--text);font-size:10px;
-}
-.theme-dot{width:25px;height:25px;border-radius:50%;margin:0 auto 5px}
-.whatsapp-float{
- position:fixed;right:15px;bottom:105px;z-index:25;
- width:59px;height:59px;border-radius:50%;
- border:3px solid #ffffff;background:linear-gradient(145deg,#2cae72,#087b4c);
- color:white;box-shadow:0 5px 18px #0003;
- display:grid;place-items:center;font-size:26px;
-}
-.whatsapp-float span{font-size:23px}
-.product-image{
- height:120px;background:var(--soft);border-radius:13px;
- display:grid;place-items:center;font-size:42px;margin-bottom:8px;
-}
-.product-card{
- background:var(--card);border:1px solid var(--border);
- border-radius:17px;padding:11px;box-shadow:var(--shadow);
-}
-.product-card strong{font-size:14px;color:var(--primary)}
-.product-card p{font-size:12px;margin:4px 0}
-.price{font: bold 14px Inter,sans-serif;color:var(--primary)}
-footer{text-align:center;color:var(--muted);font-size:11px;padding:20px}
-@media(max-width:370px){
- .nav-item{font-size:9px}
- .nav-icon{font-size:18px}
- .nav-item.home{min-height:57px}
- main{padding:13px 11px}
- .book-card{min-height:115px}
-}
-html[lang="en"] body{font-family:Inter,sans-serif}
-html[lang="en"] .arabic{font-family:serif}
-html[lang="en"] .feature-box{text-align:left}
 </style>
 </head>
 
 <body>
-<div class="app">
 <header>
- <button class="menu-btn" onclick="openMenu()" aria-label="Menu">☰</button>
- <div class="brand">
-  <div class="brand-logo">۞</div>
-  <div>
-   <h1 data-ur="نور الاسلام" data-en="Noor-ul-Islam">نور الاسلام</h1>
-   <small>Noor-ul-Islam</small>
+ <div class="topbar">
+  <div class="brand">
+   <div class="logo">☪</div>
+   <div>
+    <h1>نور الاسلام</h1>
+    <small>NOOR-UL-ISLAM</small>
+   </div>
   </div>
+  <button class="menu-btn" onclick="openMenu()" aria-label="مینو">☰</button>
  </div>
- <div style="width:43px"></div>
+ <div class="header-note" id="headerNote">قرآن و سنت کی روشنی میں ایک خوبصورت سفر</div>
 </header>
 
 <main>
-
-<!-- HOME -->
-<section class="page active" id="home">
- <div class="hero">
-  <h2 data-ur="نور الاسلام میں خوش آمدید" data-en="Welcome to Noor-ul-Islam">نور الاسلام میں خوش آمدید</h2>
-  <p data-ur="قرآن، حدیث، علم اور عمل کی ایک خوبصورت منزل" data-en="A beautiful place for Quran, Hadith, knowledge and practice">قرآن، حدیث، علم اور عمل کی ایک خوبصورت منزل</p>
- </div>
-
- <div class="date-card">
-  <div class="date-item">
-   <strong id="englishDate">تاریخ</strong>
-   <span data-ur="انگریزی تاریخ" data-en="Gregorian date">انگریزی تاریخ</span>
+ <!-- HOME -->
+ <section class="page active" id="home">
+  <div class="date-card">
+   <strong id="gregDate">انگریزی تاریخ</strong>
+   <span id="hijriDate">اسلامی تاریخ</span>
   </div>
-  <div class="date-item">
-   <strong id="islamicDate">اسلامی تاریخ</strong>
-   <span data-ur="اسلامی تاریخ" data-en="Islamic date">اسلامی تاریخ</span>
+  <div class="hero">
+   <h2>السلام علیکم ورحمۃ اللہ</h2>
+   <p>نور الاسلام میں آپ کا خیر مقدم ہے</p>
   </div>
- </div>
 
- <div class="section-title"><h3 data-ur="آج کی آیت" data-en="Verse of the Day">آج کی آیت</h3></div>
- <div class="card daily-card">
-  <div class="daily-label" data-ur="قرآن مجید" data-en="Holy Quran">قرآن مجید</div>
-  <div class="arabic">وَهُوَ مَعَكُمْ أَيْنَ مَا كُنتُمْ</div>
-  <p data-ur="اور وہ تمہارے ساتھ ہے جہاں کہیں تم ہو۔" data-en="And He is with you wherever you are.">اور وہ تمہارے ساتھ ہے جہاں کہیں تم ہو۔</p>
-  <div class="daily-note" data-ur="سورۃ الحدید، آیت 4 — نمونہ آیت" data-en="Surah Al-Hadid, 57:4 — sample verse">سورۃ الحدید، آیت 4 — نمونہ آیت</div>
- </div>
+  <div class="info-card">
+   <h3>آج کی قرآنی آیت</h3>
+   <div class="arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+   <p class="translation">شروع اللہ کے نام سے جو نہایت مہربان، بے حد رحم فرمانے والا ہے۔</p>
+   <span class="tag">سورۃ الفاتحہ: 1</span>
+  </div>
 
- <div class="section-title"><h3 data-ur="آج کی حدیث" data-en="Hadith of the Day">آج کی حدیث</h3></div>
- <div class="card daily-card">
-  <div class="daily-label" data-ur="حدیث شریف" data-en="Hadith">حدیث شریف</div>
-  <p class="daily-text" data-ur="اعمال کا دارومدار نیتوں پر ہے۔" data-en="Actions are judged by intentions.">اعمال کا دارومدار نیتوں پر ہے۔</p>
-  <div class="daily-note" data-ur="صحیح بخاری، حدیث 1 — مستند متن کے ساتھ مزید مواد بعد میں منسلک ہوگا۔" data-en="Sahih al-Bukhari 1 — verified content integration is planned.">صحیح بخاری، حدیث 1 — مستند متن کے ساتھ مزید مواد بعد میں منسلک ہوگا۔</div>
- </div>
+  <div class="info-card">
+   <h3>آج کی حدیث</h3>
+   <p>یہاں مستند حدیث، اس کا عربی متن، اردو ترجمہ اور مکمل حوالہ مستند ڈیٹابیس سے منسلک ہونے کے بعد دکھایا جائے گا۔</p>
+   <span class="tag">مستند حوالہ منسلک ہونا باقی ہے</span>
+  </div>
 
- <div class="section-title"><h3 data-ur="آج کا واٹس ایپ اسٹیٹس" data-en="Today's WhatsApp Status">آج کا واٹس ایپ اسٹیٹس</h3></div>
- <div class="status-card">
-  <div style="font-size:19px;line-height:2" id="dailyStatus">اللہ پر بھروسہ رکھیں، ہر مشکل کے بعد آسانی ہے۔</div>
-  <button class="secondary-btn" onclick="copyStatus()" data-ur="اسٹیٹس کاپی کریں" data-en="Copy Status">اسٹیٹس کاپی کریں</button>
- </div>
+  <div class="info-card">
+   <h3>آج کا اسلامی پیغام</h3>
+   <p>اپنے دن کا آغاز اللہ تعالیٰ کے ذکر اور اچھی نیت سے کریں۔</p>
+   <button class="action light" onclick="copyStatus()">واٹس ایپ اسٹیٹس کاپی کریں</button>
+  </div>
 
- <div class="section-title"><h3 data-ur="اسلامی رہنمائی" data-en="Islamic Guidance">اسلامی رہنمائی</h3></div>
- <div class="card">
-  <h3 data-ur="علم، عمل اور اچھے اخلاق" data-en="Knowledge, action and good character">علم، عمل اور اچھے اخلاق</h3>
-  <p data-ur="دین کا علم حاصل کریں، اس پر عمل کریں اور دوسروں تک خیر پہنچائیں۔" data-en="Seek knowledge, act upon it and share goodness with others.">دین کا علم حاصل کریں، اس پر عمل کریں اور دوسروں تک خیر پہنچائیں۔</p>
- </div>
+  <div class="info-card">
+   <h3>نماز کے اوقات</h3>
+   <p>نماز کے درست اوقات مقام اور مستند حسابی طریقے کے مطابق حاصل کیے جائیں گے۔</p>
+   <span class="tag">نماز ٹائم سروس ابھی منسلک نہیں</span>
+  </div>
 
- <div class="notice" data-ur="نوٹ: روزانہ کی آیت، حدیث اور تاریخ کو مستقل مستند ڈیٹا سے منسلک کرنا اگلا مرحلہ ہے۔" data-en="Note: Connecting daily verses, hadith and dates to verified live data is a later step.">نوٹ: روزانہ کی آیت، حدیث اور تاریخ کو مستقل مستند ڈیٹا سے منسلک کرنا اگلا مرحلہ ہے۔</div>
-</section>
+  <div class="info-card">
+   <h3>نور الاسلام کی سہولیات</h3>
+   <p>قرآن مجید، حدیث، اذکار، آن لائن تعلیم اور شاپنگ کے لیے نیچے موجود بٹن استعمال کریں۔</p>
+  </div>
+ </section>
 
-<!-- QURAN -->
-<section class="page" id="quran">
- <h2 data-ur="قرآن مجید" data-en="Holy Quran">قرآن مجید</h2>
- <button class="feature-box" onclick="showPage('quranFormats')">
-  <div class="feature-icon">📖</div>
-  <div><strong data-ur="قرآن مجید پڑھیں" data-en="Read Quran">قرآن مجید پڑھیں</strong><p data-ur="مختلف لائنوں والے مصاحف کا انتخاب" data-en="Choose a Quran page format">مختلف لائنوں والے مصاحف کا انتخاب</p></div>
- </button>
- <button class="feature-box" onclick="showPage('translation')">
-  <div class="feature-icon">🌙</div>
-  <div><strong data-ur="قرآن مجید کا ترجمہ پڑھیں" data-en="Read Quran Translation">قرآن مجید کا ترجمہ پڑھیں</strong><p data-ur="عربی آیات اور ترجمے کا مطالعہ" data-en="Read Arabic verses and translations">عربی آیات اور ترجمے کا مطالعہ</p></div>
- </button>
- <div class="notice" data-ur="اصل مصحف اور تلاوت کو مستند اور اجازت یافتہ ذرائع سے منسلک کیا جائے گا۔" data-en="Quran pages and recitations will be connected through verified, licensed sources.">اصل مصحف اور تلاوت کو مستند اور اجازت یافتہ ذرائع سے منسلک کیا جائے گا۔</div>
-</section>
+ <!-- QURAN -->
+ <section class="page" id="quran">
+  <h2 class="section-title">قرآن مجید</h2>
+  <p class="muted">قرآن کریم کے لیے الگ اور مکمل مطالعے کا صفحہ</p>
+  <div class="grid">
+   <button class="tile big-tile" onclick="showQuranRead()">
+    <span class="symbol">📖</span><strong>قرآن مجید پڑھیں</strong>
+    <small>مختلف لائنوں والے مصاحف</small>
+   </button>
+   <button class="tile big-tile" onclick="showTranslation()">
+    <span class="symbol">🌙</span><strong>قرآن مجید کا ترجمہ پڑھیں</strong>
+    <small>مختلف زبانوں میں</small>
+   </button>
+  </div>
+  <div id="quranRead" class="info-card hidden">
+   <h3>قرآن مجید کے مصاحف</h3>
+   <p>اپنی پسند کا مصحف منتخب کریں:</p>
+   <div class="grid" id="lineChoices">
+    <button class="tile" onclick="selectLine(11)">11 لائن</button>
+    <button class="tile" onclick="selectLine(12)">12 لائن</button>
+    <button class="tile" onclick="selectLine(13)">13 لائن</button>
+    <button class="tile" onclick="selectLine(15)">15 لائن</button>
+    <button class="tile" onclick="selectLine(16)">16 لائن تجویدی</button>
+    <button class="tile" onclick="selectLine(18)">18 لائن</button>
+   </div>
+   <p class="notice" id="lineMessage">اصل مصحف کے صفحات اور تجوید کے رنگ مستند اور اجازت یافتہ ذرائع سے شامل کیے جائیں گے۔</p>
+  </div>
+  <div id="translationBox" class="info-card hidden">
+   <h3>قرآن مجید کا ترجمہ</h3>
+   <label>ترجمے کی زبان منتخب کریں</label>
+   <select class="field" id="translationLanguage">
+    <option>اردو</option><option>English</option><option>پشتو</option><option>العربية</option>
+   </select>
+   <input class="field" placeholder="سورت یا آیت تلاش کریں">
+   <p class="notice">عربی آیات اور مستند تراجم کا ڈیٹا منسلک ہونے کے بعد یہاں ظاہر ہوگا۔</p>
+  </div>
+ </section>
 
-<!-- QURAN FORMATS -->
-<section class="page" id="quranFormats">
- <h2 data-ur="قرآن مجید پڑھیں" data-en="Read Quran">قرآن مجید پڑھیں</h2>
- <div class="grid" id="formatGrid"></div>
- <div class="notice" data-ur="یہ انتخاب فی الحال ڈیزائن کا حصہ ہیں۔ اصل صفحات شامل کرنے کے لیے مستند مصحف کی فائلیں اور اجازت درکار ہوگی۔" data-en="These are currently format selections. Licensed Quran page files are required to enable reading.">یہ انتخاب فی الحال ڈیزائن کا حصہ ہیں۔ اصل صفحات شامل کرنے کے لیے مستند مصحف کی فائلیں اور اجازت درکار ہوگی۔</div>
- <button class="secondary-btn" onclick="showPage('quran')">← واپس قرآن</button>
-</section>
+ <!-- HADITH -->
+ <section class="page" id="hadith">
+  <h2 class="section-title">حدیث کی کتب</h2>
+  <p class="muted">مشہور حدیث کی کتابوں کا انتخاب</p>
+  <input class="field" id="bookSearch" placeholder="حدیث کی کتاب تلاش کریں..." oninput="searchBooks()">
+  <div class="grid" id="bookGrid">
+   <button class="book-card"><strong>صحیح بخاری</strong><small>Sahih al-Bukhari</small></button>
+   <button class="book-card"><strong>صحیح مسلم</strong><small>Sahih Muslim</small></button>
+   <button class="book-card"><strong>سنن ابی داؤد</strong><small>Sunan Abi Dawud</small></button>
+   <button class="book-card"><strong>جامع ترمذی</strong><small>Jami at-Tirmidhi</small></button>
+   <button class="book-card"><strong>سنن نسائی</strong><small>Sunan an-Nasa'i</small></button>
+   <button class="book-card"><strong>سنن ابن ماجہ</strong><small>Sunan Ibn Majah</small></button>
+   <button class="book-card"><strong>مؤطا امام مالک</strong><small>Muwatta Imam Malik</small></button>
+   <button class="book-card"><strong>مسند احمد</strong><small>Musnad Ahmad</small></button>
+  </div>
+  <div class="info-card" style="margin-top:14px">
+   <h3>حدیث کی سہولتیں</h3>
+   <p>ہر کتاب کے لیے الگ صفحہ، باب، حدیث نمبر، عربی متن، ترجمہ اور حوالہ شامل کیا جائے گا۔</p>
+   <span class="tag">اصل حدیث ڈیٹا ابھی منسلک نہیں</span>
+  </div>
+ </section>
 
-<!-- TRANSLATION -->
-<section class="page" id="translation">
- <h2 data-ur="قرآن مجید کا ترجمہ" data-en="Quran Translation">قرآن مجید کا ترجمہ</h2>
- <input class="search" id="ayahSearch" placeholder="سورت یا آیت تلاش کریں">
- <label data-ur="ترجمے کی زبان منتخب کریں" data-en="Choose translation language">ترجمے کی زبان منتخب کریں</label>
- <select id="translationLanguage">
-  <option value="ur">اردو</option>
-  <option value="en">English</option>
-  <option value="ps">پشتو</option>
-  <option value="ar">عربی</option>
- </select>
- <div class="card">
-  <div class="arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
-  <p id="translationText" style="text-align:center">اللہ کے نام سے شروع جو نہایت مہربان، بہت رحم فرمانے والا ہے۔</p>
-  <div class="daily-note" style="text-align:center">سورۃ الفاتحہ، آیت 1 — نمونہ</div>
- </div>
- <button class="primary-btn" onclick="showNotice('اصل آیات اور مستند تراجم کا ڈیٹا اگلے مرحلے میں منسلک ہوگا۔')">تلاش کریں</button>
- <div class="notice">اصل آیات اور مستند تراجم کا مکمل ڈیٹا ابھی منسلک نہیں ہے۔</div>
-</section>
+ <!-- AZKAR -->
+ <section class="page" id="azkar">
+  <h2 class="section-title">اذکار و دعائیں</h2>
+  <div class="grid">
+   <button class="tile" onclick="showNotice('صبح کے اذکار')"><span class="symbol">🌅</span><strong>صبح کے اذکار</strong></button>
+   <button class="tile" onclick="showNotice('شام کے اذکار')"><span class="symbol">🌇</span><strong>شام کے اذکار</strong></button>
+   <button class="tile" onclick="showNotice('روزانہ کی دعائیں')"><span class="symbol">🤲</span><strong>روزانہ کی دعائیں</strong></button>
+   <button class="tile" onclick="showNotice('مسنون دعائیں')"><span class="symbol">📿</span><strong>مسنون دعائیں</strong></button>
+  </div>
+  <div class="info-card" style="margin-top:14px;text-align:center">
+   <h3>ڈیجیٹل تسبیح</h3>
+   <div class="counter" id="count">0</div>
+   <button class="action" onclick="increment()">تسبیح کریں</button>
+   <button class="action light" onclick="resetCount()">دوبارہ شروع</button>
+  </div>
+  <div id="azkarMessage" class="info-card hidden"></div>
+ </section>
 
-<!-- HADITH -->
-<section class="page" id="hadith">
- <h2 data-ur="حدیث شریف" data-en="Hadith Collections">حدیث شریف</h2>
- <p data-ur="احادیث کی کتاب منتخب کریں" data-en="Choose a Hadith collection">احادیث کی کتاب منتخب کریں</p>
- <input class="search" id="hadithSearch" placeholder="حدیث کی کتاب تلاش کریں..." oninput="filterHadith()">
- <div class="grid" id="hadithGrid"></div>
- <div class="notice" data-ur="یہ ابتدائی کتابوں کی فہرست ہے۔ مزید مستند مجموعے تحقیق اور حوالوں کی تصدیق کے بعد شامل کیے جائیں گے۔" data-en="This is an initial collection list. More verified collections can be added after research.">یہ ابتدائی کتابوں کی فہرست ہے۔ مزید مستند مجموعے تحقیق اور حوالوں کی تصدیق کے بعد شامل کیے جائیں گے۔</div>
-</section>
+ <!-- EDUCATION -->
+ <section class="page" id="education">
+  <div class="hero">
+   <h2>النور آن لائن ٹیچنگ سینٹر</h2>
+   <p>قرآن مجید کی آن لائن تعلیم</p>
+  </div>
+  <h3 class="section-title">ہمارے کورسز</h3>
+  <div class="grid">
+   <div class="tile"><span class="symbol">📖</span><strong>قرآن ناظرہ</strong><small>قرآن پڑھنے کی تعلیم</small></div>
+   <div class="tile"><span class="symbol">✨</span><strong>تجوید کورس</strong><small>درست تلفظ اور تجوید</small></div>
+   <div class="tile"><span class="symbol">👦</span><strong>بچوں کی تعلیم</strong><small>بچوں کے لیے قرآن</small></div>
+   <div class="tile"><span class="symbol">🌍</span><strong>بیرون ملک طلبہ</strong><small>آن لائن کلاسز</small></div>
+  </div>
+  <div class="info-card" style="margin-top:14px">
+   <h3>داخلے اور رابطہ</h3>
+   <p>داخلے، اوقات اور فیس کی معلومات کے لیے رابطہ کی سہولت بعد میں فعال کی جائے گی۔</p>
+   <span class="tag">رابطہ نمبر شامل ہونا باقی ہے</span>
+  </div>
+ </section>
 
-<!-- HADITH DETAIL -->
-<section class="page" id="hadithDetail">
- <h2 id="hadithTitle">حدیث کی کتاب</h2>
- <div class="card">
-  <div class="arabic">الْحَمْدُ لِلّٰهِ</div>
-  <p data-ur="اس کتاب کے مستند عربی متن، ترجمے، ابواب اور حدیث نمبرز کو مستند ڈیٹا سے منسلک کیا جائے گا۔" data-en="Verified Arabic text, translations, chapters and hadith numbers will be connected here.">اس کتاب کے مستند عربی متن، ترجمے، ابواب اور حدیث نمبرز کو مستند ڈیٹا سے منسلک کیا جائے گا۔</p>
- </div>
- <button class="secondary-btn" onclick="showPage('hadith')">← حدیث کی کتابوں پر واپس جائیں</button>
-</section>
+ <!-- SHOPPING -->
+ <section class="page" id="shopping">
+  <div class="hero">
+   <h2>النور شاپنگ سینٹر</h2>
+   <p>آپ کی مصنوعات، ایک ہی جگہ</p>
+  </div>
+  <h3 class="section-title">ہماری مصنوعات</h3>
+  <div id="products" class="grid"></div>
+  <div class="info-card" style="margin-top:15px">
+   <h3>ایڈمن پینل — ابتدائی نمونہ</h3>
+   <p class="muted">یہ صرف اسی موبائل کے براؤزر میں محفوظ ہوگا۔ تمام صارفین کے لیے پروڈکٹ دکھانے کا کلاؤڈ نظام بعد میں بنے گا۔</p>
+   <input class="field" id="productName" placeholder="پروڈکٹ کا نام">
+   <input class="field" id="productPrice" type="number" placeholder="قیمت">
+   <input class="field" id="productImage" placeholder="تصویر کا لنک (اختیاری)">
+   <textarea class="field" id="productDescription" placeholder="پروڈکٹ کی تفصیل"></textarea>
+   <button class="action" onclick="addProduct()">پروڈکٹ محفوظ کریں</button>
+   <div id="adminMessage" class="muted"></div>
+  </div>
+ </section>
 
-<!-- AZKAR -->
-<section class="page" id="azkar">
- <h2 data-ur="اذکار اور دعائیں" data-en="Azkar and Duas">اذکار اور دعائیں</h2>
- <div class="grid">
-  <button class="book-card" onclick="showNotice('صبح کے اذکار کا مستند مواد اگلے مرحلے میں شامل ہوگا۔')"><span class="book-icon">🌅</span><strong>صبح کے اذکار</strong></button>
-  <button class="book-card" onclick="showNotice('شام کے اذکار کا مستند مواد اگلے مرحلے میں شامل ہوگا۔')"><span class="book-icon">🌙</span><strong>شام کے اذکار</strong></button>
-  <button class="book-card" onclick="showNotice('روزانہ کی دعائیں شامل کی جائیں گی۔')"><span class="book-icon">🤲</span><strong>روزانہ کی دعائیں</strong></button>
-  <button class="book-card" onclick="showPage('tasbeeh')"><span class="book-icon">📿</span><strong>تسبیح کاؤنٹر</strong></button>
- </div>
-</section>
+ <!-- MORE -->
+ <section class="page" id="more">
+  <h2 class="section-title">مزید سہولیات</h2>
+  <div class="grid">
+   <button class="tile" onclick="showNotice('قبلہ کی سمت')"><span class="symbol">🧭</span><strong>قبلہ کی سمت</strong></button>
+   <button class="tile" onclick="showNotice('نماز کے اوقات')"><span class="symbol">🕌</span><strong>نماز کے اوقات</strong></button>
+   <button class="tile" onclick="showNotice('اسلامی کیلنڈر')"><span class="symbol">📅</span><strong>اسلامی کیلنڈر</strong></button>
+   <button class="tile" onclick="showNotice('حج و عمرہ')"><span class="symbol">🕋</span><strong>حج و عمرہ</strong></button>
+   <button class="tile" onclick="showNotice('تفسیر')"><span class="symbol">📚</span><strong>تفسیر</strong></button>
+   <button class="tile" onclick="showNotice('فقہ')"><span class="symbol">⚖️</span><strong>فقہ</strong></button>
+  </div>
+  <div class="info-card" style="margin-top:14px">
+   <h3>نور الاسلام</h3>
+   <p>ایک جامع اسلامی پلیٹ فارم بنانے کی کوشش۔</p>
+   <span class="tag">نسخہ 1.0 — ابتدائی ڈیزائن</span>
+  </div>
+ </section>
+</main>
 
-<!-- TASBEEH -->
-<section class="page" id="tasbeeh">
- <h2>تسبیح کاؤنٹر</h2>
- <div class="card" style="text-align:center">
-  <div id="count" style="font:700 55px Inter;color:var(--primary);padding:20px">0</div>
-  <button class="primary-btn" style="width:100%;padding:18px" onclick="incrementCount()">تسبیح شمار کریں</button>
-  <button class="secondary-btn" style="margin-top:12px" onclick="resetCount()">دوبارہ شروع کریں</button>
- </div>
-</section>
+<button class="floating-contact" onclick="contactUs()" aria-label="رابطہ">✉</button>
 
-<!-- EDUCATION -->
-<section class="page" id="education">
- <h2 data-ur="النور آن لائن ٹیچنگ سینٹر" data-en="Al-Noor Online Teaching Center">النور آن لائن ٹیچنگ سینٹر</h2>
- <div class="hero">
-  <h2 data-ur="آن لائن قرآن کی تعلیم" data-en="Online Quran Education">آن لائن قرآن کی تعلیم</h2>
-  <p data-ur="بچوں اور بڑوں کے لیے قرآن سیکھنے کی سہولت" data-en="Quran learning for children and adults">بچوں اور بڑوں کے لیے قرآن سیکھنے کی سہولت</p>
- </div>
- <div class="grid">
-  <div class="book-card"><span class="book-icon">📖</span><strong>قرآن ناظرہ</strong><small>Quran Nazra</small></div>
-  <div class="book-card"><span class="book-icon">📗</span><strong>تجوید کورس</strong><small>Tajweed Course</small></div>
-  <div class="book-card"><span class="book-icon">🧒</span><strong>بچوں کی تعلیم</strong><small>Children's Classes</small></div>
-  <div class="book-card"><span class="book-icon">🌍</span><strong>بیرون ملک طلبہ</strong><small>International Students</small></div>
- </div>
- <div class="card">
-  <h3>داخلے اور معلومات</h3>
-  <p>آن لائن کلاسز، اوقات اور داخلے کی تفصیلات کے لیے رابطہ کریں۔</p>
-  <button class="primary-btn" onclick="contactWhatsApp()">ہم سے رابطہ کریں</button>
- </div>
-</section>
+<nav class="bottom-nav">
+ <button class="nav-btn" data-page="more" onclick="go('more')"><span class="ico">☰</span><span>مزید</span></button>
+ <button class="nav-btn" data-page="shopping" onclick="go('shopping')"><span class="ico">🛍</span><span>شاپنگ</span></button>
+ <button class="nav-btn" data-page="education" onclick="go('education')"><span class="ico">🎓</span><span>تعلیم</span></button>
+ <button class="nav-btn home-nav selected" data-page="home" onclick="go('home')"><span class="ico">⌂</span><span>ہوم</span></button>
+ <button class="nav-btn" data-page="azkar" onclick="go('azkar')"><span class="ico">📿</span><span>اذکار</span></button>
+ <button class="nav-btn" data-page="hadith" onclick="go('hadith')"><span class="ico">📚</span><span>حدیث</span></button>
+ <button class="nav-btn" data-page="quran" onclick="go('quran')"><span class="ico">📖</span><span>قرآن</span></button>
+</nav>
 
-<!-- SHOPPING -->
-<section class="page" id="shopping">
- <h2 data-ur="النور شاپنگ سینٹر" data-en="Al-Noor Shopping Center">النور شاپنگ سینٹر</h2>
- <div class="hero">
-  <h2>النور شاپنگ سینٹر</h2>
-  <p>ہماری مصنوعات ایک ہی جگہ پر</p>
- </div>
- <div class="section-title"><h3>ہماری مصنوعات</h3></div>
- <div class="grid" id="productGrid"></div>
- <div class="card">
-  <h3>ایڈمن: نئی پروڈکٹ شامل کریں</h3>
-  <p>یہ ابتدائی مقامی نمونہ ہے۔ اسے عوامی شاپنگ سسٹم بنانے کے لیے محفوظ ایڈمن لاگ اِن اور آن لائن ڈیٹابیس درکار ہوگا۔</p>
-  <input class="field" id="productName" placeholder="پروڈکٹ کا نام">
-  <input class="field" id="productPrice" placeholder="قیمت">
-  <input class="field" id="productDescription" placeholder="مختصر تفصیل">
-  <label>پروڈکٹ کی تصویر</label>
-  <input class="field" type="file" id="productPhoto" accept="image/*">
-  <button class="primary-btn" onclick="addProduct()">پروڈکٹ محفوظ کریں</button>
- </div>
-</section>
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="backdropClose(event)">
+ <aside class="drawer">
+  <div class="drawer-head">
+   <h2>نور الاسلام</h2>
+   <button onclick="closeMenu()">بند ✕</button>
+  </div>
+  <hr>
+  <h3 class="sub-title">زبان منتخب کریں</h3>
+  <select class="field" id="siteLanguage" onchange="changeLanguage(this.value)">
+   <option value="ur">اردو</option>
+   <option value="en">English</option>
+  </select>
+  <p class="muted">قرآن کے ترجمے کی زبان الگ سے قرآن کے صفحے پر منتخب ہوگی۔</p>
+  <h3 class="sub-title">ڈیزائن کے رنگ منتخب کریں</h3>
+  <div class="theme-list">
+   <button class="theme-dot" style="background:#075c42" onclick="setTheme('#075c42','#064632')"></button>
+   <button class="theme-dot" style="background:#1765a0" onclick="setTheme('#1765a0','#104b78')"></button>
+   <button class="theme-dot" style="background:#a52e36" onclick="setTheme('#a52e36','#772029')"></button>
+   <button class="theme-dot" style="background:#68439a" onclick="setTheme('#68439a','#493071')"></button>
+   <button class="theme-dot" style="background:#168c87" onclick="setTheme('#168c87','#09635e')"></button>
+   <button class="theme-dot" style="background:#a78632" onclick="setTheme('#a78632','#765d20')"></button>
+   <button class="theme-dot" style="background:#c66a22" onclick="setTheme('#c66a22','#904717')"></button>
+   <button class="theme-dot" style="background:#c05b8b" onclick="setTheme('#c05b8b','#873b61')"></button>
+   <button class="theme-dot" style="background:#343a40" onclick="setTheme('#343a40','#20252a')"></button>
+   <button class="theme-dot" style="background:#65723a" onclick="setTheme('#65723a','#465126')"></button>
+  </div>
+  <h3 class="sub-title">دیگر معلومات</h3>
+  <p class="muted">نور الاسلام — قرآن، حدیث اور اسلامی تعلیم</p>
+ </aside>
+</div>
 
-<!-- MORE -->
-<section class="page" id="more">
- <h2 data-ur="مزید سہولیات" data-en="More Services">مزید سہولیات</h2>
- <div class="notice">یہاں مزید اسلامی اور دوسری سہولیات مرحلہ وار شامل کی جائیں گی۔</div>
- <div class="grid">
-  <button class="book-card" onclick="showNotice('قبلہ کی سمت کی سہولت اگلے مرحلے میں فعال ہوگی۔')"><span class="book-icon">🧭</span><strong>قبلہ کی سمت</strong></button>
-  <button class="book-card" onclick="showNotice('نماز کے اوقا
+<footer>نور الاسلام — قرآن و سنت کی روشنی</footer>
+
+<script>
+const pageNames=['home','quran','hadith','azkar','education','shopping','more'];
+
+function go(name){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(name).classList.add('active');
+ document.querySelectorAll('.nav-btn').forEach(b=>{
+  b.classList.toggle('selected',b.dataset.page===name);
+ });
+ window.scrollTo({top:0,behavior:'smooth'});
+ closeMenu();
+}
+
+function openMenu(){document.getElementById('drawerBackdrop').classList.add('open')}
+function closeMenu(){document.getElementById('drawerBackdrop').classList.remove('open')}
+function backdropClose(e){if(e.target.id==='drawerBackdrop')closeMenu()}
+
+function showQuranRead(){
+ document.getElementById('quranRead').classList.remove('hidden');
+ document.getElementById('translationBox').classList.add('hidden');
+}
+function showTranslation(){
+ document.getElementById('translationBox').classList.remove('hidden');
+ document.getElementById('quranRead').classList.add('hidden');
+}
+function selectLine(n){
+ document.getElementById('lineMessage').textContent=
+ n+' لائن والا مصحف منتخب کیا گیا۔ اصل صفحات اور تجویدی رنگ مستند ماخذ سے شامل کرنا باقی ہے۔';
+}
+function showNotice(title){
+ const box=document.getElementById('azkarMessage');
+ box.classList.remove('hidden');
+ box.textContent=title+' کی مستند معلومات اور مواد شامل کرنا باقی ہے۔';
+ if(document.ge
 
  
  
