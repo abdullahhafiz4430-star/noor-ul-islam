@@ -1,281 +1,296 @@
 
+
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#064e3b">
-<title>نور الاسلام | قرآن مجید</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b3d2e">
+<title>نور الاسلام | Noor-ul-Islam</title>
 <style>
+:root{--green:#0b3d2e;--green2:#145b43;--gold:#d8b45a;--cream:#f7f4e9;--ink:#18352b;--muted:#6c7c73;--blue:#e9f2ff;--blue-line:#c8dcf6;--white:#fff;--shadow:0 8px 24px rgba(10,50,36,.09)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- margin:0;background:#f5f4ec;color:#173c2e;
- font-family:serif;
-}
-header{
- background:linear-gradient(135deg,#043d2e,#087653);
- color:white;text-align:center;padding:24px 12px;
-}
-.logo{font-size:34px;color:#f1d486;font-weight:bold}
-header p{margin:8px 0 0}
-nav{
- display:flex;justify-content:center;gap:17px;
- flex-wrap:wrap;padding:14px;background:#07563f;
-}
-nav a{color:white;text-decoration:none;font-size:15px}
-.hero{
- text-align:center;padding:40px 18px;
- background:linear-gradient(145deg,#064e3b,#0b7957);
- color:white;
-}
-.hero h1{color:#f1d486;font-size:32px}
-.hero p{line-height:2;font-size:17px}
-.btn{
- display:inline-block;background:#d9b85e;color:#173c2e;
- padding:11px 20px;border-radius:25px;
- text-decoration:none;font-weight:bold;border:0;
- margin-top:8px;font-family:inherit;cursor:pointer;
-}
-section{max-width:1000px;margin:auto;padding:30px 16px}
-h2{text-align:center;color:#07563f;margin-bottom:12px;font-size:27px}
-.intro{text-align:center;line-height:2;color:#52665b}
-.bismillah{
- text-align:center;font-size:28px;color:#986f20;padding:15px;
-}
-.quran-grid{
- display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
- gap:15px;margin-top:24px;
-}
-.quran-card{
- background:white;border:1px solid #dfd3ae;
- border-radius:18px;padding:20px 12px;text-align:center;
- box-shadow:0 5px 18px #0000000c;
-}
-.book-line{
- display:flex;align-items:center;justify-content:center;
- gap:8px;margin-bottom:10px;
-}
-.book-icon{font-size:35px}
-.tajweed{
- background:#e3f2e8;color:#08734f;border-radius:20px;
- padding:5px 10px;font-size:12px;font-weight:bold;
-}
-.quran-card h3{color:#07563f;font-size:20px;margin:8px 0}
-.quran-card p{font-size:14px;line-height:1.9;color:#59695f}
-.status{
- display:inline-block;background:#f2efe5;color:#786b4c;
- padding:7px 10px;border-radius:20px;font-size:12px;
- margin-top:8px;
-}
-.active-link{
- display:inline-block;background:#d9b85e;color:#173c2e;
- padding:10px 15px;border-radius:22px;
- text-decoration:none;font-weight:bold;margin-top:8px;
-}
-.notice{
- background:#eaf2ec;border-radius:13px;
- padding:16px;text-align:center;line-height:2;
- margin-top:20px;
-}
-.translation-box{
- background:white;border:1px solid #dfd3ae;
- border-radius:18px;padding:20px;margin-top:25px;
- text-align:center;line-height:2;
-}
-.grid{
- display:grid;grid-template-columns:repeat(2,1fr);
- gap:13px;margin-top:20px;
-}
-.card{
- background:white;border:1px solid #e7dfc5;
- border-radius:15px;padding:18px 10px;text-align:center;
-}
-.symbol{font-size:30px}
-.card h3{color:#07563f}
-.card p{font-size:14px;color:#52665b;line-height:1.8}
-footer{
- background:#064e3b;color:white;text-align:center;
- padding:25px;line-height:2;margin-top:25px;
-}
-@media(min-width:650px){
- .quran-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
- .grid{grid-template-columns:repeat(4,1fr)}
-}
-@media(max-width:380px){
- .quran-card{padding:15px 8px}
- .quran-card h3{font-size:17px}
-}
+body{margin:0;background:#f3f6f2;color:var(--ink);font-family:system-ui,"Noto Nastaliq Urdu","Noto Naskh Arabic",serif;padding-bottom:96px}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.topbar{background:linear-gradient(135deg,var(--green),#176548);color:white;padding:18px 16px 22px;border-radius:0 0 24px 24px;box-shadow:var(--shadow)}
+.toprow{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:46px;height:46px;border:1px solid #d8b45a;border-radius:15px;display:grid;place-items:center;color:var(--gold);font-size:25px;background:#ffffff10}
+.brand h1{font-size:21px;margin:0}
+.brand small{display:block;color:#d7e7dc;font-size:11px;margin-top:2px}
+.datebox{font-size:12px;color:#e5eee8;text-align:left}
+.container{max-width:760px;margin:auto;padding:16px}
+.welcome{padding:19px;border-radius:20px;background:linear-gradient(135deg,#fffdf5,#e8f1e9);border:1px solid #e8dfc7;margin-top:16px}
+.welcome h2{margin:0 0 8px;color:var(--green);font-size:23px}
+.welcome p{margin:0;color:#52685c;font-size:14px;line-height:1.8}
+.section{display:none;animation:fade .2s ease}
+.section.active{display:block}
+@keyframes fade{from{opacity:.5;transform:translateY(4px)}to{opacity:1;transform:none}}
+.section-title{font-size:21px;color:var(--green);margin:8px 0 5px}
+.sub{color:var(--muted);font-size:13px;margin:0 0 15px;line-height:1.7}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}
+.quick{background:white;border:1px solid #e5ebe5;border-radius:16px;padding:14px 7px;text-align:center;box-shadow:var(--shadow);color:var(--green);min-height:90px}
+.quick span{display:block;font-size:25px;margin-bottom:6px}
+.quick b{font-size:13px}
+.card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tile{background:white;border:1px solid #e4eae4;border-radius:18px;padding:16px 13px;box-shadow:var(--shadow);text-align:right;color:var(--ink);width:100%;min-height:112px}
+.tile .ico{font-size:27px;display:block;margin-bottom:8px}
+.tile strong{display:block;color:var(--green);font-size:16px}
+.tile small{display:block;color:var(--muted);font-size:12px;line-height:1.6;margin-top:5px}
+.quran-tile{background:var(--blue);border:1px solid var(--blue-line)}
+.pill{display:inline-block;background:#d7e8ff;color:#174a7b;border-radius:20px;padding:3px 9px;font-size:11px;margin-top:8px}
+.search{display:flex;gap:8px;margin:12px 0}
+.search input{min-width:0;flex:1;border:1px solid #d8e2d9;border-radius:12px;padding:12px;background:white;outline:none}
+.primary{border:0;background:var(--green2);color:white;border-radius:12px;padding:10px 15px}
+.panel{background:white;border:1px solid #e4eae4;border-radius:16px;padding:14px;margin:12px 0;box-shadow:var(--shadow)}
+.panel h3{margin:0 0 8px;color:var(--green);font-size:16px}
+.muted{color:var(--muted);font-size:13px;line-height:1.8}
+.langs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.lang{border:1px solid #cddbd0;background:white;color:var(--green);border-radius:20px;padding:8px 13px;font-size:13px}
+.lang.selected{background:var(--green);color:white}
+.book-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.book{background:#fff;border:1px solid #e1e9e2;border-radius:14px;padding:13px;text-align:right;color:var(--green);font-weight:600}
+.notice{background:#fff8e6;border:1px solid #efdfb7;border-radius:14px;padding:12px;color:#715a20;font-size:12px;line-height:1.8;margin-top:14px}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e1e8e2;box-shadow:0 -5px 20px #173b2b12;z-index:10;padding:7px max(8px,env(safe-area-inset-left)) calc(7px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(6,1fr);gap:2px;max-width:900px;margin:auto}
+.navbtn{border:0;background:transparent;color:#718077;border-radius:12px;padding:5px 1px 3px;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0}
+.navbtn .ni{font-size:21px;line-height:1.2}
+.navbtn.active{color:var(--green);background:#edf5ef;font-weight:700}
+.navbtn.active .ni{color:#b38b2e}
+.more-menu{display:none;position:fixed;bottom:83px;left:12px;right:12px;max-width:450px;margin:auto;background:white;border:1px solid #dfe8df;border-radius:18px;padding:10px;box-shadow:0 12px 35px #102f2230;z-index:11}
+.more-menu.open{display:block}
+.more-menu button{width:100%;border:0;background:white;text-align:right;padding:13px;border-radius:10px;color:var(--green)}
+.more-menu button+button{border-top:1px solid #edf0ed}
+.footer{text-align:center;color:#89958d;font-size:11px;margin:25px 0 5px}
+@media(max-width:390px){.navbtn{font-size:9px}.navbtn .ni{font-size:19px}.card-grid{gap:9px}.tile{padding:13px 10px}.quick-grid{gap:7px}}
 </style>
 </head>
-
 <body>
 
-<header>
- <div class="logo">نور الاسلام</div>
- <p>قرآن مجید • حدیث • اسلامی تعلیمات</p>
+<header class="topbar">
+ <div class="toprow">
+  <div class="brand">
+   <div class="logo">☪</div>
+   <div><h1>نور الاسلام</h1><small>قرآن • حدیث • علم و رہنمائی</small></div>
+  </div>
+  <div class="datebox">خوش آمدید<br><b>السلام علیکم</b></div>
+ </div>
 </header>
 
-<nav>
- <a href="#home">ہوم</a>
- <a href="#quran">قرآن مجید</a>
- <a href="#hadith">حدیث</a>
- <a href="#services">اسلامی سہولیات</a>
-</nav>
+<main class="container">
 
-<div class="hero" id="home">
- <h1>نور الاسلام</h1>
- <p>قرآن و سنت کی روشنی میں علم حاصل کرنے کا خوبصورت سفر</p>
- <a class="btn" href="#quran">قرآن مجید کھولیں</a>
+<section id="home" class="section active">
+ <div class="welcome">
+  <h2>نور الاسلام میں خوش آمدید</h2>
+  <p>قرآن مجید، حدیث، اذکار اور اسلامی تعلیمات کے لیے ایک جامع جگہ۔ اپنی پسند کا حصہ منتخب کریں۔</p>
+ </div>
+ <div class="panel">
+  <h3>آج کی رہنمائی</h3>
+  <p class="muted">یہاں مستند روزانہ آیت، ترجمہ اور حوالہ شامل کیا جائے گا۔ مستند مواد شامل ہونے تک یہ جگہ تعارفی ہے۔</p>
+ </div>
+ <h2 class="section-title">اہم سہولیات</h2>
+ <div class="quick-grid">
+  <button class="quick" onclick="showPage('quran')"><span>📖</span><b>قرآن مجید</b></button>
+  <button class="quick" onclick="showPage('hadith')"><span>📚</span><b>حدیث شریف</b></button>
+  <button class="quick" onclick="showPage('azkar')"><span>🤲</span><b>اذکار و دعائیں</b></button>
+  <button class="quick" onclick="showPage('teaching')"><span>🎓</span><b>آن لائن تعلیم</b></button>
+  <button class="quick" onclick="showPage('shopping')"><span>🛍️</span><b>النور شاپنگ</b></button>
+  <button class="quick" onclick="showPage('morepage')"><span>⋯</span><b>مزید سہولیات</b></button>
+ </div>
+ <div class="panel">
+  <h3>نماز اور اسلامی اوقات</h3>
+  <p class="muted">نماز کے اوقات، اذان نوٹیفکیشن اور اسلامی کیلنڈر کی سہولت اگلے مرحلے میں مقام اور مستند اوقات کے ذریعے فعال کی جائے گی۔</p>
+ </div>
+</section>
+
+<section id="quran" class="section">
+ <h2 class="section-title">قرآن مجید</h2>
+ <p class="sub">قرآن پڑھنے کا مطلوبہ طریقہ منتخب کریں۔</p>
+ <div class="card-grid">
+  <button class="tile quran-tile" onclick="showPage('mushaf')">
+   <span class="ico">📖</span><strong>قرآن مجید پڑھیں</strong>
+   <small>مختلف لائنوں والے قرآن مجید</small><span class="pill">قرآن ریڈنگ</span>
+  </button>
+  <button class="tile quran-tile" onclick="showPage('translation')">
+   <span class="ico">📚</span><strong>قرآن مجید کا ترجمہ پڑھیں</strong>
+   <small>عربی آیات کے ساتھ منتخب ترجمہ</small><span class="pill">ترجمہ و تفسیر</span>
+  </button>
+ </div>
+ <div class="panel">
+  <h3>تجویدی کلر ریڈنگ</h3>
+  <p class="muted">تجوید کے قواعد کو الگ رنگوں میں دکھانے کی سہولت یہاں شامل کی جائے گی۔ مستند رنگوں اور مصحف کے حقوق کی تصدیق کے بعد اسے فعال کیا جائے گا۔</p>
+ </div>
+</section>
+
+<section id="mushaf" class="section">
+ <h2 class="section-title">قرآن مجید پڑھیں</h2>
+ <p class="sub">اپنی مطلوبہ لائنوں والا قرآن منتخب کریں۔</p>
+ <div class="card-grid">
+  <button class="tile quran-tile" onclick="formatNotice(11)"><span class="ico">📗</span><strong>11 لائنوں والا قرآن مجید</strong><small>پڑھنے کے لیے منتخب کریں</small></button>
+  <button class="tile quran-tile" onclick="formatNotice(12)"><span class="ico">📗</span><strong>12 لائنوں والا قرآن مجید</strong><small>پڑھنے کے لیے منتخب کریں</small></button>
+  <button class="tile quran-tile" onclick="formatNotice(13)"><span class="ico">📗</span><strong>13 لائنوں والا قرآن مجید</strong><small>پڑھنے کے لیے منتخب کریں</small></button>
+  <button class="tile quran-tile" onclick="formatNotice(15)"><span class="ico">📗</span><strong>15 لائنوں والا قرآن مجید</strong><small>پڑھنے کے لیے منتخب کریں</small></button>
+  <button class="tile quran-tile" onclick="formatNotice(16)"><span class="ico">📗</span><strong>16 لائنوں والا قرآن مجید</strong><small>پڑھنے کے لیے منتخب کریں</small></button>
+  <button class="tile quran-tile" onclick="formatNotice(18)"><span class="ico">📗</span><strong>18 لائنوں والا قرآن مجید</strong><small>پڑھنے کے لیے منتخب کریں</small></button>
+ </div>
+ <div id="formatMessage" class="notice">نوٹ: ان نسخوں کے اصل صفحات ابھی شامل نہیں کیے گئے۔ ہر نسخے کے مستند اور اجازت یافتہ صفحات ملنے کے بعد ہی پڑھنے کا فیچر فعال ہوگا۔</div>
+ <button class="primary" style="margin-top:12px" onclick="showPage('quran')">واپس قرآن مجید</button>
+</section>
+
+<section id="translation" class="section">
+ <h2 class="section-title">قرآن مجید کا ترجمہ پڑھیں</h2>
+ <p class="sub">سورت یا آیت نمبر تلاش کریں اور ترجمے کی زبان منتخب کریں۔</p>
+ <div class="search">
+  <input id="ayahSearch" placeholder="سورت یا آیت نمبر تلاش کریں">
+  <button class="primary" onclick="searchAyah()">تلاش</button>
+ </div>
+ <div class="panel">
+  <h3>ترجمے کی زبان منتخب کریں</h3>
+  <div class="langs">
+   <button class="lang selected" onclick="chooseLang(this,'اردو')">اردو</button>
+   <button class="lang" onclick="chooseLang(this,'English')">English</button>
+   <button class="lang" onclick="chooseLang(this,'پښتو')">پښتو</button>
+   <button class="lang" onclick="chooseLang(this,'العربية')">العربية</button>
+  </div>
+  <p class="muted" id="langStatus">منتخب زبان: اردو</p>
+ </div>
+ <div class="panel">
+  <h3>آیت اور ترجمہ</h3>
+  <p class="muted" id="translationResult">مستند عربی متن اور منتخب زبان کا مستند ترجمہ شامل ہونے کے بعد یہاں دکھایا جائے گا۔</p>
+ </div>
+ <div class="notice">قرآنی متن اور تراجم مستند ماخذ سے حاصل کرکے حوالہ اور حقوق کی تصدیق کے بعد شامل کیے جائیں گے۔ یہ ڈیزائن ابھی نمونہ ہے، مکمل قرآن یا ترجمہ اس میں موجود نہیں۔</div>
+</section>
+
+<section id="hadith" class="section">
+ <h2 class="section-title">حدیث شریف</h2>
+ <p class="sub">حدیث کی کتاب منتخب کریں۔ ہر کتاب کا الگ مطالعہ صفحہ تیار کیا جائے گا۔</p>
+ <div class="search">
+  <input id="hadithSearch" placeholder="حدیث کی کتاب تلاش کریں">
+  <button class="primary" onclick="filterBooks()">تلاش</button>
+ </div>
+ <div class="book-list" id="bookList">
+  <button class="book">صحیح البخاری</button>
+  <button class="book">صحیح مسلم</button>
+  <button class="book">سنن ابی داؤد</button>
+  <button class="book">جامع ترمذی</button>
+  <button class="book">سنن النسائی</button>
+  <button class="book">سنن ابن ماجہ</button>
+  <button class="book">موطأ امام مالک</button>
+  <button class="book">مسند احمد</button>
+ </div>
+ <div class="notice">یہ ابتدائی فہرست ہے، 36 یا 37 کتابوں کی حتمی فہرست مستند مجموعوں کی تحقیق کے بعد شامل ہوگی۔ حدیث کا اصل متن، ترجمہ اور حوالہ مستند ماخذ سے شامل کیا جائے گا۔</div>
+</section>
+
+<section id="azkar" class="section">
+ <h2 class="section-title">اذکار و دعائیں</h2>
+ <p class="sub">روزمرہ کی دعاؤں اور اذکار کے لیے الگ جگہ۔</p>
+ <div class="card-grid">
+  <button class="tile"><span class="ico">🌅</span><strong>صبح کے اذکار</strong><small>مستند اذکار اور حوالہ</small></button>
+  <button class="tile"><span class="ico">🌙</span><strong>شام کے اذکار</strong><small>مستند اذکار اور حوالہ</small></button>
+  <button class="tile"><span class="ico">🤲</span><strong>روزمرہ کی دعائیں</strong><small>عربی، ترجمہ اور حوالہ</small></button>
+  <button class="tile"><span class="ico">📿</span><strong>تسبیح کاؤنٹر</strong><small>ڈیجیٹل تسبیح</small></button>
+ </div>
+ <div class="notice">اصل دعائیں اور اذکار مستند حوالوں کے ساتھ اگلے مرحلے میں شامل کیے جائیں گے۔</div>
+</section>
+
+<section id="teaching" class="section">
+ <h2 class="section-title">النور آن لائن ٹیچنگ سینٹر</h2>
+ <div class="panel">
+  <h3>آن لائن قرآن و اسلامی تعلیم</h3>
+  <p class="muted">یہاں کورسز، اساتذہ، اوقات، داخلہ اور رابطے کی تفصیلات شامل ہوں گی۔</p>
+ </div>
+ <div class="card-grid">
+  <button class="tile"><span class="ico">📖</span><strong>قرآن ناظرہ</strong></button>
+  <button class="tile"><span class="ico">🌟</span><strong>تجوید کورس</strong></button>
+  <button class="tile"><span class="ico">🧒</span><strong>بچوں کی تعلیم</strong></button>
+  <button class="tile"><span class="ico">📝</span><strong>داخلہ معلومات</strong></button>
+ </div>
+</section>
+
+<section id="shopping" class="section">
+ <h2 class="section-title">النور شاپنگ سینٹر</h2>
+ <div class="panel">
+  <h3>اسلامی کتب اور ضروری اشیاء</h3>
+  <p class="muted">یہاں مصنوعات، قیمتیں، دستیابی اور آرڈر کی تفصیلات بعد میں شامل کی جائیں گی۔</p>
+ </div>
+</section>
+
+<section id="morepage" class="section">
+ <h2 class="section-title">مزید سہولیات</h2>
+ <div class="card-grid">
+  <button class="tile"><span class="ico">🕋</span><strong>قبلہ رخ</strong><small>قبلہ معلوم کرنے کی سہولت</small></button>
+  <button class="tile"><span class="ico">🕌</span><strong>نماز کے اوقات</strong><small>مقام کے مطابق اوقات</small></button>
+  <button class="tile"><span class="ico">📅</span><strong>اسلامی کیلنڈر</strong><small>ہجری تاریخ</small></button>
+  <button class="tile"><span class="ico">🕋</span><strong>حج و عمرہ گائیڈ</strong><small>رہنمائی اور معلومات</small></button>
+ </div>
+</section>
+
+<div class="footer">نور الاسلام • علم، عمل اور رہنمائی</div>
+</main>
+
+<div id="moreMenu" class="more-menu">
+ <button onclick="showPage('shopping')">🛍️ النور شاپنگ سینٹر</button>
+ <button onclick="showPage('morepage')">🕌 نماز، قبلہ اور اسلامی کیلنڈر</button>
+ <button onclick="showPage('teaching')">🎓 النور آن لائن ٹیچنگ سینٹر</button>
 </div>
 
-<section id="quran">
- <h2>القرآن الکریم</h2>
- <div class="bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
- <p class="intro">
- اپنے پسندیدہ قرآن مجید کے نسخے کا انتخاب کریں۔
- </p>
+<nav class="bottom" aria-label="مرکزی مینیو">
+ <button class="navbtn active" data-page="home" onclick="showPage('home')"><span class="ni">⌂</span>ہوم</button>
+ <button class="navbtn" data-page="quran" onclick="showPage('quran')"><span class="ni">📖</span>قرآن</button>
+ <button class="navbtn" data-page="hadith" onclick="showPage('hadith')"><span class="ni">📚</span>حدیث</button>
+ <button class="navbtn" data-page="azkar" onclick="showPage('azkar')"><span class="ni">🤲</span>اذکار</button>
+ <button class="navbtn" data-page="more" onclick="showMore()"><span class="ni">⋯</span>مزید</button>
+ <button class="navbtn" data-page="teaching" onclick="showPage('teaching')"><span class="ni">🎓</span>تعلیم</button>
+</nav>
 
- <div class="quran-grid">
+<script>
+const pages=['home','quran','mushaf','translation','hadith','azkar','teaching','shopping','morepage'];
 
-  <div class="quran-card">
-   <div class="book-line">
-    <span class="book-icon">📖</span>
-    <span class="tajweed">تجویدی</span>
-   </div>
-   <h3>11 لائن قرآن مجید</h3>
-   <p>11 لائن والا قرآن مجید</p>
-   <span class="status">نسخہ شامل ہونا باقی ہے</span>
-  </div>
+function showPage(id){
+ pages.forEach(p=>{
+  const el=document.getElementById(p);
+  if(el)el.classList.toggle('active',p===id);
+ });
+ document.querySelectorAll('.navbtn').forEach(b=>
+  b.classList.toggle('active',
+   b.dataset.page===id ||
+   ((id==='mushaf'||id==='translation')&&b.dataset.page==='quran') ||
+   (id==='shopping'&&b.dataset.page==='more')
+  )
+ );
+ closeMore();
+ window.scrollTo({top:0,behavior:'smooth'});
+}
 
-  <div class="quran-card">
-   <div class="book-line">
-    <span class="book-icon">📖</span>
-    <span class="tajweed">تجویدی</span>
-   </div>
-   <h3>12 لائن قرآن مجید</h3>
-   <p>12 لائن والا قرآن مجید</p>
-   <span class="status">نسخہ شامل ہونا باقی ہے</span>
-  </div>
-
-  <div class="quran-card">
-   <div class="book-line">
-    <span class="book-icon">📖</span>
-    <span class="tajweed">تجویدی</span>
-   </div>
-   <h3>13 لائن قرآن مجید</h3>
-   <p>13 لائن والا قرآن مجید</p>
-   <span class="status">نسخہ شامل ہونا باقی ہے</span>
-  </div>
-
-  <div class="quran-card">
-   <div class="book-line">
-    <span class="book-icon">📖</span>
-    <span class="tajweed">تجویدی</span>
-   </div>
-   <h3>15 لائن قرآن مجید</h3>
-   <p>15 لائن والا قرآن مجید</p>
-   <span class="status">نسخہ شامل ہونا باقی ہے</span>
-  </div>
-
-  <div class="quran-card">
-   <div class="book-line">
-    <span class="book-icon">📖</span>
-    <span class="tajweed">تجویدی</span>
-   </div>
-   <h3>16 لائن قرآن مجید</h3>
-   <p>16 لائن والا قرآن مجید</p>
-   <a class="active-link"
-      href="https://www.tajweediquran.com/16-line-quran"
-      target="_blank" rel="noopener">
-      قرآن مجید پڑھیں
-   </a>
-  </div>
-
-  <div class="quran-card">
-   <div class="book-line">
-    <span class="book-icon">📖</span>
-    <span class="tajweed">تجویدی</span>
-   </div>
-   <h3>18 لائن قرآن مجید</h3>
-   <p>18 لائن والا قرآن مجید</p>
-   <span class="status">نسخہ شامل ہونا باقی ہے</span>
-  </div>
-
- </div>
-
- <div class="translation-box">
-  <div class="book-line">
-   <span class="book-icon">📚</span>
-  </div>
-  <h3>آیت بہ آیت قرآن مجید</h3>
-  <p>عربی آیت کے ساتھ ترجمہ اور تفسیر</p>
-  <p>اردو • پشتو • عربی • انگریزی</p>
-  <span class="status">مستند قرآنی مواد شامل ہونا باقی ہے</span>
- </div>
-
-</section>
-
-<section id="hadith">
- <h2>احادیث مبارکہ</h2>
- <div class="notice">
- صحیح احادیث، کتاب اور حدیث نمبر کے مستند حوالوں کے ساتھ شامل کی جائیں گی۔
- </div>
-</section>
-
-<section id="services">
- <h2>اسلامی سہولیات</h2>
- <div class="grid">
-
-  <div class="card">
-   <div class="symbol">📖</div>
-   <h3>تفسیر</h3><p>مستند تفاسیر</p>
-  </div>
-
-  <div class="card">
-   <div class="symbol">📚</div>
-   <h3>فقہ</h3><p>اسلامی مسائل</p>
-  </div>
-
-  <div class="card">
-   <div class="symbol">🕌</div>
-   <h3>نماز کے اوقات</h3><p>مقام کے مطابق اوقات</p>
-  </div>
-
-  <div class="card">
-   <div class="symbol">🔊</div>
-   <h3>اذان</h3><p>اذان کی سہولت</p>
-  </div>
-
-  <div class="card">
-   <div class="symbol">🤲</div>
-   <h3>دعائیں</h3><p>مسنون دعائیں</p>
-  </div>
-
-  <div class="card">
-   <div class="symbol">📿</div>
-   <h3>اذکار</h3><p>صبح و شام کے اذکار</p>
-  </div>
-
-  <div class="card">
-   <div class="symbol">🧭</div>
-   <h3>قبلہ</h3><p>قبلہ معلوم کرنے کی سہولت</p>
-  </div>
-
-  <div class="card">
-   <div class="symbol">🌙</div>
-   <h3>سیرت النبی ﷺ</h3><p>مستند اسلامی تاریخ</p>
-  </div>
-
- </div>
-</section>
-
-<footer>
- <strong>نور الاسلام</strong>
- <p>علم حاصل کریں، عمل کریں اور دوسروں تک پہنچائیں۔</p>
- <p>اللہ تعالیٰ اس کوشش کو قبول فرمائے۔ آمین</p>
-</footer>
-
+function showMore(){
+ document.getElementById('moreMenu').classList.toggle('open');
+}
+function closeMore(){
+ document.getElementById('moreMenu').classList.remove('open');
+}
+function formatNotice(n){
+ document.getElementById('formatMessage').textContent=
+ n+' لائنوں والے قرآن مجید کا انتخاب ہوگیا۔ اس نسخے کے مستند اور اجازت یافتہ صفحات شامل ہونے کے بعد مطالعہ فعال ہوگا۔';
+}
+function chooseLang(btn,lang){
+ document.querySelectorAll('.lang').forEach(x=>x.classList.remove('selected'));
+ btn.classList.add('selected');
+ document.getElementById('langStatus').textContent='منتخب زبان: '+lang;
+}
+function searchAyah(){
+ const q=document.getElementById('ayahSearch').value.trim();
+ document.getElementById('translationResult').textContent=
+ q?'آپ کی تلاش "'+q+'" محفوظ ہوگئی۔ مستند قرآنی ڈیٹا منسلک ہونے کے بعد نتیجہ دکھایا جائے گا۔':'براہِ کرم سورت یا آیت نمبر لکھیں۔';
+}
+function filterBooks(){
+ const q=document.getElementById('hadithSearch').value.trim();
+ document.querySelectorAll('#bookList .book').forEach(b=>
+  b.style.display=b.textContent.includes(q)?'block':'none'
+ );
+}
+</script>
 </body>
 </html>
+
+ 
+ 
