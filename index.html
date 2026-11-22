@@ -6,35 +6,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#075c42">
 <title>نور الاسلام | Noor-ul-Islam</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
 :root{
- --green:#075c42;
- --deep:#064632;
- --gold:#c9a44c;
- --cream:#fbf9f1;
- --white:#ffffff;
- --text:#263b32;
- --muted:#718078;
- --border:#e9e5d8;
- --soft:#f1f5ef;
- --shadow:0 5px 22px rgba(15,65,45,.08);
+ --green:#075c42;--deep:#064632;--gold:#c9a44c;
+ --cream:#fbf9f1;--text:#263b32;--muted:#718078;
+ --border:#e9e5d8;--shadow:0 5px 22px rgba(15,65,45,.08);
 }
 *{box-sizing:border-box}
 body{
  margin:0;background:var(--cream);color:var(--text);
- font-family:'Noto Nastaliq Urdu',serif;
- padding-bottom:100px;
+ font-family:'Noto Nastaliq Urdu',serif;padding-bottom:100px;
 }
 button,input,select,textarea{font:inherit}
 button{cursor:pointer}
 header{
  background:linear-gradient(135deg,var(--deep),var(--green));
- color:white;padding:17px 16px 20px;
- border-radius:0 0 25px 25px;
+ color:white;padding:17px 16px 20px;border-radius:0 0 25px 25px;
  box-shadow:var(--shadow);
 }
 .topbar{display:flex;align-items:center;justify-content:space-between}
@@ -47,8 +36,8 @@ header{
 .brand h1{font-size:21px;margin:0;color:#fff}
 .brand small{display:block;font:11px Inter,sans-serif;color:#e8d9ac}
 .menu-btn{
- background:#ffffff1c;border:1px solid #ffffff40;
- color:white;border-radius:12px;width:43px;height:43px;font-size:23px;
+ background:#ffffff1c;border:1px solid #ffffff40;color:white;
+ border-radius:12px;width:43px;height:43px;font-size:23px;
 }
 .header-note{text-align:center;margin-top:14px;color:#f3e9c9;font-size:12px}
 main{max-width:650px;margin:auto;padding:17px 14px}
@@ -59,25 +48,21 @@ main{max-width:650px;margin:auto;padding:17px 14px}
 .sub-title{font-size:16px;color:var(--green);margin:17px 0 10px}
 .muted{color:var(--muted);font-size:12px}
 .date-card{
- background:white;border:1px solid var(--border);
- border-radius:17px;padding:13px;text-align:center;
- box-shadow:var(--shadow);margin-bottom:14px;
+ background:white;border:1px solid var(--border);border-radius:17px;
+ padding:13px;text-align:center;box-shadow:var(--shadow);margin-bottom:14px;
 }
 .date-card strong{display:block;color:var(--green);font-size:15px}
 .date-card span{font-size:12px;color:var(--muted)}
 .hero{
- background:linear-gradient(135deg,#0a6549,#0c8058);
- color:white;border-radius:20px;padding:20px;
- position:relative;overflow:hidden;margin-bottom:15px;
+ background:linear-gradient(135deg,#0a6549,#0c8058);color:white;
+ border-radius:20px;padding:20px;position:relative;overflow:hidden;margin-bottom:15px;
 }
-.hero:after{content:"☪";position:absolute;left:12px;top:-18px;
- font-size:100px;color:#ffffff12}
+.hero:after{content:"☪";position:absolute;left:12px;top:-18px;font-size:100px;color:#ffffff12}
 .hero h2{font-size:21px;margin:0 0 5px}
 .hero p{font-size:12px;color:#e4eddf;margin:0}
 .info-card{
- background:white;border:1px solid var(--border);
- border-radius:17px;padding:15px;margin-bottom:13px;
- box-shadow:var(--shadow);
+ background:white;border:1px solid var(--border);border-radius:17px;
+ padding:15px;margin-bottom:13px;box-shadow:var(--shadow);
 }
 .info-card h3{margin:0 0 8px;color:var(--green);font-size:16px}
 .info-card p{font-size:13px;line-height:2;margin:4px 0}
@@ -87,33 +72,29 @@ main{max-width:650px;margin:auto;padding:17px 14px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
 .tile{
  background:white;border:1px solid var(--border);border-radius:16px;
- min-height:105px;padding:13px 9px;text-align:center;
- color:var(--green);box-shadow:var(--shadow);
- transition:.2s;
+ min-height:105px;padding:13px 9px;text-align:center;color:var(--green);
+ box-shadow:var(--shadow);transition:.2s;
 }
 .tile:active{transform:scale(.97)}
 .tile .symbol{font-size:27px;display:block;margin-bottom:5px}
 .tile strong{font-size:13px;display:block}
 .tile small{font-size:10px;color:var(--muted)}
 .big-tile{min-height:120px}
-.action{
- background:var(--green);color:white;border:0;border-radius:12px;
- padding:10px 16px;font-size:13px;
-}
+.action{background:var(--green);color:white;border:0;border-radius:12px;padding:10px 16px;font-size:13px}
 .action.gold{background:var(--gold);color:#25372d}
 .action.light{background:#edf4ed;color:var(--green)}
 .field{
- width:100%;padding:11px;border:1px solid var(--border);
- border-radius:11px;background:white;margin:5px 0 12px;
- outline-color:var(--green);font-size:13px;
+ width:100%;padding:11px;border:1px solid var(--border);border-radius:11px;
+ background:white;margin:5px 0 12px;outline-color:var(--green);font-size:13px;
 }
 .book-card{
- background:white;border:1px solid var(--border);
- border-radius:14px;padding:13px;text-align:center;
- box-shadow:var(--shadow);min-height:83px;
+ background:white;border:1px solid var(--border);border-radius:14px;
+ padding:13px;text-align:center;box-shadow:var(--shadow);min-height:83px;
 }
 .book-card strong{display:block;color:var(--green);font-size:13px}
 .book-card small{color:var(--muted);font-size:10px}
+
+/* نیچے کے سات بٹن: دائیں سے بائیں */
 .bottom-nav{
  position:fixed;bottom:0;left:0;right:0;z-index:20;
  background:#fff;border-top:1px solid var(--border);
@@ -123,27 +104,26 @@ main{max-width:650px;margin:auto;padding:17px 14px}
  direction:rtl;
 }
 .nav-btn{
- border:0;background:transparent;color:#77857d;
- min-width:0;padding:6px 1px;border-radius:12px;
- display:flex;flex-direction:column;align-items:center;gap:3px;
+ border:0;background:transparent;color:#77857d;min-width:0;
+ padding:6px 1px;border-radius:12px;display:flex;
+ flex-direction:column;align-items:center;gap:3px;
  font-size:10px;white-space:nowrap;
 }
 .nav-btn .ico{font-size:20px;line-height:1.2}
 .nav-btn.selected{background:#eaf3ec;color:var(--green);font-weight:bold}
-.nav-btn.home-nav{color:white;background:var(--green);border:3px solid #e5d4a4;
+.nav-btn.home-nav{
+ color:white;background:var(--green);border:3px solid #e5d4a4;
  min-height:62px;margin:0 1px;padding:6px 2px;
  border-radius:17px 17px 13px 13px;transform:translateY(-7px);
- box-shadow:0 4px 12px #075c4233}
+ box-shadow:0 4px 12px #075c4233;
+}
 .nav-btn.home-nav .ico{font-size:25px}
 .nav-btn.home-nav.selected{background:var(--deep)}
-.drawer-backdrop{
- display:none;position:fixed;inset:0;background:#0007;z-index:30
-}
+.drawer-backdrop{display:none;position:fixed;inset:0;background:#0007;z-index:30}
 .drawer-backdrop.open{display:block}
 .drawer{
  position:absolute;right:0;top:0;bottom:0;width:min(310px,85vw);
- background:var(--cream);padding:20px;overflow:auto;
- border-radius:20px 0 0 20px;
+ background:var(--cream);padding:20px;overflow:auto;border-radius:20px 0 0 20px;
 }
 .drawer-head{display:flex;justify-content:space-between;align-items:center;color:var(--green)}
 .drawer-head button{border:0;background:#e9eee8;border-radius:9px;padding:7px 12px}
@@ -152,15 +132,12 @@ main{max-width:650px;margin:auto;padding:17px 14px}
 .counter{font-size:38px;color:var(--green);text-align:center;margin:12px}
 footer{text-align:center;font-size:11px;color:var(--muted);padding:22px}
 .floating-contact{
- position:fixed;left:15px;bottom:92px;z-index:15;
- width:53px;height:53px;border-radius:50%;
- background:linear-gradient(145deg,var(--gold),#f1d58a);
- color:var(--deep);border:3px solid white;
- box-shadow:0 5px 18px #0002;font-size:24px;
- display:grid;place-items:center;
+ position:fixed;left:15px;bottom:92px;z-index:15;width:53px;height:53px;
+ border-radius:50%;background:linear-gradient(145deg,var(--gold),#f1d58a);
+ color:var(--deep);border:3px solid white;box-shadow:0 5px 18px #0002;
+ font-size:24px;display:grid;place-items:center;
 }
-.notice{background:#fff8e7;border:1px solid #ead9a9;color:#715b2b;
- padding:12px;border-radius:12px;font-size:12px;line-height:2}
+.notice{background:#fff8e7;border:1px solid #ead9a9;color:#715b2b;padding:12px;border-radius:12px;font-size:12px;line-height:2}
 .hidden{display:none!important}
 body.english{font-family:Inter,sans-serif;direction:ltr}
 body.english .arabic{font-family:Amiri,serif;direction:rtl}
@@ -172,16 +149,13 @@ body.english .drawer{right:auto;left:0;border-radius:0 20px 20px 0}
 }
 </style>
 </head>
-
 <body>
+
 <header>
  <div class="topbar">
   <div class="brand">
    <div class="logo">☪</div>
-   <div>
-    <h1>نور الاسلام</h1>
-    <small>NOOR-UL-ISLAM</small>
-   </div>
+   <div><h1>نور الاسلام</h1><small>NOOR-UL-ISLAM</small></div>
   </div>
   <button class="menu-btn" onclick="openMenu()" aria-label="مینو">☰</button>
  </div>
@@ -189,7 +163,7 @@ body.english .drawer{right:auto;left:0;border-radius:0 20px 20px 0}
 </header>
 
 <main>
- <!-- HOME -->
+ <!-- ہوم -->
  <section class="page active" id="home">
   <div class="date-card">
    <strong id="gregDate">انگریزی تاریخ</strong>
@@ -199,56 +173,49 @@ body.english .drawer{right:auto;left:0;border-radius:0 20px 20px 0}
    <h2>السلام علیکم ورحمۃ اللہ</h2>
    <p>نور الاسلام میں آپ کا خیر مقدم ہے</p>
   </div>
-
   <div class="info-card">
    <h3>آج کی قرآنی آیت</h3>
    <div class="arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
    <p class="translation">شروع اللہ کے نام سے جو نہایت مہربان، بے حد رحم فرمانے والا ہے۔</p>
    <span class="tag">سورۃ الفاتحہ: 1</span>
   </div>
-
   <div class="info-card">
    <h3>آج کی حدیث</h3>
    <p>یہاں مستند حدیث، اس کا عربی متن، اردو ترجمہ اور مکمل حوالہ مستند ڈیٹابیس سے منسلک ہونے کے بعد دکھایا جائے گا۔</p>
    <span class="tag">مستند حوالہ منسلک ہونا باقی ہے</span>
   </div>
-
   <div class="info-card">
    <h3>آج کا اسلامی پیغام</h3>
    <p>اپنے دن کا آغاز اللہ تعالیٰ کے ذکر اور اچھی نیت سے کریں۔</p>
    <button class="action light" onclick="copyStatus()">واٹس ایپ اسٹیٹس کاپی کریں</button>
   </div>
-
   <div class="info-card">
    <h3>نماز کے اوقات</h3>
    <p>نماز کے درست اوقات مقام اور مستند حسابی طریقے کے مطابق حاصل کیے جائیں گے۔</p>
    <span class="tag">نماز ٹائم سروس ابھی منسلک نہیں</span>
   </div>
-
   <div class="info-card">
-   <h3>نور الاسلام کی سہولیات</h3>
-   <p>قرآن مجید، حدیث، اذکار، آن لائن تعلیم اور شاپنگ کے لیے نیچے موجود بٹن استعمال کریں۔</p>
+   <h3>نور الاسلام</h3>
+   <p>قرآن و سنت کی روشنی میں ایک جامع اسلامی پلیٹ فارم۔</p>
   </div>
  </section>
 
- <!-- QURAN -->
+ <!-- قرآن -->
  <section class="page" id="quran">
   <h2 class="section-title">قرآن مجید</h2>
   <p class="muted">قرآن کریم کے لیے الگ اور مکمل مطالعے کا صفحہ</p>
   <div class="grid">
    <button class="tile big-tile" onclick="showQuranRead()">
-    <span class="symbol">📖</span><strong>قرآن مجید پڑھیں</strong>
-    <small>مختلف لائنوں والے مصاحف</small>
+    <span class="symbol">📖</span><strong>قرآن مجید پڑھیں</strong><small>مختلف لائنوں والے مصاحف</small>
    </button>
    <button class="tile big-tile" onclick="showTranslation()">
-    <span class="symbol">🌙</span><strong>قرآن مجید کا ترجمہ پڑھیں</strong>
-    <small>مختلف زبانوں میں</small>
+    <span class="symbol">🌙</span><strong>قرآن مجید کا ترجمہ پڑھیں</strong><small>مختلف زبانوں میں</small>
    </button>
   </div>
   <div id="quranRead" class="info-card hidden">
    <h3>قرآن مجید کے مصاحف</h3>
    <p>اپنی پسند کا مصحف منتخب کریں:</p>
-   <div class="grid" id="lineChoices">
+   <div class="grid">
     <button class="tile" onclick="selectLine(11)">11 لائن</button>
     <button class="tile" onclick="selectLine(12)">12 لائن</button>
     <button class="tile" onclick="selectLine(13)">13 لائن</button>
@@ -269,7 +236,7 @@ body.english .drawer{right:auto;left:0;border-radius:0 20px 20px 0}
   </div>
  </section>
 
- <!-- HADITH -->
+ <!-- حدیث -->
  <section class="page" id="hadith">
   <h2 class="section-title">حدیث کی کتب</h2>
   <p class="muted">مشہور حدیث کی کتابوں کا انتخاب</p>
@@ -291,7 +258,7 @@ body.english .drawer{right:auto;left:0;border-radius:0 20px 20px 0}
   </div>
  </section>
 
- <!-- AZKAR -->
+ <!-- ذکر -->
  <section class="page" id="azkar">
   <h2 class="section-title">اذکار و دعائیں</h2>
   <div class="grid">
@@ -309,7 +276,7 @@ body.english .drawer{right:auto;left:0;border-radius:0 20px 20px 0}
   <div id="azkarMessage" class="info-card hidden"></div>
  </section>
 
- <!-- EDUCATION -->
+ <!-- تعلیم -->
  <section class="page" id="education">
   <div class="hero">
    <h2>النور آن لائن ٹیچنگ سینٹر</h2>
@@ -329,7 +296,7 @@ body.english .drawer{right:auto;left:0;border-radius:0 20px 20px 0}
   </div>
  </section>
 
- <!-- SHOPPING -->
+ <!-- شاپنگ -->
  <section class="page" id="shopping">
   <div class="hero">
    <h2>النور شاپنگ سینٹر</h2>
@@ -349,7 +316,7 @@ body.english .drawer{right:auto;left:0;border-radius:0 20px 20px 0}
   </div>
  </section>
 
- <!-- MORE -->
+ <!-- مزید -->
  <section class="page" id="more">
   <h2 class="section-title">مزید سہولیات</h2>
   <div class="grid">
@@ -370,16 +337,18 @@ body.english .drawer{right:auto;left:0;border-radius:0 20px 20px 0}
 
 <button class="floating-contact" onclick="contactUs()" aria-label="رابطہ">✉</button>
 
+<!-- اہم: بٹنوں کی ترتیب دائیں سے بائیں -->
 <nav class="bottom-nav">
- <button class="nav-btn" data-page="more" onclick="go('more')"><span class="ico">☰</span><span>مزید</span></button>
- <button class="nav-btn" data-page="shopping" onclick="go('shopping')"><span class="ico">🛍</span><span>شاپنگ</span></button>
- <button class="nav-btn" data-page="education" onclick="go('education')"><span class="ico">🎓</span><span>تعلیم</span></button>
- <button class="nav-btn home-nav selected" data-page="home" onclick="go('home')"><span class="ico">⌂</span><span>ہوم</span></button>
- <button class="nav-btn" data-page="azkar" onclick="go('azkar')"><span class="ico">📿</span><span>اذکار</span></button>
- <button class="nav-btn" data-page="hadith" onclick="go('hadith')"><span class="ico">📚</span><span>حدیث</span></button>
  <button class="nav-btn" data-page="quran" onclick="go('quran')"><span class="ico">📖</span><span>قرآن</span></button>
+ <button class="nav-btn" data-page="hadith" onclick="go('hadith')"><span class="ico">📚</span><span>حدیث</span></button>
+ <button class="nav-btn" data-page="azkar" onclick="go('azkar')"><span class="ico">📿</span><span>ذکر</span></button>
+ <button class="nav-btn home-nav selected" data-page="home" onclick="go('home')"><span class="ico">⌂</span><span>ہوم</span></button>
+ <button class="nav-btn" data-page="education" onclick="go('education')"><span class="ico">🎓</span><span>تعلیم</span></button>
+ <button class="nav-btn" data-page="shopping" onclick="go('shopping')"><span class="ico">🛍</span><span>شاپنگ</span></button>
+ <button class="nav-btn" data-page="more" onclick="go('more')"><span class="ico">☰</span><span>مزید</span></button>
 </nav>
 
+<!-- سائیڈ مینو -->
 <div class="drawer-backdrop" id="drawerBackdrop" onclick="backdropClose(event)">
  <aside class="drawer">
   <div class="drawer-head">
@@ -414,18 +383,16 @@ body.english .drawer{right:auto;left:0;border-radius:0 20px 20px 0}
 <footer>نور الاسلام — قرآن و سنت کی روشنی</footer>
 
 <script>
-const pageNames=['home','quran','hadith','azkar','education','shopping','more'];
-
 function go(name){
  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
- document.getElementById(name).classList.add('active');
+ const page=document.getElementById(name);
+ if(page) page.classList.add('active');
  document.querySelectorAll('.nav-btn').forEach(b=>{
   b.classList.toggle('selected',b.dataset.page===name);
  });
  window.scrollTo({top:0,behavior:'smooth'});
  closeMenu();
 }
-
 function openMenu(){document.getElementById('drawerBackdrop').classList.add('open')}
 function closeMenu(){document.getElementById('drawerBackdrop').classList.remove('open')}
 function backdropClose(e){if(e.target.id==='drawerBackdrop')closeMenu()}
@@ -446,7 +413,15 @@ function showNotice(title){
  const box=document.getElementById('azkarMessage');
  box.classList.remove('hidden');
  box.textContent=title+' کی مستند معلومات اور مواد شامل کرنا باقی ہے۔';
- if(document.ge
+}
+let count=0;
+function increment(){
+ count++;
+ document.getElementById('count').textContent=count;
+}
+function resetCount(){
+ count=0;
+ document.getEle
 
  
  
