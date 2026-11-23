@@ -9,33 +9,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+/* نمبر 01: بنیادی ڈیزائن شروع */
 :root{
- --green:#16834b;
- --dark:#075b35;
- --pale:#eaf5ed;
- --white:#fff;
- --text:#183b29;
- --muted:#77877c;
- --line:#dce9df;
+ --green:#16834b;--dark:#075b35;--pale:#eaf5ed;
+ --white:#fff;--text:#183b29;--muted:#77877c;--line:#dce9df;
 }
 *{box-sizing:border-box}
 body{
  margin:0;background:#f3f8f3;color:var(--text);
- font-family:'Noto Nastaliq Urdu',serif;
- padding-bottom:86px;
+ font-family:'Noto Nastaliq Urdu',serif;padding-bottom:86px;
 }
 button,input,select{font:inherit}
 button{cursor:pointer}
 header{
- background:var(--green);color:white;
- padding:12px 14px 15px;
+ background:var(--green);color:white;padding:12px 14px 15px;
  border-radius:0 0 19px 19px;
 }
 .topline{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .menu{
  width:40px;height:40px;border-radius:10px;
- border:1px solid #ffffff80;background:#ffffff18;
- color:white;font-size:22px
+ border:1px solid #ffffff80;background:#ffffff18;color:white;font-size:22px
 }
 .brand{font-size:22px;font-weight:bold}
 .brand small{display:block;font:10px Arial;letter-spacing:1px}
@@ -45,147 +38,83 @@ main{max-width:650px;margin:auto;padding:12px}
 .page{display:none}
 .page.active{display:block}
 .card{
- background:white;border:1px solid var(--line);
- border-radius:16px;padding:13px;margin-bottom:12px;
- box-shadow:0 2px 9px #164a2710
+ background:white;border:1px solid var(--line);border-radius:16px;
+ padding:13px;margin-bottom:12px;box-shadow:0 2px 9px #164a2710
 }
 .prayer{
- background:var(--dark);color:white;
- border-radius:17px;padding:13px;margin-bottom:12px;
+ background:var(--dark);color:white;border-radius:14px;
+ padding:9px;margin-bottom:9px;
 }
-.prayer h3{text-align:center;margin:0 0 9px;font-size:17px}
-.prayer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.prayer h3{text-align:center;margin:0 0 6px;font-size:15px}
+.prayer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
 .prayer-grid div{
- background:#ffffff17;border-radius:10px;
- padding:7px 2px;text-align:center;font-size:10px
+ background:#ffffff17;border-radius:8px;
+ padding:5px 2px;text-align:center;font-size:10px
 }
-.prayer-grid b{display:block;font-size:13px}
-.prayer-note{text-align:center;font-size:10px;margin-top:8px;color:#d8eee0}
+.prayer-grid b{display:block;font-size:12px}
+.prayer-note{text-align:center;font-size:9px;margin-top:5px;color:#d8eee0}
 .search-row{display:flex;gap:7px;margin:12px 0}
 .search{
  flex:1;display:flex;align-items:center;gap:5px;
  background:white;border:1.5px solid var(--green);
  border-radius:14px;padding:5px 10px
 }
-.search input{
- border:0;outline:0;background:transparent;
- width:100%;min-width:0;font-size:12px
-}
+.search input{border:0;outline:0;background:transparent;width:100%;min-width:0;font-size:12px}
 .search button{border:0;background:transparent;color:var(--green);font-size:21px}
-.heart{
- width:46px;border:0;border-radius:12px;
- background:var(--green);color:white;font-size:23px
-}
-.icon-strip{
- display:flex;justify-content:space-around;gap:9px;
- margin:0 0 12px
-}
+.heart{width:46px;border:0;border-radius:12px;background:var(--green);color:white;font-size:23px}
+.icon-strip{display:flex;justify-content:space-around;gap:9px;margin:0 0 12px}
 .icon-strip button{
- background:white;border:1px solid var(--line);
- color:var(--green);border-radius:11px;
- width:25%;padding:8px 3px;font-size:20px
+ background:white;border:1px solid var(--line);color:var(--green);
+ border-radius:11px;width:25%;padding:8px 3px;font-size:20px
 }
 .icon-strip small{display:block;font-size:9px}
-.heading{
- display:flex;align-items:center;justify-content:space-between;
- gap:5px;margin-bottom:8px
-}
+.heading{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-bottom:8px}
 .heading h3{font-size:16px;color:var(--green);margin:0}
 .heading small{font-size:10px;color:var(--muted)}
-.arabic{
- font-family:'Amiri',serif;text-align:center;
- font-size:26px;line-height:2;color:var(--dark)
-}
+.arabic{font-family:'Amiri',serif;text-align:center;font-size:26px;line-height:2;color:var(--dark)}
 .translation{font-size:13px;line-height:2;margin:7px 0}
 .ref{font-size:10px;color:var(--muted)}
-.status{
- background:var(--pale);border-radius:12px;
- padding:13px;text-align:center;line-height:2;font-size:14px
-}
-.question{
- background:var(--pale);padding:12px;border-radius:12px;
- line-height:2;font-size:13px
-}
-.answer{
- background:white;color:var(--green);border:1px solid var(--green);
- border-radius:9px;padding:6px 10px;margin:4px;font-size:11px
-}
+.status{background:var(--pale);border-radius:12px;padding:13px;text-align:center;line-height:2;font-size:14px}
+.question{background:var(--pale);padding:12px;border-radius:12px;line-height:2;font-size:13px}
+.answer{background:white;color:var(--green);border:1px solid var(--green);border-radius:9px;padding:6px 10px;margin:4px;font-size:11px}
 .section-title{font-size:19px;color:var(--green);margin:8px 0 12px}
-.gift{
- background:#e8f5eb;border:1px solid #c8e2ce;
- border-radius:16px;padding:15px;margin-bottom:12px
-}
+.gift{background:#e8f5eb;border:1px solid #c8e2ce;border-radius:16px;padding:15px;margin-bottom:12px}
 .gift h3{color:var(--green);margin:0 0 5px}
 .gift p{font-size:12px;line-height:2;margin:5px 0}
-.gift button{
- border:0;background:var(--green);color:white;
- border-radius:9px;padding:7px 14px;font-size:11px
-}
+.gift button{border:0;background:var(--green);color:white;border-radius:9px;padding:7px 14px;font-size:11px}
 .mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:12px}
-.mini-grid button{
- border:1px solid var(--line);background:white;color:var(--green);
- border-radius:11px;padding:10px 2px;font-size:19px
-}
+.mini-grid button{border:1px solid var(--line);background:white;color:var(--green);border-radius:11px;padding:10px 2px;font-size:19px}
 .mini-grid small{display:block;font-size:10px}
-.feature{
- display:flex;align-items:center;gap:10px;
- background:white;border:1px solid var(--line);
- border-radius:14px;padding:9px;margin-bottom:10px
-}
-.feature .picture{
- width:90px;height:78px;border-radius:10px;
- background:var(--pale);display:grid;place-items:center;
- font-size:35px;flex-shrink:0
-}
+.feature{display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--line);border-radius:14px;padding:9px;margin-bottom:10px}
+.feature .picture{width:90px;height:78px;border-radius:10px;background:var(--pale);display:grid;place-items:center;font-size:35px;flex-shrink:0}
 .feature h3{font-size:14px;color:var(--green);margin:0 0 4px}
 .feature p{font-size:10px;line-height:1.9;margin:0;color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
-.tile{
- border:1px solid var(--line);background:white;
- border-radius:13px;padding:13px 7px;text-align:center;
- color:var(--green);min-height:90px
-}
+.tile{border:1px solid var(--line);background:white;border-radius:13px;padding:13px 7px;text-align:center;color:var(--green);min-height:90px}
 .tile span{display:block;font-size:25px}
 .tile b{display:block;font-size:13px}
 .tile small{font-size:10px;color:var(--muted)}
-.field{
- width:100%;border:1px solid var(--line);
- border-radius:10px;padding:10px;margin:5px 0;
- background:white;font-size:12px
-}
+.field{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;margin:5px 0;background:white;font-size:12px}
 .hidden{display:none!important}
-.notice{
- background:var(--pale);padding:12px;border-radius:11px;
- font-size:12px;line-height:2;margin-top:10px
-}
+.notice{background:var(--pale);padding:12px;border-radius:11px;font-size:12px;line-height:2;margin-top:10px}
+/* نمبر 01 ختم */
 
-/* ہر ہوم کارڈ کے نیچے سادہ ایک جیسے ایکشن آئیکنز */
+/* نمبر 02: کارڈ ایکشن آئیکنز شروع */
 .actions{
- display:flex;
- direction:ltr;
- justify-content:flex-start;
- align-items:center;
- gap:17px;
- margin-top:12px;
- padding-top:7px;
+ display:flex;direction:ltr;justify-content:flex-start;align-items:center;
+ gap:17px;margin-top:12px;padding-top:7px;
 }
 .actions button{
- border:0!important;
- outline:0;
- background:transparent!important;
- box-shadow:none!important;
- color:#89938d;
- padding:0!important;
- margin:0;
- min-width:0;
- font-family:Arial,sans-serif;
- font-size:19px;
- line-height:1.4;
+ border:0!important;outline:0;background:transparent!important;
+ box-shadow:none!important;color:#89938d;padding:0!important;margin:0;
+ min-width:0;font-family:Arial,sans-serif;font-size:19px;line-height:1.4;
  border-radius:0!important;
 }
-.actions button:hover,
-.actions button.active{color:var(--green)}
+.actions button:hover,.actions button.active{color:var(--green)}
 .actions button:focus{outline:none}
+/* نمبر 02 ختم */
+
+/* نمبر 03: نیچے والے سات بٹن شروع */
 .bottom-nav{
  position:fixed;z-index:20;bottom:0;left:0;right:0;
  display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
@@ -195,20 +124,19 @@ main{max-width:650px;margin:auto;padding:12px}
 }
 .nav-btn{
  border:0;background:transparent;color:#68786d;
- display:flex;flex-direction:column;align-items:center;
- justify-content:center;gap:2px;min-width:0;
- border-radius:11px;padding:5px 0;font-size:9px;white-space:nowrap
+ display:flex;flex-direction:column;align-items:center;justify-content:center;
+ gap:2px;min-width:0;border-radius:11px;padding:5px 0;font-size:9px;white-space:nowrap
 }
 .nav-btn span:first-child{font-size:20px;line-height:1.3}
 .nav-btn.selected{color:var(--green);background:var(--pale);font-weight:bold}
 .nav-btn.home-nav{background:var(--green);color:white;transform:translateY(-5px);border:2px solid white;min-height:56px}
+/* نمبر 03 ختم */
+
+/* نمبر 04: سائیڈ مینو اور موبائل ڈیزائن شروع */
 .drawer-bg{display:none;position:fixed;inset:0;background:#0007;z-index:30}
 .drawer-bg.open{display:block}
-.drawer{
- position:absolute;right:0;top:0;bottom:0;width:82%;
- max-width:310px;background:white;padding:18px;overflow:auto
-}
-.drawer button{border:0;border-radius:8px;padding:8px;background:var(--pale);color:var(--green)}
+.drawer{position:absolute;right:0;top:0;bottom:0;width:82%;max-width:310px;background:white;padding:18px;overflow:auto}
+.drawer button{border:0;border-radius:8px;padding:8px;background:var(--pale);color:var(--green);margin:4px}
 @media(max-width:390px){
  .nav-btn{font-size:8px}
  .nav-btn span:first-child{font-size:18px}
@@ -216,10 +144,13 @@ main{max-width:650px;margin:auto;padding:12px}
  .actions{gap:13px}
  .actions button{font-size:18px}
 }
+/* نمبر 04 ختم */
 </style>
 </head>
 
 <body>
+
+<!-- نمبر 05: ہیڈر شروع -->
 <header>
  <div class="topline">
   <button class="menu" onclick="openDrawer()">☰</button>
@@ -228,12 +159,14 @@ main{max-width:650px;margin:auto;padding:12px}
  </div>
  <div class="header-date">قرآن و سنت کی روشنی میں ایک خوبصورت سفر</div>
 </header>
+<!-- نمبر 05 ختم -->
 
 <main>
 
-<!-- ہوم پیج -->
+<!-- نمبر 06: ہوم پیج شروع -->
 <section class="page active" id="home">
 
+ <!-- نمبر 06-A: نماز کے اوقات -->
  <div class="prayer searchable">
   <h3>🕌 نماز کے اوقات</h3>
   <div class="prayer-grid">
@@ -244,17 +177,10 @@ main{max-width:650px;margin:auto;padding:12px}
    <div>عشاء<b>--:--</b></div>
   </div>
   <div class="prayer-note">آپ کے مقام کے مطابق نماز کے اوقات</div>
-  <div class="actions">
-   <button onclick="copyText(this)" title="کاپی">▢</button>
-   <button onclick="like(this)" title="لائک">♡</button>
-   <button onclick="dislike(this)" title="ڈس لائک">♧</button>
-   <button onclick="readText(this)" title="آواز">◖))</button>
-   <button onclick="saveText(this)" title="محفوظ">▱</button>
-   <button onclick="shareText(this)" title="شیئر">↗</button>
-   <button onclick="moreOptions(this)" title="مزید">⋮</button>
-  </div>
  </div>
+ <!-- نمبر 06-A ختم -->
 
+ <!-- نمبر 06-B: سرچ اور پسندیدہ -->
  <div class="search-row">
   <div class="search">
    <button onclick="searchHome()">⌕</button>
@@ -263,21 +189,20 @@ main{max-width:650px;margin:auto;padding:12px}
   </div>
   <button class="heart" onclick="go('favorites')">♡</button>
  </div>
+ <!-- نمبر 06-B ختم -->
 
- <!-- صرف چار مختصر سہولیات -->
+ <!-- نمبر 06-C: چار مختصر سہولیات -->
  <div class="icon-strip">
   <button onclick="go('azkar')">📿<small>تسبیح</small></button>
   <button onclick="go('azkar')">🤲<small>دعائیں</small></button>
   <button onclick="go('azkar')">🌅<small>صبح کے اذکار</small></button>
   <button onclick="go('azkar')">🌙<small>شام کے اذکار</small></button>
  </div>
+ <!-- نمبر 06-C ختم -->
 
- <!-- آج کی آیت -->
+ <!-- نمبر 06-D: آج کی آیت -->
  <div class="card searchable">
-  <div class="heading">
-   <h3>📖 آج کی قرآنی آیت</h3>
-   <small>آیت اور ترجمہ</small>
-  </div>
+  <div class="heading"><h3>📖 آج کی قرآنی آیت</h3><small>آیت اور ترجمہ</small></div>
   <div class="arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
   <p class="translation">شروع اللہ کے نام سے جو نہایت مہربان، بے حد رحم فرمانے والا ہے۔</p>
   <div class="ref">سورۃ الفاتحہ — آیت 1</div>
@@ -291,8 +216,9 @@ main{max-width:650px;margin:auto;padding:12px}
    <button onclick="moreOptions(this)" title="مزید">⋮</button>
   </div>
  </div>
+ <!-- نمبر 06-D ختم -->
 
- <!-- آج کی حدیث -->
+ <!-- نمبر 06-E: آج کی حدیث -->
  <div class="card searchable">
   <div class="heading"><h3>📚 آج کی حدیث</h3><small>حدیث اور ترجمہ</small></div>
   <div class="arabic">إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ</div>
@@ -308,8 +234,9 @@ main{max-width:650px;margin:auto;padding:12px}
    <button onclick="moreOptions(this)" title="مزید">⋮</button>
   </div>
  </div>
+ <!-- نمبر 06-E ختم -->
 
- <!-- آج کا اسٹیٹس -->
+ <!-- نمبر 06-F: آج کا اسٹیٹس -->
  <div class="card searchable">
   <div class="heading"><h3>🌿 آج کا اسلامی اسٹیٹس</h3><small>واٹس ایپ اسٹیٹس</small></div>
   <div class="status">اللہ تعالیٰ پر بھروسہ رکھیں، بے شک وہ بہترین کارساز ہے۔</div>
@@ -323,8 +250,9 @@ main{max-width:650px;margin:auto;padding:12px}
    <button onclick="moreOptions(this)" title="مزید">⋮</button>
   </div>
  </div>
+ <!-- نمبر 06-F ختم -->
 
- <!-- آج کا سوال -->
+ <!-- نمبر 06-G: آج کا سوال -->
  <div class="card searchable">
   <div class="heading"><h3>❓ آج کا اسلامی سوال</h3><small>اپنا علم آزمائیں</small></div>
   <div class="question">
@@ -346,8 +274,9 @@ main{max-width:650px;margin:auto;padding:12px}
    <button onclick="moreOptions(this)" title="مزید">⋮</button>
   </div>
  </div>
+ <!-- نمبر 06-G ختم -->
 
- <!-- تحفہ -->
+ <!-- نمبر 06-H: تحفہ -->
  <div class="gift searchable">
   <h3>🎁 ایک قیمتی تحفہ</h3>
   <p>اپنے پیاروں کے ساتھ نیکی اور اسلامی پیغام شیئر کریں۔</p>
@@ -362,29 +291,20 @@ main{max-width:650px;margin:auto;padding:12px}
    <button onclick="moreOptions(this)" title="مزید">⋮</button>
   </div>
  </div>
+ <!-- نمبر 06-H ختم -->
 
- <!-- عمرہ -->
+ <!-- نمبر 06-I: عمرہ اور حج -->
  <div class="feature searchable">
   <div class="picture">🕋</div>
   <div><h3>عمرہ کی رہنمائی</h3><p>عمرہ کے طریقے اور اہم معلومات</p></div>
  </div>
- <div class="card searchable">
-  <div class="actions">
-   <button onclick="copyText(this)" title="کاپی">▢</button>
-   <button onclick="like(this)" title="لائک">♡</button>
-   <button onclick="dislike(this)" title="ڈس لائک">♧</button>
-   <button onclick="readText(this)" title="آواز">◖))</button>
-   <button onclick="saveText(this)" title="محفوظ">▱</button>
-   <button onclick="shareText(this)" title="شیئر">↗</button>
-   <button onclick="moreOptions(this)" title="مزید">⋮</button>
-  </div>
- </div>
-
- <!-- حج -->
  <div class="feature searchable">
   <div class="picture">🕌</div>
   <div><h3>حج کی رہنمائی</h3><p>حج کے مناسک اور بنیادی معلومات</p></div>
  </div>
+ <!-- نمبر 06-I ختم -->
+
+ <!-- نمبر 06-J: اسلامی فلیشز -->
  <div class="card searchable">
   <div class="heading"><h3>🌿 اسلامی فلیشز</h3></div>
   <div class="status">نیکی کی بات دوسروں تک پہنچائیں۔</div>
@@ -398,10 +318,12 @@ main{max-width:650px;margin:auto;padding:12px}
    <button onclick="moreOptions(this)" title="مزید">⋮</button>
   </div>
  </div>
+ <!-- نمبر 06-J ختم -->
 
 </section>
+<!-- نمبر 06 ختم -->
 
-<!-- قرآن -->
+<!-- نمبر 07: قرآن سیکشن شروع -->
 <section class="page" id="quran">
  <h2 class="section-title">📖 قرآن مجید</h2>
  <div class="grid">
@@ -424,14 +346,17 @@ main{max-width:650px;margin:auto;padding:12px}
  </div>
  <div class="card hidden" id="translations">
   <h3>ترجمے کی زبان</h3>
-  <select class="field"><option>اردو</option><option>English</option><option>پشتو</option><option>العربية</option></select>
+  <select class="field">
+   <option>اردو</option><option>English</option><option>پشتو</option><option>العربية</option>
+  </select>
   <p class="notice">مستند تراجم کا مکمل ڈیٹا بعد میں منسلک ہوگا۔</p>
  </div>
  <div class="card hidden" id="audio"><h3>قرآن آڈیو</h3><p>آف لائن آڈیو فائلیں شامل کرنا باقی ہیں۔</p></div>
  <div class="card hidden" id="bookmark"><h3>میرا مطالعہ</h3><p>آخری پڑھی ہوئی جگہ محفوظ کرنے کی سہولت بعد میں شامل ہوگی۔</p></div>
 </section>
+<!-- نمبر 07 ختم -->
 
-<!-- حدیث -->
+<!-- نمبر 08: حدیث سیکشن شروع -->
 <section class="page" id="hadith">
  <h2 class="section-title">📚 حدیث کی کتابیں</h2>
  <input class="field" id="hadithSearch" placeholder="کتاب تلاش کریں" oninput="filterBooks()">
@@ -447,8 +372,9 @@ main{max-width:650px;margin:auto;padding:12px}
  </div>
  <div class="notice">حدیث کا مکمل متن، ترجمہ، کتاب اور باب کا ڈیٹا اگلے مرحلے میں شامل ہوگا۔</div>
 </section>
+<!-- نمبر 08 ختم -->
 
-<!-- اذکار -->
+<!-- نمبر 09: اذکار سیکشن شروع -->
 <section class="page" id="azkar">
  <h2 class="section-title">📿 اذکار و دعائیں</h2>
  <div class="grid">
@@ -464,8 +390,9 @@ main{max-width:650px;margin:auto;padding:12px}
   <button class="tile" onclick="resetCount()">دوبارہ شروع</button>
  </div>
 </section>
+<!-- نمبر 09 ختم -->
 
-<!-- تعلیم -->
+<!-- نمبر 10: تعلیم سیکشن شروع -->
 <section class="page" id="education">
  <h2 class="section-title">النور آن لائن ٹیچنگ سینٹر</h2>
  <div class="grid">
@@ -479,8 +406,9 @@ main{max-width:650px;margin:auto;padding:12px}
   <p>داخلے کی تفصیلات اور کلاسز کا نظام اگلے مرحلے میں شامل ہوگا۔</p>
  </div>
 </section>
+<!-- نمبر 10 ختم -->
 
-<!-- شاپنگ -->
+<!-- نمبر 11: شاپنگ سیکشن شروع -->
 <section class="page" id="shopping">
  <h2 class="section-title">النور شاپنگ سینٹر</h2>
  <div id="products" class="grid"></div>
@@ -493,8 +421,9 @@ main{max-width:650px;margin:auto;padding:12px}
   <p class="ref">یہ فی الحال اسی براؤزر کا عارضی نمونہ ہے، آن لائن ڈیٹابیس نہیں۔</p>
  </div>
 </section>
+<!-- نمبر 11 ختم -->
 
-<!-- مزید -->
+<!-- نمبر 12: مزید سیکشن شروع -->
 <section class="page" id="more">
  <h2 class="section-title">مزید اسلامی سہولیات</h2>
  <div class="grid">
@@ -506,17 +435,19 @@ main{max-width:650px;margin:auto;padding:12px}
   <button class="tile"><span>⚖️</span><b>فقہ</b></button>
  </div>
 </section>
+<!-- نمبر 12 ختم -->
 
-<!-- پسندیدہ -->
+<!-- نمبر 13: پسندیدہ سیکشن شروع -->
 <section class="page" id="favorites">
  <h2 class="section-title">♡ پسندیدہ اور محفوظ شدہ مواد</h2>
  <div id="savedItems"></div>
  <div class="card" id="noSaved">آپ کا محفوظ کیا ہوا مواد یہاں نظر آئے گا۔</div>
 </section>
+<!-- نمبر 13 ختم -->
 
 </main>
 
-<!-- نیچے سات بٹن، دائیں سے بائیں -->
+<!-- نمبر 14: نیچے سات بٹن شروع -->
 <nav class="bottom-nav">
  <button class="nav-btn" data-page="quran" onclick="go('quran')"><span>📖</span>قرآن</button>
  <button class="nav-btn" data-page="hadith" onclick="go('hadith')"><span>📚</span>حدیث</button>
@@ -524,7 +455,12 @@ main{max-width:650px;margin:auto;padding:12px}
  <button class="nav-btn home-nav selected" data-page="home" onclick="go('home')"><span>⌂</span>ہوم</button>
  <button class="nav-btn" data-page="education" onclick="go('education')"><span>🎓</span>تعلیم</button>
  <button class="nav-btn" data-page="shopping" onclick="go('shopping')"><span>🛍️</span>شاپنگ</button>
- <button class="nav-btn" data-page="more" onclick="go('more')
+ <button class="nav-btn" data-page="more" onclick="go('more')"><span>☰</span>مزید</button>
+</nav>
+<!-- نمبر 14 ختم -->
+
+<!-- نمبر 15: سائیڈ مینو شروع -->
+<div class="drawer-bg" id="drawerBg" o
 
  
  
