@@ -131,12 +131,53 @@ main{max-width:650px;margin:auto;padding:12px}
 .nav-btn.selected{color:var(--green);background:var(--pale);font-weight:bold}
 .nav-btn.home-nav{background:var(--green);color:white;transform:translateY(-5px);border:2px solid white;min-height:56px}
 /* نمبر 03 ختم */
-
 /* نمبر 04: سائیڈ مینو اور موبائل ڈیزائن شروع */
-.drawer-bg{display:none;position:fixed;inset:0;background:#0007;z-index:30}
+
+/* اوپر مینو کے تین لائنوں والے بٹن کی درست ترتیب */
+.menu{
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ padding:0;
+ line-height:1;
+ font-family:Arial,sans-serif;
+ font-size:25px;
+ width:40px;
+ height:40px;
+ flex-shrink:0;
+}
+
+/* سائیڈ مینو */
+.drawer-bg{
+ display:none;
+ position:fixed;
+ inset:0;
+ background:#0007;
+ z-index:30;
+}
 .drawer-bg.open{display:block}
-.drawer{position:absolute;right:0;top:0;bottom:0;width:82%;max-width:310px;background:white;padding:18px;overflow:auto}
-.drawer button{border:0;border-radius:8px;padding:8px;background:var(--pale);color:var(--green);margin:4px}
+
+.drawer{
+ position:absolute;
+ right:0;
+ top:0;
+ bottom:0;
+ width:82%;
+ max-width:310px;
+ background:white;
+ padding:18px;
+ overflow:auto;
+}
+.drawer button{
+ border:0;
+ border-radius:8px;
+ padding:8px;
+ background:var(--pale);
+ color:var(--green);
+ margin:4px;
+}
+
 @media(max-width:390px){
  .nav-btn{font-size:8px}
  .nav-btn span:first-child{font-size:18px}
@@ -144,7 +185,9 @@ main{max-width:650px;margin:auto;padding:12px}
  .actions{gap:13px}
  .actions button{font-size:18px}
 }
+
 /* نمبر 04 ختم */
+
 </style>
 </head>
 
