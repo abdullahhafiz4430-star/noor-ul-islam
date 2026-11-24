@@ -520,6 +520,285 @@ header{
 </nav>
 <!-- نمبر 14 ختم -->
 
-<!-- نمبر 15: سائیڈ مینو شروع -->
-<div class="drawer-bg" id="drawerBg" o
+
+<!-- نمبر 15: سائیڈ مینو مکمل شروع -->
+<div class="drawer-bg" id="drawerBg" onclick="closeDrawer(event)">
+ <div class="drawer" onclick="event.stopPropagation()">
+  <h3 style="color:var(--green);text-align:center">نور الاسلام</h3>
+  <button onclick="go('home');closeDrawer()">🏠 ہوم</button>
+  <button onclick="go('quran');closeDrawer()">📖 قرآن مجید</button>
+  <button onclick="go('hadith');closeDrawer()">📚 حدیث</button>
+  <button onclick="go('azkar');closeDrawer()">📿 اذکار و دعائیں</button>
+  <button onclick="go('education');closeDrawer()">🎓 آن لائن تعلیم</button>
+  <button onclick="go('shopping');closeDrawer()">🛍️ شاپنگ</button>
+  <button onclick="go('more');closeDrawer()">☰ مزید سہولیات</button>
+  <button onclick="go('favorites');closeDrawer()">♡ پسندیدہ</button>
+  <button onclick="closeDrawer()">✖ بند کریں</button>
+ </div>
+</div>
+<!-- نمبر 15 ختم -->
+
+<!-- نمبر 16: تمام فنکشن شروع -->
+<script>
+
+// سائیڈ مینو
+function openDrawer(){
+ document.getElementById('drawerBg').classList.add('open');
+}
+function closeDrawer(event){
+ if(event && event.target.closest('.drawer')) return;
+ document.getElementById('drawerBg').classList.remove('open');
+}
+
+// صفحات تبدیل کرنا
+function go(page){
+ document.querySelectorAll('.page').forEach(p=>{
+  p.classList.remove('active');
+ });
+ const target=document.getElementById(page);
+ if(target) target.classList.add('active');
+
+ document.querySelectorAll('.nav-btn').forEach(b=>{
+  b.classList.toggle('selected',b.dataset.page===page);
+ });
+ window.scrollTo(0,0);
+}
+
+// چھوٹے حصے کھولنا
+function show(id){
+ const box=document.getElementById(id);
+ if(box) box.classList.toggle('hidden');
+}
+
+// قرآن کی لائنیں
+function line(number){
+ const result=document.getElementById('lineResult');
+ if(result){
+  result.textContent=number+' لائن قرآن منتخب کیا گیا۔ اصل صفحات شامل کرنا باقی ہیں۔';
+ }
+}
+
+// تلاش
+function searchHome(){
+ const input=document.getElementById('searchInput');
+ const word=input.value.trim();
+ if(!word) return;
+
+ document.querySelectorAll('.searchable').forEach(item=>{
+  item.style.display=item.innerText.includes(word)?'':'none';
+ });
+}
+
+function voiceSearch(){
+ const SpeechRecognition=window.SpeechRecognition || window.webkitSpeechRecognition;
+ if(!SpeechRecognition){
+  alert('آپ کے براؤزر میں آواز سے تلاش کی سہولت دستیاب نہیں۔');
+  return;
+ }
+ const recognition=new SpeechRecognition();
+ recognition.lang='ur-PK';
+ recognition.onresult=function(event){
+  document.getElementById('searchInput').value=event.results[0][0].transcript;
+  searchHome();
+ };
+ recognition.start();
+}
+
+// مواد کا متن
+function getText(button){
+ const card=button.closest('.card,.gift');
+ return card ? card.innerText : '';
+}
+
+function copyText(button){
+ const text=getText(button);
+ if(navigator.clipboard){
+  navigator.clipboard.writeText(text).then(()=>alert('کاپی ہوگیا'));
+ }else{
+  alert('کاپی کی سہولت اس براؤزر میں دستیاب نہیں۔');
+ }
+}
+
+function like(button){
+ button.classList.toggle('active');
+ button.textContent=button.classList.contains('active')?'♥':'♡';
+}
+
+function dislike(button){
+ button.classList.toggle('active');
+}
+
+function readText(button){
+ const text=getText(button);
+ if(!('speechSynthesis' in window)){
+  alert('آواز کی سہولت دستیاب نہیں۔');
+  return;
+ }
+ speechSynthesis.cancel();
+ const speech=new SpeechSynthesisUtterance(text);
+ speech.lang='ur-PK';
+ speechSynthesis.speak(speech);
+}
+
+function saveText(button){
+ const text=getText(button);
+ let saved=JSON.parse(localStorage.getItem('noorSaved')||'[]');
+ saved.push(text);
+ localStorage.setItem('noorSaved',JSON.stringify(saved));
+ showSaved();
+ alert('پسندیدہ میں محفوظ ہوگیا');
+}
+
+function showSaved(){
+ const saved=JSON.parse(localStorage.getItem('noorSaved')||'[]');
+ const area=document.getElementById('savedItems');
+ const empty=document.getElementById('noSaved');
+ if(!area) return;
+ area.innerHTML='';
+ saved.forEach(item=>{
+  const card=document.createElement('div');
+  card.className='card';
+  card.textContent=item;
+  area.appendChild(card);
+ });
+ if(empty) empty.style.display=saved.length?'none':'block';
+}
+
+function shareText(button){
+ const text=getText(button);
+ if(navigator.share){
+  navigator.share({title:'نور الاسلام',text:text});
+ }else if(navigator.clipboard){
+  navigator.clipboard.writeText(text);
+  alert('متن کاپی ہوگیا، اب شیئر کر سکتے ہیں۔');
+ }
+}
+
+function moreOptions(){
+ alert('مزید سہولیات اگلے مرحلے میں شامل ہوں گی۔');
+}
+
+// سوال کا جواب
+function answer(correct){
+ const result=document.getElementById('answerResult');
+ if(result){
+  result.textContent=correct?'ماشاءاللہ! درست جواب۔':'دوبارہ کوشش کریں۔';
+ }
+}
+
+// حدیث کی کتابیں تلاش
+function filterBooks(){
+ const word=document.getElementById('hadithSearch').value.trim();
+ document.querySelectorAll('#hadithBooks .tile').forEach(book=>{
+  book.style.display=book.innerText.includes(word)?'':'none';
+ });
+}
+
+// ڈیجیٹل تسبیح
+let count=0;
+function countUp(){
+ count++;
+ document.getElementById('counter').textContent=count;
+}
+function resetCount(){
+ count=0;
+ document.getElementById('counter').textContent=count;
+}
+
+// شاپنگ میں پروڈکٹ شامل کرنا
+function addProduct(){
+ const name=document.getElementById('pname').value.trim();
+ const price=document.getElementById('pprice').value.trim();
+ const desc=document.getElementById('pdesc').value.trim();
+
+ if(!name){
+  alert('پروڈکٹ کا نام لکھیں۔');
+  return;
+ }
+
+ const card=document.createElement('div');
+ card.className='tile';
+ const title=document.createElement('b');
+ title.textContent=name;
+ const detail=document.createElement('small');
+ detail.textContent=price+' '+desc;
+ card.appendChild(title);
+ card.appendChild(detail);
+ document.getElementById('products').appendChild(card);
+
+ document.getElementById('pname').value='';
+ document.getElementById('pprice').value='';
+ document.getElementById('pdesc').value='';
+}
+
+// نمبر 16 ختم
+
+
+// نمبر 17: خودکار تاریخ کا نظام شروع
+
+// پاکستان کے اعلان کے مطابق ضرورت پڑنے پر
+// moonAdjustment کو 1 یا -1 کیا جا سکتا ہے۔
+const moonAdjustment=0;
+
+function updateNoorDates(){
+ const now=new Date();
+
+ // پاکستان کا مقامی وقت
+ const islamicDate=new Date(
+  now.getTime()+moonAdjustment*24*60*60*1000
+ );
+
+ const islamic=new Intl.DateTimeFormat(
+  'en-u-ca-islamic-umalqura',
+  {
+   day:'numeric',
+   month:'long',
+   year:'numeric',
+   timeZone:'Asia/Karachi'
+  }
+ ).format(islamicDate);
+
+ const english=new Intl.DateTimeFormat(
+  'en-GB',
+  {
+   weekday:'short',
+   day:'2-digit',
+   month:'2-digit',
+   year:'2-digit',
+   timeZone:'Asia/Karachi'
+  }
+ ).format(now);
+
+ const top=document.getElementById('topDate');
+
+ if(top){
+  top.textContent=islamic;
+
+  let englishBox=document.getElementById('englishDate');
+
+  if(!englishBox){
+   englishBox=document.createElement('div');
+   englishBox.id='englishDate';
+   englishBox.style.fontSize='11px';
+   englishBox.style.marginTop='3px';
+   top.insertAdjacentElement('afterend',englishBox);
+  }
+
+  englishBox.textContent=english;
+ }
+}
+
+updateNoorDates();
+setInterval(updateNoorDates,60*60*1000);
+showSaved();
+
+// نمبر 17 ختم
+
+</script>
+
+<!-- نمبر 18: ویب سائٹ کا اختتام -->
+</body>
+</html>
+<!-- نمبر 18 ختم -->
+
 
