@@ -1,19 +1,15 @@
 
-<!DOCTYPE html>
-<html lang="ur" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#16834b">
-<title>نور الاسلام</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
-<style>
 /* نمبر 01: بنیادی ڈیزائن شروع */
+
+/* نمبر 01-A: بنیادی رنگ */
 :root{
  --green:#16834b;--dark:#075b35;--pale:#eaf5ed;
  --white:#fff;--text:#183b29;--muted:#77877c;--line:#dce9df;
 }
+/* نمبر 01-A ختم */
+
+/* نمبر 01-B: عمومی باکس اور باڈی */
 *{box-sizing:border-box}
 body{
  margin:0;background:#f3f8f3;color:var(--text);
@@ -21,6 +17,9 @@ body{
 }
 button,input,select{font:inherit}
 button{cursor:pointer}
+/* نمبر 01-B ختم */
+
+/* نمبر 01-C: ابتدائی ہیڈر ڈیزائن */
 header{
  background:var(--green);color:white;padding:12px 14px 15px;
  border-radius:0 0 19px 19px;
@@ -34,6 +33,9 @@ header{
 .brand small{display:block;font:10px Arial;letter-spacing:1px}
 .date-top{font-size:11px;text-align:center;line-height:1.8}
 .header-date{font-size:12px;text-align:center;margin-top:8px}
+/* نمبر 01-C ختم */
+
+/* نمبر 01-D: مرکزی صفحہ اور کارڈ */
 main{max-width:650px;margin:auto;padding:12px}
 .page{display:none}
 .page.active{display:block}
@@ -41,6 +43,9 @@ main{max-width:650px;margin:auto;padding:12px}
  background:white;border:1px solid var(--line);border-radius:16px;
  padding:13px;margin-bottom:12px;box-shadow:0 2px 9px #164a2710
 }
+/* نمبر 01-D ختم */
+
+/* نمبر 01-E: نماز کے اوقات */
 .prayer{
  background:var(--dark);color:white;border-radius:14px;
  padding:9px;margin-bottom:9px;
@@ -53,6 +58,9 @@ main{max-width:650px;margin:auto;padding:12px}
 }
 .prayer-grid b{display:block;font-size:12px}
 .prayer-note{text-align:center;font-size:9px;margin-top:5px;color:#d8eee0}
+/* نمبر 01-E ختم */
+
+/* نمبر 01-F: سرچ اور پسندیدہ */
 .search-row{display:flex;gap:7px;margin:12px 0}
 .search{
  flex:1;display:flex;align-items:center;gap:5px;
@@ -62,44 +70,79 @@ main{max-width:650px;margin:auto;padding:12px}
 .search input{border:0;outline:0;background:transparent;width:100%;min-width:0;font-size:12px}
 .search button{border:0;background:transparent;color:var(--green);font-size:21px}
 .heart{width:46px;border:0;border-radius:12px;background:var(--green);color:white;font-size:23px}
+/* نمبر 01-F ختم */
+
+/* نمبر 01-G: مختصر سہولیات */
 .icon-strip{display:flex;justify-content:space-around;gap:9px;margin:0 0 12px}
 .icon-strip button{
  background:white;border:1px solid var(--line);color:var(--green);
  border-radius:11px;width:25%;padding:8px 3px;font-size:20px
 }
 .icon-strip small{display:block;font-size:9px}
+/* نمبر 01-G ختم */
+
+/* نمبر 01-H: عنوانات */
 .heading{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-bottom:8px}
 .heading h3{font-size:16px;color:var(--green);margin:0}
 .heading small{font-size:10px;color:var(--muted)}
+/* نمبر 01-H ختم */
+
+/* نمبر 01-I: عربی اور ترجمہ */
 .arabic{font-family:'Amiri',serif;text-align:center;font-size:26px;line-height:2;color:var(--dark)}
 .translation{font-size:13px;line-height:2;margin:7px 0}
 .ref{font-size:10px;color:var(--muted)}
+/* نمبر 01-I ختم */
+
+/* نمبر 01-J: اسٹیٹس اور سوال */
 .status{background:var(--pale);border-radius:12px;padding:13px;text-align:center;line-height:2;font-size:14px}
 .question{background:var(--pale);padding:12px;border-radius:12px;line-height:2;font-size:13px}
 .answer{background:white;color:var(--green);border:1px solid var(--green);border-radius:9px;padding:6px 10px;margin:4px;font-size:11px}
+/* نمبر 01-J ختم */
+
+/* نمبر 01-K: سیکشن عنوان */
 .section-title{font-size:19px;color:var(--green);margin:8px 0 12px}
+/* نمبر 01-K ختم */
+
+/* نمبر 01-L: تحفے کا حصہ */
 .gift{background:#e8f5eb;border:1px solid #c8e2ce;border-radius:16px;padding:15px;margin-bottom:12px}
 .gift h3{color:var(--green);margin:0 0 5px}
 .gift p{font-size:12px;line-height:2;margin:5px 0}
 .gift button{border:0;background:var(--green);color:white;border-radius:9px;padding:7px 14px;font-size:11px}
+/* نمبر 01-L ختم */
+
+/* نمبر 01-M: چھوٹے گرڈ */
 .mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:12px}
 .mini-grid button{border:1px solid var(--line);background:white;color:var(--green);border-radius:11px;padding:10px 2px;font-size:19px}
 .mini-grid small{display:block;font-size:10px}
+/* نمبر 01-M ختم */
+
+/* نمبر 01-N: فیچر کارڈ */
 .feature{display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--line);border-radius:14px;padding:9px;margin-bottom:10px}
 .feature .picture{width:90px;height:78px;border-radius:10px;background:var(--pale);display:grid;place-items:center;font-size:35px;flex-shrink:0}
 .feature h3{font-size:14px;color:var(--green);margin:0 0 4px}
 .feature p{font-size:10px;line-height:1.9;margin:0;color:var(--muted)}
+/* نمبر 01-N ختم */
+
+/* نمبر 01-O: ٹائل گرڈ */
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
 .tile{border:1px solid var(--line);background:white;border-radius:13px;padding:13px 7px;text-align:center;color:var(--green);min-height:90px}
 .tile span{display:block;font-size:25px}
 .tile b{display:block;font-size:13px}
 .tile small{font-size:10px;color:var(--muted)}
+/* نمبر 01-O ختم */
+
+/* نمبر 01-P: فیلڈ، نوٹس اور پوشیدہ حصہ */
 .field{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;margin:5px 0;background:white;font-size:12px}
 .hidden{display:none!important}
 .notice{background:var(--pale);padding:12px;border-radius:11px;font-size:12px;line-height:2;margin-top:10px}
+/* نمبر 01-P ختم */
+
 /* نمبر 01 ختم */
 
+
 /* نمبر 02: کارڈ ایکشن آئیکنز شروع */
+
+/* نمبر 02-A: ایکشن آئیکنز کی ترتیب */
 .actions{
  display:flex;direction:ltr;justify-content:flex-start;align-items:center;
  gap:17px;margin-top:12px;padding-top:7px;
@@ -112,9 +155,14 @@ main{max-width:650px;margin:auto;padding:12px}
 }
 .actions button:hover,.actions button.active{color:var(--green)}
 .actions button:focus{outline:none}
+/* نمبر 02-A ختم */
+
 /* نمبر 02 ختم */
 
+
 /* نمبر 03: نیچے والے سات بٹن شروع */
+
+/* نمبر 03-A: نیچے نیویگیشن بار */
 .bottom-nav{
  position:fixed;z-index:20;bottom:0;left:0;right:0;
  display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
@@ -122,6 +170,9 @@ main{max-width:650px;margin:auto;padding:12px}
  padding:7px 2px max(8px,env(safe-area-inset-bottom));
  box-shadow:0 -3px 14px #164a2712
 }
+/* نمبر 03-A ختم */
+
+/* نمبر 03-B: نیویگیشن بٹن */
 .nav-btn{
  border:0;background:transparent;color:#68786d;
  display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -130,10 +181,14 @@ main{max-width:650px;margin:auto;padding:12px}
 .nav-btn span:first-child{font-size:20px;line-height:1.3}
 .nav-btn.selected{color:var(--green);background:var(--pale);font-weight:bold}
 .nav-btn.home-nav{background:var(--green);color:white;transform:translateY(-5px);border:2px solid white;min-height:56px}
+/* نمبر 03-B ختم */
+
 /* نمبر 03 ختم */
+
+
 /* نمبر 04: سائیڈ مینو اور موبائل ڈیزائن شروع */
 
-/* اوپر مینو کے تین لائنوں والے بٹن کی درست ترتیب */
+/* نمبر 04-A: اوپر مینو کے تین لائنوں والے بٹن کی درست ترتیب */
 .menu{
  display:flex;
  align-items:center;
@@ -147,8 +202,9 @@ main{max-width:650px;margin:auto;padding:12px}
  height:40px;
  flex-shrink:0;
 }
+/* نمبر 04-A ختم */
 
-/* سائیڈ مینو */
+/* نمبر 04-B: سائیڈ مینو کا پس منظر */
 .drawer-bg{
  display:none;
  position:fixed;
@@ -157,7 +213,9 @@ main{max-width:650px;margin:auto;padding:12px}
  z-index:30;
 }
 .drawer-bg.open{display:block}
+/* نمبر 04-B ختم */
 
+/* نمبر 04-C: سائیڈ مینو */
 .drawer{
  position:absolute;
  right:0;
@@ -177,7 +235,9 @@ main{max-width:650px;margin:auto;padding:12px}
  color:var(--green);
  margin:4px;
 }
+/* نمبر 04-C ختم */
 
+/* نمبر 04-D: موبائل ڈیزائن */
 @media(max-width:390px){
  .nav-btn{font-size:8px}
  .nav-btn span:first-child{font-size:18px}
@@ -185,6 +245,9 @@ main{max-width:650px;margin:auto;padding:12px}
  .actions{gap:13px}
  .actions button{font-size:18px}
 }
+/* نمبر 04-D ختم */
+
+/* نمبر 04-E: ہیڈر کا منظور شدہ سائز */
 header{
  background:var(--green);
  color:white;
@@ -202,7 +265,7 @@ header{
  text-align:center;
  margin-top:17px;
 }
-
+/* نمبر 04-E ختم */
 
 /* نمبر 04 ختم */
 
@@ -212,14 +275,21 @@ header{
 <body>
 
 <!-- نمبر 05: ہیڈر شروع -->
+
+<!-- نمبر 05-A: ہیڈر کی اوپری لائن -->
 <header>
  <div class="topline">
   <button class="menu" onclick="openDrawer()">☰</button>
   <div class="brand">نور الاسلام<small>NOOR-UL-ISLAM</small></div>
   <div class="date-top">📅 اسلامی تاریخ<br><span id="topDate">آج کی تاریخ</span></div>
  </div>
+<!-- نمبر 05-A ختم -->
+
+<!-- نمبر 05-B: ہیڈر کا تعارفی جملہ -->
  <div class="header-date">قرآن و سنت کی روشنی میں ایک خوبصورت سفر</div>
 </header>
+<!-- نمبر 05-B ختم -->
+
 <!-- نمبر 05 ختم -->
 
 <main>
@@ -384,15 +454,21 @@ header{
 </section>
 <!-- نمبر 06 ختم -->
 
+
 <!-- نمبر 07: قرآن سیکشن شروع -->
 <section class="page" id="quran">
  <h2 class="section-title">📖 قرآن مجید</h2>
+
+ <!-- نمبر 07-A: قرآن کے بنیادی اختیارات -->
  <div class="grid">
   <button class="tile" onclick="show('mushaf')"><span>📗</span><b>قرآن مجید</b><small>مختلف لائنوں والے مصاحف</small></button>
   <button class="tile" onclick="show('translations')"><span>🌙</span><b>قرآن کا ترجمہ</b><small>مختلف زبانیں</small></button>
   <button class="tile" onclick="show('audio')"><span>🎧</span><b>قرآن آڈیو</b><small>تلاوت سنیں</small></button>
   <button class="tile" onclick="show('bookmark')"><span>🔖</span><b>میرا مطالعہ</b></button>
  </div>
+ <!-- نمبر 07-A ختم -->
+
+ <!-- نمبر 07-B: مختلف لائنوں والے مصاحف -->
  <div class="card hidden" id="mushaf">
   <h3>قرآن مجید کے مصاحف</h3>
   <div class="grid">
@@ -405,6 +481,9 @@ header{
   </div>
   <p id="lineResult" class="notice">اصل قرآن صفحات شامل کرنا باقی ہیں۔</p>
  </div>
+ <!-- نمبر 07-B ختم -->
+
+ <!-- نمبر 07-C: قرآن کے تراجم -->
  <div class="card hidden" id="translations">
   <h3>ترجمے کی زبان</h3>
   <select class="field">
@@ -412,15 +491,29 @@ header{
   </select>
   <p class="notice">مستند تراجم کا مکمل ڈیٹا بعد میں منسلک ہوگا۔</p>
  </div>
+ <!-- نمبر 07-C ختم -->
+
+ <!-- نمبر 07-D: قرآن آڈیو -->
  <div class="card hidden" id="audio"><h3>قرآن آڈیو</h3><p>آف لائن آڈیو فائلیں شامل کرنا باقی ہیں۔</p></div>
+ <!-- نمبر 07-D ختم -->
+
+ <!-- نمبر 07-E: بک مارک -->
  <div class="card hidden" id="bookmark"><h3>میرا مطالعہ</h3><p>آخری پڑھی ہوئی جگہ محفوظ کرنے کی سہولت بعد میں شامل ہوگی۔</p></div>
+ <!-- نمبر 07-E ختم -->
+
 </section>
 <!-- نمبر 07 ختم -->
+
 
 <!-- نمبر 08: حدیث سیکشن شروع -->
 <section class="page" id="hadith">
  <h2 class="section-title">📚 حدیث کی کتابیں</h2>
+
+ <!-- نمبر 08-A: حدیث سرچ -->
  <input class="field" id="hadithSearch" placeholder="کتاب تلاش کریں" oninput="filterBooks()">
+ <!-- نمبر 08-A ختم -->
+
+ <!-- نمبر 08-B: حدیث کی کتابیں -->
  <div class="grid" id="hadithBooks">
   <button class="tile"><b>صحیح بخاری</b><small>Sahih Bukhari</small></button>
   <button class="tile"><b>صحیح مسلم</b><small>Sahih Muslim</small></button>
@@ -431,48 +524,75 @@ header{
   <button class="tile"><b>مؤطا امام مالک</b></button>
   <button class="tile"><b>مسند احمد</b></button>
  </div>
+ <!-- نمبر 08-B ختم -->
+
+ <!-- نمبر 08-C: حدیث کا نوٹس -->
  <div class="notice">حدیث کا مکمل متن، ترجمہ، کتاب اور باب کا ڈیٹا اگلے مرحلے میں شامل ہوگا۔</div>
+ <!-- نمبر 08-C ختم -->
+
 </section>
 <!-- نمبر 08 ختم -->
+
 
 <!-- نمبر 09: اذکار سیکشن شروع -->
 <section class="page" id="azkar">
  <h2 class="section-title">📿 اذکار و دعائیں</h2>
+
+ <!-- نمبر 09-A: اذکار اور دعاؤں کے اختیارات -->
  <div class="grid">
   <button class="tile"><span>🌅</span><b>صبح کے اذکار</b></button>
   <button class="tile"><span>🌇</span><b>شام کے اذکار</b></button>
   <button class="tile"><span>🤲</span><b>روزانہ کی دعائیں</b></button>
   <button class="tile"><span>📿</span><b>مسنون دعائیں</b></button>
  </div>
+ <!-- نمبر 09-A ختم -->
+
+ <!-- نمبر 09-B: ڈیجیٹل تسبیح -->
  <div class="card" style="text-align:center;margin-top:12px">
   <h3 class="section-title">ڈیجیٹل تسبیح</h3>
   <div id="counter" style="font-size:40px;color:var(--green)">0</div>
   <button class="tile" onclick="countUp()">تسبیح کریں</button>
   <button class="tile" onclick="resetCount()">دوبارہ شروع</button>
  </div>
+ <!-- نمبر 09-B ختم -->
+
 </section>
 <!-- نمبر 09 ختم -->
+
 
 <!-- نمبر 10: تعلیم سیکشن شروع -->
 <section class="page" id="education">
  <h2 class="section-title">النور آن لائن ٹیچنگ سینٹر</h2>
+
+ <!-- نمبر 10-A: تعلیمی کورسز -->
  <div class="grid">
   <button class="tile"><span>📖</span><b>قرآن ناظرہ</b></button>
   <button class="tile"><span>✨</span><b>تجوید کورس</b></button>
   <button class="tile"><span>👦</span><b>بچوں کی تعلیم</b></button>
   <button class="tile"><span>🌍</span><b>بیرون ملک طلبہ</b></button>
  </div>
+ <!-- نمبر 10-A ختم -->
+
+ <!-- نمبر 10-B: داخلہ اور رابطہ -->
  <div class="card" style="margin-top:12px">
   <h3>داخلہ اور رابطہ</h3>
   <p>داخلے کی تفصیلات اور کلاسز کا نظام اگلے مرحلے میں شامل ہوگا۔</p>
  </div>
+ <!-- نمبر 10-B ختم -->
+
 </section>
 <!-- نمبر 10 ختم -->
+
 
 <!-- نمبر 11: شاپنگ سیکشن شروع -->
 <section class="page" id="shopping">
  <h2 class="section-title">النور شاپنگ سینٹر</h2>
+
+ <!-- نمبر 11-A: پروڈکٹس کی جگہ -->
  <div id="products" class="grid"></div>
+ <!-- نمبر 11-A ختم -->
+
+ <!-- نمبر 11-B: پروڈکٹ شامل کرنے کا نمونہ -->
  <div class="card">
   <h3>پروڈکٹ شامل کریں — ابتدائی نمونہ</h3>
   <input class="field" id="pname" placeholder="پروڈکٹ کا نام">
@@ -481,12 +601,17 @@ header{
   <button class="tile" onclick="addProduct()">شامل کریں</button>
   <p class="ref">یہ فی الحال اسی براؤزر کا عارضی نمونہ ہے، آن لائن ڈیٹابیس نہیں۔</p>
  </div>
+ <!-- نمبر 11-B ختم -->
+
 </section>
 <!-- نمبر 11 ختم -->
+
 
 <!-- نمبر 12: مزید سیکشن شروع -->
 <section class="page" id="more">
  <h2 class="section-title">مزید اسلامی سہولیات</h2>
+
+ <!-- نمبر 12-A: مزید اسلامی سہولیات کے بٹن -->
  <div class="grid">
   <button class="tile"><span>🧭</span><b>قبلہ کی سمت</b></button>
   <button class="tile"><span>🕌</span><b>نماز کے اوقات</b></button>
@@ -495,20 +620,30 @@ header{
   <button class="tile"><span>📚</span><b>تفسیر</b></button>
   <button class="tile"><span>⚖️</span><b>فقہ</b></button>
  </div>
+ <!-- نمبر 12-A ختم -->
+
 </section>
 <!-- نمبر 12 ختم -->
+
 
 <!-- نمبر 13: پسندیدہ سیکشن شروع -->
 <section class="page" id="favorites">
  <h2 class="section-title">♡ پسندیدہ اور محفوظ شدہ مواد</h2>
+
+ <!-- نمبر 13-A: محفوظ شدہ مواد -->
  <div id="savedItems"></div>
  <div class="card" id="noSaved">آپ کا محفوظ کیا ہوا مواد یہاں نظر آئے گا۔</div>
+ <!-- نمبر 13-A ختم -->
+
 </section>
 <!-- نمبر 13 ختم -->
 
 </main>
 
+
 <!-- نمبر 14: نیچے سات بٹن شروع -->
+
+<!-- نمبر 14-A: نیچے نیویگیشن کے سات بٹن -->
 <nav class="bottom-nav">
  <button class="nav-btn" data-page="quran" onclick="go('quran')"><span>📖</span>قرآن</button>
  <button class="nav-btn" data-page="hadith" onclick="go('hadith')"><span>📚</span>حدیث</button>
@@ -518,13 +653,22 @@ header{
  <button class="nav-btn" data-page="shopping" onclick="go('shopping')"><span>🛍️</span>شاپنگ</button>
  <button class="nav-btn" data-page="more" onclick="go('more')"><span>☰</span>مزید</button>
 </nav>
+<!-- نمبر 14-A ختم -->
+
 <!-- نمبر 14 ختم -->
 
 
 <!-- نمبر 15: سائیڈ مینو مکمل شروع -->
+
+<!-- نمبر 15-A: سائیڈ مینو کا پس منظر اور باکس -->
 <div class="drawer-bg" id="drawerBg" onclick="closeDrawer(event)">
  <div class="drawer" onclick="event.stopPropagation()">
+
+  <!-- نمبر 15-B: سائیڈ مینو کا عنوان -->
   <h3 style="color:var(--green);text-align:center">نور الاسلام</h3>
+  <!-- نمبر 15-B ختم -->
+
+  <!-- نمبر 15-C: سائیڈ مینو کے بٹن -->
   <button onclick="go('home');closeDrawer()">🏠 ہوم</button>
   <button onclick="go('quran');closeDrawer()">📖 قرآن مجید</button>
   <button onclick="go('hadith');closeDrawer()">📚 حدیث</button>
@@ -534,14 +678,19 @@ header{
   <button onclick="go('more');closeDrawer()">☰ مزید سہولیات</button>
   <button onclick="go('favorites');closeDrawer()">♡ پسندیدہ</button>
   <button onclick="closeDrawer()">✖ بند کریں</button>
+  <!-- نمبر 15-C ختم -->
+
  </div>
 </div>
+<!-- نمبر 15-A ختم -->
+
 <!-- نمبر 15 ختم -->
+
 
 <!-- نمبر 16: تمام فنکشن شروع -->
 <script>
 
-// سائیڈ مینو
+// نمبر 16-A شروع: سائیڈ مینو کھولنا اور بند کرنا
 function openDrawer(){
  document.getElementById('drawerBg').classList.add('open');
 }
@@ -549,8 +698,9 @@ function closeDrawer(event){
  if(event && event.target.closest('.drawer')) return;
  document.getElementById('drawerBg').classList.remove('open');
 }
+// نمبر 16-A ختم
 
-// صفحات تبدیل کرنا
+// نمبر 16-B شروع: صفحات تبدیل کرنا
 function go(page){
  document.querySelectorAll('.page').forEach(p=>{
   p.classList.remove('active');
@@ -563,22 +713,25 @@ function go(page){
  });
  window.scrollTo(0,0);
 }
+// نمبر 16-B ختم
 
-// چھوٹے حصے کھولنا
+// نمبر 16-C شروع: چھوٹے حصے کھولنا
 function show(id){
  const box=document.getElementById(id);
  if(box) box.classList.toggle('hidden');
 }
+// نمبر 16-C ختم
 
-// قرآن کی لائنیں
+// نمبر 16-D شروع: قرآن کی لائنیں
 function line(number){
  const result=document.getElementById('lineResult');
  if(result){
   result.textContent=number+' لائن قرآن منتخب کیا گیا۔ اصل صفحات شامل کرنا باقی ہیں۔';
  }
 }
+// نمبر 16-D ختم
 
-// تلاش
+// نمبر 16-E شروع: تلاش
 function searchHome(){
  const input=document.getElementById('searchInput');
  const word=input.value.trim();
@@ -588,7 +741,9 @@ function searchHome(){
   item.style.display=item.innerText.includes(word)?'':'none';
  });
 }
+// نمبر 16-E ختم
 
+// نمبر 16-F شروع: آواز سے تلاش
 function voiceSearch(){
  const SpeechRecognition=window.SpeechRecognition || window.webkitSpeechRecognition;
  if(!SpeechRecognition){
@@ -603,13 +758,16 @@ function voiceSearch(){
  };
  recognition.start();
 }
+// نمبر 16-F ختم
 
-// مواد کا متن
+// نمبر 16-G شروع: مواد کا متن حاصل کرنا
 function getText(button){
  const card=button.closest('.card,.gift');
  return card ? card.innerText : '';
 }
+// نمبر 16-G ختم
 
+// نمبر 16-H شروع: متن کاپی کرنا
 function copyText(button){
  const text=getText(button);
  if(navigator.clipboard){
@@ -618,7 +776,9 @@ function copyText(button){
   alert('کاپی کی سہولت اس براؤزر میں دستیاب نہیں۔');
  }
 }
+// نمبر 16-H ختم
 
+// نمبر 16-I شروع: لائک اور ڈس لائک
 function like(button){
  button.classList.toggle('active');
  button.textContent=button.classList.contains('active')?'♥':'♡';
@@ -627,7 +787,9 @@ function like(button){
 function dislike(button){
  button.classList.toggle('active');
 }
+// نمبر 16-I ختم
 
+// نمبر 16-J شروع: متن آواز میں سننا
 function readText(button){
  const text=getText(button);
  if(!('speechSynthesis' in window)){
@@ -639,7 +801,9 @@ function readText(button){
  speech.lang='ur-PK';
  speechSynthesis.speak(speech);
 }
+// نمبر 16-J ختم
 
+// نمبر 16-K شروع: پسندیدہ میں محفوظ کرنا
 function saveText(button){
  const text=getText(button);
  let saved=JSON.parse(localStorage.getItem('noorSaved')||'[]');
@@ -648,7 +812,9 @@ function saveText(button){
  showSaved();
  alert('پسندیدہ میں محفوظ ہوگیا');
 }
+// نمبر 16-K ختم
 
+// نمبر 16-L شروع: محفوظ شدہ مواد دکھانا
 function showSaved(){
  const saved=JSON.parse(localStorage.getItem('noorSaved')||'[]');
  const area=document.getElementById('savedItems');
@@ -663,7 +829,9 @@ function showSaved(){
  });
  if(empty) empty.style.display=saved.length?'none':'block';
 }
+// نمبر 16-L ختم
 
+// نمبر 16-M شروع: مواد شیئر کرنا
 function shareText(button){
  const text=getText(button);
  if(navigator.share){
@@ -673,28 +841,33 @@ function shareText(button){
   alert('متن کاپی ہوگیا، اب شیئر کر سکتے ہیں۔');
  }
 }
+// نمبر 16-M ختم
 
+// نمبر 16-N شروع: مزید اختیارات
 function moreOptions(){
  alert('مزید سہولیات اگلے مرحلے میں شامل ہوں گی۔');
 }
+// نمبر 16-N ختم
 
-// سوال کا جواب
+// نمبر 16-O شروع: سوال کا جواب
 function answer(correct){
  const result=document.getElementById('answerResult');
  if(result){
   result.textContent=correct?'ماشاءاللہ! درست جواب۔':'دوبارہ کوشش کریں۔';
  }
 }
+// نمبر 16-O ختم
 
-// حدیث کی کتابیں تلاش
+// نمبر 16-P شروع: حدیث کی کتابیں تلاش کرنا
 function filterBooks(){
  const word=document.getElementById('hadithSearch').value.trim();
  document.querySelectorAll('#hadithBooks .tile').forEach(book=>{
   book.style.display=book.innerText.includes(word)?'':'none';
  });
 }
+// نمبر 16-P ختم
 
-// ڈیجیٹل تسبیح
+// نمبر 16-Q شروع: ڈیجیٹل تسبیح
 let count=0;
 function countUp(){
  count++;
@@ -704,8 +877,9 @@ function resetCount(){
  count=0;
  document.getElementById('counter').textContent=count;
 }
+// نمبر 16-Q ختم
 
-// شاپنگ میں پروڈکٹ شامل کرنا
+// نمبر 16-R شروع: شاپنگ میں پروڈکٹ شامل کرنا
 function addProduct(){
  const name=document.getElementById('pname').value.trim();
  const price=document.getElementById('pprice').value.trim();
@@ -730,16 +904,22 @@ function addProduct(){
  document.getElementById('pprice').value='';
  document.getElementById('pdesc').value='';
 }
+// نمبر 16-R ختم
 
 // نمبر 16 ختم
 
 
 // نمبر 17: خودکار تاریخ کا نظام شروع
 
+// نمبر 17-A: چاند کی تاریخ میں تبدیلی کا اختیار
+
 // پاکستان کے اعلان کے مطابق ضرورت پڑنے پر
 // moonAdjustment کو 1 یا -1 کیا جا سکتا ہے۔
 const moonAdjustment=0;
 
+// نمبر 17-A ختم
+
+// نمبر 17-B: اسلامی اور انگریزی تاریخ اپ ڈیٹ کرنا
 function updateNoorDates(){
  const now=new Date();
 
@@ -787,16 +967,19 @@ function updateNoorDates(){
   englishBox.textContent=english;
  }
 }
+// نمبر 17-B ختم
 
+// نمبر 17-C: تاریخ اپ ڈیٹ اور محفوظ مواد دکھانا
 updateNoorDates();
 setInterval(updateNoorDates,60*60*1000);
 showSaved();
+// نمبر 17-C ختم
 
 // نمبر 17 ختم
 
 </script>
 
-<!-- نمبر 18: ویب سائٹ کا اختتام -->
+<!-- نمبر 18: ویب سائٹ کا اختتام شروع -->
 </body>
 </html>
 <!-- نمبر 18 ختم -->
