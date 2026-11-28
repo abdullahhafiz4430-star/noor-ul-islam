@@ -11,32 +11,170 @@
 :root{--g:#07543b;--deep:#033b2b;--gold:#d6b45f;--cream:#fbf7e9;--ink:#193c2e;--line:#e9dfc4;--shadow:0 7px 24px #173d2b14}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Nastaliq Urdu',serif;padding-bottom:94px}button{font:inherit;cursor:pointer}
 /* ▣ 01-A اختتام ▣ */
+/* ▣ 01-B شروع — ہیڈر کا مکمل ڈیزائن ▣ */
 
+header{
+position:relative;
+isolation:isolate;
+overflow:hidden;
+background:linear-gradient(145deg,var(--deep),#08704b);
+color:#fff;
+padding:44px 14px 48px;
+min-height:190px;
+box-sizing:border-box;
+border-radius:0 0 22px 22px;
+box-shadow:var(--shadow);
+}
 
-/* ▣ 01-B شروع ▣ اوپر والے ہیڈر کا مکمل ڈیزائن */
-header{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(145deg,var(--deep),#08704b);color:#fff;padding:44px 14px 48px;min-height:190px;border-radius:0 0 22px 22px;box-shadow:var(--shadow)}
+.header-art{
+position:absolute;
+z-index:-1;
+inset:0;
+overflow:hidden;
+pointer-events:none;
+}
 
-.header-art{position:absolute;z-index:-1;inset:0;overflow:hidden;pointer-events:none}
-.arch{position:absolute;border:1px solid #d6b45f66;border-bottom:0;border-radius:180px 180px 0 0;left:50%;transform:translateX(-50%);top:26px;width:min(92vw,440px);height:230px}
-.arch.a2{width:min(78vw,370px);top:42px;height:205px;border-color:#f4df9b55}
-.arch.a3{width:min(64vw,300px);top:58px;height:180px;border-color:#f4df9b44}
-.star{position:absolute;color:#f1d88c;font-size:19px}
+.arch{
+position:absolute;
+border:1px solid #d6b45f66;
+border-bottom:0;
+border-radius:180px 180px 0 0;
+left:50%;
+transform:translateX(-50%);
+top:26px;
+width:min(92vw,440px);
+height:230px;
+}
+
+.arch.a2{
+width:min(78vw,370px);
+top:42px;
+height:205px;
+border-color:#f4df9b55;
+}
+
+.arch.a3{
+width:min(64vw,300px);
+top:58px;
+height:180px;
+border-color:#f4df9b44;
+}
+
+.star{
+position:absolute;
+color:#f1d88c;
+font-size:19px;
+}
+
 .s1{top:23px;left:13%}
 .s2{top:66px;right:12%}
 .s3{top:100px;left:8%;font-size:13px}
 
-.header-crown{position:absolute;top:5px;left:50%;transform:translateX(-50%);color:var(--gold);font-size:25px;z-index:2;pointer-events:none}
+.header-crown{
+position:absolute;
+top:5px;
+left:50%;
+transform:translateX(-50%);
+color:var(--gold);
+font-size:25px;
+z-index:3;
+pointer-events:none;
+}
 
-.top{display:flex;align-items:center;justify-content:space-between;direction:ltr;gap:12px;width:100%;position:relative;z-index:3}
-.brand{display:flex;align-items:center;gap:11px;direction:rtl}
-.logo{width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:27px;background:#ffffff0c;flex-shrink:0}
-.brand h1{font-size:35px;margin:0;color:#fff}
-.brand small{display:block;font:10px Arial,sans-serif;letter-spacing:2px;color:#f0d99b}
+.top{
+position:absolute;
+top:12px;
+left:12px;
+right:12px;
+width:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+direction:ltr;
+z-index:3;
+}
 
-.menu{width:42px;height:42px;border:1px solid #ffffff55;border-radius:50%;background:#ffffff16;color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;flex-shrink:0}
-.menu span{display:block;width:19px;height:2px;border-radius:5px;background:#fff}
+.brand{
+display:contents;
+}
 
-.motto{text-align:center;color:#f5e8c1;font-size:12px;margin:17px 0 0}
+.logo{
+position:absolute;
+top:0;
+left:0;
+width:48px;
+height:48px;
+border:1px solid var(--gold);
+border-radius:50%;
+display:grid;
+place-items:center;
+color:var(--gold);
+font-size:27px;
+background:#ffffff0c;
+flex-shrink:0;
+}
+
+.brand h1{
+position:absolute;
+top:48px;
+left:50%;
+transform:translateX(-50%);
+font-family:'Noto Nastaliq Urdu',serif;
+font-size:35px;
+line-height:1.8;
+white-space:nowrap;
+margin:0;
+color:#fff;
+}
+
+.brand small{
+position:absolute;
+top:116px;
+left:50%;
+transform:translateX(-50%);
+display:block;
+font-family:Georgia,serif;
+font-size:14px;
+letter-spacing:3px;
+color:#f0d99b;
+white-space:nowrap;
+direction:ltr;
+}
+
+.menu{
+position:absolute;
+top:0;
+right:0;
+width:42px;
+height:42px;
+border:1px solid #ffffff55;
+border-radius:50%;
+background:#ffffff16;
+color:white;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:5px;
+padding:0;
+flex-shrink:0;
+}
+
+.menu span{
+display:block;
+width:19px;
+height:2px;
+border-radius:5px;
+background:#fff;
+}
+
+.motto{
+text-align:center;
+color:#f5e8c1;
+font-size:12px;
+margin:17px 0 0;
+}
+
 /* ▣ 01-B اختتام ▣ */
 
 
