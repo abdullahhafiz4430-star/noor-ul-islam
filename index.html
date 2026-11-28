@@ -1,5 +1,5 @@
 
-<!-- نمبر 01: بنیادی HTML دستاویز شروع -->
+<!-- ▣ 01 شروع ▣ بنیادی HTML دستاویز -->
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
@@ -7,42 +7,73 @@
 <title>نور الاسلام | Noor-ul-Islam</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* نمبر 01-A: بنیادی رنگ، فونٹ اور عمومی ڈیزائن */
+/* ▣ 01-A شروع ▣ بنیادی رنگ، فونٹ اور عمومی ڈیزائن */
 :root{--g:#07543b;--deep:#033b2b;--gold:#d6b45f;--cream:#fbf7e9;--ink:#193c2e;--line:#e9dfc4;--shadow:0 7px 24px #173d2b14}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Nastaliq Urdu',serif;padding-bottom:94px}button{font:inherit;cursor:pointer}
-/* نمبر 01-B: اوپر والے ہیڈر کا مکمل ڈیزائن */
+/* ▣ 01-A اختتام ▣ */
+
+
+/* ▣ 01-B شروع ▣ اوپر والے ہیڈر کا مکمل ڈیزائن */
 header{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(145deg,var(--deep),#08704b);color:#fff;padding:44px 14px 48px;border-radius:0 0 22px 22px;box-shadow:var(--shadow)}
 /* آرائشی گول محرابیں ایک ہی مرکزی جگہ پر محدود رکھی گئی ہیں */
 .header-art{position:absolute;z-index:-1;inset:0;overflow:hidden;pointer-events:none}.arch{position:absolute;border:1px solid #d6b45f66;border-bottom:0;border-radius:180px 180px 0 0;left:50%;transform:translateX(-50%);top:26px;width:min(92vw,440px);height:230px}.arch.a2{width:min(78vw,370px);top:42px;height:205px;border-color:#f4df9b55}.arch.a3{width:min(64vw,300px);top:58px;height:180px;border-color:#f4df9b44}.star{position:absolute;color:#f1d88c;font-size:19px}.s1{top:23px;left:13%}.s2{top:66px;right:12%}.s3{top:100px;left:8%;font-size:13px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:11px}.logo{width:48px;height:48px;border:1px solid var(--gold);border-radius:16px;display:grid;place-items:center;color:var(--gold);font-size:27px;background:#ffffff0c}.brand h1{font-size:21px;margin:0;color:#fff}.brand small{display:block;font:10px Arial,sans-serif;letter-spacing:2px;color:#f0d99b}.menu{width:42px;height:42px;border:1px solid #ffffff55;border-radius:12px;background:#ffffff16;color:white;font-size:22px}.motto{text-align:center;color:#f5e8c1;font-size:12px;margin:17px 0 0}
-/* نمبر 02-A: تمام صفحات کی مشترکہ اسٹائلنگ */
-/* نمبر 02-B: ہوم صفحے کی ترتیب */
-main{max-width:680px;margin:auto;padding:15px 13px}.date{display:flex;justify-content:space-around;align-items:center;background:#fffdf6;border:1px solid var(--line);border-radius:15px;padding:9px;margin-bottom:13px;box-shadow:var(--shadow);font-size:12px;color:var(--g)}.welcome{background:linear-gradient(110deg,#064631,#0b7650);border:1px solid #d4b45e;border-radius:17px;color:white;padding:14px;text-align:center;margin-bottom:14px;box-shadow:var(--shadow)}.welcome h2{font-size:19px;margin:0 0 3px}.welcome p{font-size:11px;margin:0;color:#f3e9c9}.quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:14px}.quick button{min-height:86px;border:1px solid #d9c78e;border-radius:15px;background:linear-gradient(145deg,#fffef9,#f5edcf);box-shadow:var(--shadow);color:var(--g);display:flex;align-items:center;justify-content:center;gap:10px;padding:10px}.quick .em{font-size:27px}.quick strong{font-size:15px}.card{background:#fffdf8;border:1px solid var(--line);border-radius:16px;padding:14px;margin:0 0 12px;box-shadow:var(--shadow)}.card h3{color:var(--g);font-size:16px;margin:0 0 8px}.arabic{font-family:Amiri,serif;font-size:27px;line-height:1.9;text-align:center;color:var(--deep)}.translation{text-align:center;font-size:13px;line-height:2}.tag{display:inline-block;background:#edf3e9;color:var(--g);border-radius:20px;padding:3px 10px;font-size:10px}.section-title{font-size:20px;color:var(--g);margin:7px 0 10px}.muted{font-size:12px;color:#718078}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tile{border:1px solid var(--line);border-radius:14px;background:white;color:var(--g);min-height:90px;padding:12px 8px;box-shadow:var(--shadow)}.tile .em{display:block;font-size:25px}.tile strong{font-size:13px}.tile:active{transform:scale(.98)}.page{display:none}.page.active{display:block;animation:fade .18s ease}@keyframes fade{from{opacity:.5;transform:translateY(4px)}to{opacity:1;transform:none}}.field{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff;font:14px 'Noto Nastaliq Urdu',serif;margin:6px 0}.action{border:0;border-radius:10px;background:var(--g);color:white;padding:8px 14px;font-size:12px}.notice{background:#fff8e7;border:1px solid #ead9a9;padding:10px;border-radius:10px;font-size:12px;line-height:2}.hidden{display:none!important}
-/* نمبر 20-A: سات بٹنوں والا نچلا مینیو */
-.bottom-nav{position:fixed;z-index:20;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:end;direction:rtl;background:#fffdf8;border-top:1px solid var(--line);box-shadow:0 -6px 22px #173d2b18;padding:7px 3px max(8px,env(safe-area-inset-bottom))}.nav-btn{min-width:0;border:0;background:transparent;color:#718078;border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 0;font-size:10px;white-space:nowrap}.nav-btn .ico{font-size:20px;line-height:1.2}.nav-btn.selected{background:#eaf2e9;color:var(--g);font-weight:bold;transform:translateY(-5px);box-shadow:0 3px 10px #07543b1a}.nav-btn.home-nav{border:2px solid var(--gold);background:var(--g);color:white;min-height:57px;transform:translateY(-5px);border-radius:15px 15px 12px 12px}.nav-btn.home-nav.selected{background:var(--deep);transform:translateY(-8px)}.nav-btn.home-nav .ico{font-size:24px}
-/* نمبر 21-A: سائیڈ مینیو اور فٹر */
-.drawer-back{display:none;position:fixed;inset:0;background:#0007;z-index:30}.drawer-back.open{display:block}.drawer{position:absolute;right:0;top:0;bottom:0;width:min(310px,86vw);overflow:auto;background:var(--cream);padding:18px;border-radius:18px 0 0 18px}.drawer button.close{float:left;border:0;border-radius:8px;padding:6px 10px}.floating{position:fixed;z-index:15;left:14px;bottom:90px;width:48px;height:48px;border-radius:50%;border:2px solid white;background:var(--gold);color:var(--deep);font-size:22px;box-shadow:var(--shadow)}footer{text-align:center;color:#829087;font-size:10px;padding:18px}
+/* ▣ 01-B اختتام ▣ */
 
-/* نمبر 01-E: ہیڈر کے نیچے چلنے والے چھوٹے خانے */
+
+/* ▣ 02-A شروع ▣ تمام صفحات کی مشترکہ اسٹائلنگ */
+/* ▣ 02-B شروع ▣ ہوم صفحے کی ترتیب */
+main{max-width:680px;margin:auto;padding:15px 13px}.date{display:flex;justify-content:space-around;align-items:center;background:#fffdf6;border:1px solid var(--line);border-radius:15px;padding:9px;margin-bottom:13px;box-shadow:var(--shadow);font-size:12px;color:var(--g)}.welcome{background:linear-gradient(110deg,#064631,#0b7650);border:1px solid #d4b45e;border-radius:17px;color:white;padding:14px;text-align:center;margin-bottom:14px;box-shadow:var(--shadow)}.welcome h2{font-size:19px;margin:0 0 3px}.welcome p{font-size:11px;margin:0;color:#f3e9c9}.quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:14px}.quick button{min-height:86px;border:1px solid #d9c78e;border-radius:15px;background:linear-gradient(145deg,#fffef9,#f5edcf);box-shadow:var(--shadow);color:var(--g);display:flex;align-items:center;justify-content:center;gap:10px;padding:10px}.quick .em{font-size:27px}.quick strong{font-size:15px}.card{background:#fffdf8;border:1px solid var(--line);border-radius:16px;padding:14px;margin:0 0 12px;box-shadow:var(--shadow)}.card h3{color:var(--g);font-size:16px;margin:0 0 8px}.arabic{font-family:Amiri,serif;font-size:27px;line-height:1.9;text-align:center;color:var(--deep)}.translation{text-align:center;font-size:13px;line-height:2}.tag{display:inline-block;background:#edf3e9;color:var(--g);border-radius:20px;padding:3px 10px;font-size:10px}.section-title{font-size:20px;color:var(--g);margin:7px 0 10px}.muted{font-size:12px;color:#718078}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tile{border:1px solid var(--line);border-radius:14px;background:white;color:var(--g);min-height:90px;padding:12px 8px;box-shadow:var(--shadow)}.tile .em{display:block;font-size:25px}.tile strong{font-size:13px}.tile:active{transform:scale(.98)}.page{display:none}.page.active{display:block;animation:fade .18s ease}@keyframes fade{from{opacity:.5;transform:translateY(4px)}to{opacity:1;transform:none}}.field{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff;font:14px 'Noto Nastaliq Urdu',serif;margin:6px 0}.action{border:0;border-radius:10px;background:var(--g);color:white;padding:8px 14px;font-size:12px}.notice{background:#fff8e7;border:1px solid #ead9a9;padding:10px;border-radius:10px;font-size:12px;line-height:2}.hidden{display:none!important}
+/* ▣ 02-B اختتام ▣ */
+/* ▣ 02-A اختتام ▣ */
+
+
+/* ▣ 20-A شروع ▣ سات بٹنوں والا نچلا مینیو */
+.bottom-nav{position:fixed;z-index:20;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:end;direction:rtl;background:#fffdf8;border-top:1px solid var(--line);box-shadow:0 -6px 22px #173d2b18;padding:7px 3px max(8px,env(safe-area-inset-bottom))}.nav-btn{min-width:0;border:0;background:transparent;color:#718078;border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 0;font-size:10px;white-space:nowrap}.nav-btn .ico{font-size:20px;line-height:1.2}.nav-btn.selected{background:#eaf2e9;color:var(--g);font-weight:bold;transform:translateY(-5px);box-shadow:0 3px 10px #07543b1a}.nav-btn.home-nav{border:2px solid var(--gold);background:var(--g);color:white;min-height:57px;transform:translateY(-5px);border-radius:15px 15px 12px 12px}.nav-btn.home-nav.selected{background:var(--deep);transform:translateY(-8px)}.nav-btn.home-nav .ico{font-size:24px}
+/* ▣ 20-A اختتام ▣ */
+
+
+/* ▣ 21-A شروع ▣ سائیڈ مینیو اور فٹر */
+.drawer-back{display:none;position:fixed;inset:0;background:#0007;z-index:30}.drawer-back.open{display:block}.drawer{position:absolute;right:0;top:0;bottom:0;width:min(310px,86vw);overflow:auto;background:var(--cream);padding:18px;border-radius:18px 0 0 18px}.drawer button.close{float:left;border:0;border-radius:8px;padding:6px 10px}.floating{position:fixed;z-index:15;left:14px;bottom:90px;width:48px;height:48px;border-radius:50%;border:2px solid white;background:var(--gold);color:var(--deep);font-size:22px;box-shadow:var(--shadow)}footer{text-align:center;color:#829087;font-size:10px;padding:18px}
+/* ▣ 21-A اختتام ▣ */
+
+
+/* ▣ 01-E شروع ▣ ہیڈر کے نیچے چلنے والے چھوٹے خانے */
 .scroll-box-strip{height:48px;overflow:hidden;background:var(--cream);display:flex;align-items:center;border-bottom:1px solid #eadfbe}
 .scroll-box-track{display:flex;align-items:center;gap:7px;width:max-content;padding:4px 8px;animation:noorScroll 34s linear infinite}
 .scroll-box{flex:0 0 27px;width:27px;height:36px;border:1px solid var(--gold);border-radius:7px;background:linear-gradient(145deg,#fffdf7,#f1e7c8);box-shadow:inset 0 1px 4px #d6b45f25}
 @keyframes noorScroll{from{transform:translateX(0)}to{transform:translateX(50%)}}
 .scroll-box-track:hover{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.scroll-box-track{animation:none}}
+/* ▣ 01-E اختتام ▣ */
 
+
+/* ▣ 01-G شروع ▣ موبائل اور بڑی اسکرین کی ترتیب */
 @media(min-width:600px){main{padding:22px}.bottom-nav{padding-left:max(calc((100% - 620px)/2),10px);padding-right:max(calc((100% - 620px)/2),10px)}}
+/* ▣ 01-G اختتام ▣ */
 </style>
 </head>
-<!-- نمبر 01: ویب سائٹ کا بنیادی ڈھانچہ -->
+
+
+<!-- ▣ 01 اختتام ▣ بنیادی HTML دستاویز -->
+
+
+<!-- ▣ 01 شروع ▣ ویب سائٹ کا بنیادی ڈھانچہ -->
 <body>
-<!-- نمبر 01: ہیڈر کا حصہ شروع -->
-<header><!-- نمبر 01-C: ہیڈر کی آرائش اور محرابیں -->
-<div class="header-art"><div class="arch"></div><div class="arch a2"></div><div class="arch a3"></div><span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✦</span></div><!-- نمبر 01-D: ہیڈر کی اوپری قطار، لوگو اور مینو -->
-<div class="top"><div class="brand"><div class="logo">☪</div><div><h1>نور الاسلام</h1><small>NOOR-UL-ISLAM</small></div></div><button class="menu" onclick="openMenu()" aria-label="مینو">☰</button></div><div class="motto">قرآن و سنت کی روشنی میں ایک خوبصورت سفر</div></header>
- 
 
 
-<!-- نمبر 01-F: ہیڈر کے نیچے سنہری بارڈر والے افقی خانے -->
+<!-- ▣ 01-C شروع ▣ ہیڈر کی آرائش اور محرابیں -->
+<!-- ▣ 01-D شروع ▣ ہیڈر کی اوپری قطار، لوگو اور مینو -->
+<!-- ▣ 01 شروع ▣ ہیڈر کا حصہ -->
+<header>
+<div class="header-art"><div class="arch"></div><div class="arch a2"></div><div class="arch a3"></div><span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✦</span></div>
+<div class="top"><div class="brand"><div class="logo">☪</div><div><h1>نور الاسلام</h1><small>NOOR-UL-ISLAM</small></div></div><button class="menu" onclick="openMenu()" aria-label="مینو">☰</button></div><div class="motto">قرآن و سنت کی روشنی میں ایک خوبصورت سفر</div>
+</header>
+<!-- ▣ 01 اختتام ▣ ہیڈر کا حصہ -->
+<!-- ▣ 01-D اختتام ▣ -->
+<!-- ▣ 01-C اختتام ▣ -->
+
+
+<!-- ▣ 01-F شروع ▣ ہیڈر کے نیچے سنہری بارڈر والے افقی خانے -->
 <div class="scroll-box-strip" aria-label="اسلامی معلومات کے خانے">
   <div class="scroll-box-track">
     <div class="scroll-box" aria-hidden="true"></div>
@@ -65,51 +96,116 @@ main{max-width:680px;margin:auto;padding:15px 13px}.date{display:flex;justify-co
     <div class="scroll-box" aria-hidden="true"></div>
   </div>
 </div>
+<!-- ▣ 01-F اختتام ▣ -->
 
-<!-- نمبر 02: مرکزی مواد اور تمام صفحات -->
+
+<!-- ▣ 02 شروع ▣ مرکزی مواد اور تمام صفحات -->
 <main>
-<!-- نمبر 02-B: ہوم صفحہ -->
-<section class="page active" id="home"><!-- نمبر 02-C: ہجری اور عیسوی تاریخ -->
-<div class="date"><span id="dateG">آج کی تاریخ</span><span id="dateH">اسلامی تاریخ</span></div><div class="welcome"><h2>السلام علیکم ورحمۃ اللہ</h2><p>نور الاسلام میں آپ کا خیر مقدم ہے</p></div><div class="quick"><button onclick="go('quran')"><span class="em">📖</span><strong>قرآن مجید</strong></button><button onclick="go('hadith')"><span class="em">📚</span><strong>حدیث</strong></button><button onclick="go('azkar')"><span class="em">📿</span><strong>اذکار</strong></button><button onclick="go('more')"><span class="em">🕌</span><strong>نماز و دیگر سہولیات</strong></button></div><div class="card"><h3>آج کی قرآنی آیت</h3><div class="arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div><div class="translation">شروع اللہ کے نام سے جو نہایت مہربان، بے حد رحم فرمانے والا ہے۔</div><span class="tag">سورۃ الفاتحہ: 1</span></div><div class="card"><h3>آج کی حدیث</h3><p class="muted">مستند حدیث کا مکمل متن اور حوالہ ڈیٹا منسلک ہونے کے بعد یہاں دکھایا جائے گا۔</p><span class="tag">حدیث ڈیٹا شامل کرنا باقی ہے</span></div><div class="card"><h3>آج کا اسلامی پیغام</h3><p>اپنے دن کا آغاز اللہ تعالیٰ کے ذکر اور اچھی نیت سے کریں۔</p></div></section>
-<!-- نمبر 03: قرآن مجید کا مکمل حصہ -->
-<!-- نمبر 03-A: قرآن کا مرکزی صفحہ -->
-<section class="page" id="quran"><h2 class="section-title">قرآن مجید</h2><div class="grid"><button class="tile" onclick="show('qread')"><span class="em">📖</span><strong>قرآن مجید پڑھیں</strong></button><button class="tile" onclick="show('qtrans')"><span class="em">🌙</span><strong>ترجمہ منتخب کریں</strong></button></div><!-- نمبر 03-B: قرآن پڑھنے اور لائنوں کے انتخاب کا حصہ -->
-<div class="card hidden" id="qread"><!-- نمبر 03-C: مصحف کی لائنوں کے انتخاب کی فہرست، 16 لائن تجویدی الگ آپشن -->
-<h3>مصحف کی لائنیں منتخب کریں</h3><div class="grid" id="lineButtons"></div><p class="notice" id="lineMsg">اصل صفحات اور تجویدی رنگ مستند ماخذ سے شامل کرنا باقی ہیں۔</p></div><div class="card hidden" id="qtrans"><h3>ترجمے کی زبان</h3><select class="field"><option>اردو</option><option>پشتو</option><option>العربية</option><option>English</option></select><p class="notice">مستند تراجم کا ڈیٹا منسلک کرنا باقی ہے۔</p></div></section>
-<!-- نمبر 04: حدیث کی کتب -->
+
+
+<!-- ▣ 02-B شروع ▣ ہوم صفحہ -->
+<section class="page active" id="home">
+<!-- ▣ 02-C شروع ▣ ہجری اور عیسوی تاریخ -->
+<div class="date"><span id="dateG">آج کی تاریخ</span><span id="dateH">اسلامی تاریخ</span></div>
+<div class="welcome"><h2>السلام علیکم ورحمۃ اللہ</h2><p>نور الاسلام میں آپ کا خیر مقدم ہے</p></div><div class="quick"><button onclick="go('quran')"><span class="em">📖</span><strong>قرآن مجید</strong></button><button onclick="go('hadith')"><span class="em">📚</span><strong>حدیث</strong></button><button onclick="go('azkar')"><span class="em">📿</span><strong>اذکار</strong></button><button onclick="go('more')"><span class="em">🕌</span><strong>نماز و دیگر سہولیات</strong></button></div><div class="card"><h3>آج کی قرآنی آیت</h3><div class="arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div><div class="translation">شروع اللہ کے نام سے جو نہایت مہربان، بے حد رحم فرمانے والا ہے۔</div><span class="tag">سورۃ الفاتحہ: 1</span></div><div class="card"><h3>آج کی حدیث</h3><p class="muted">مستند حدیث کا مکمل متن اور حوالہ ڈیٹا منسلک ہونے کے بعد یہاں دکھایا جائے گا۔</p><span class="tag">حدیث ڈیٹا شامل کرنا باقی ہے</span></div><div class="card"><h3>آج کا اسلامی پیغام</h3><p>اپنے دن کا آغاز اللہ تعالیٰ کے ذکر اور اچھی نیت سے کریں۔</p></div>
+</section>
+<!-- ▣ 02-C اختتام ▣ -->
+<!-- ▣ 02-B اختتام ▣ -->
+
+
+<!-- ▣ 03 شروع ▣ قرآن مجید کا مکمل حصہ -->
+<!-- ▣ 03-A شروع ▣ قرآن کا مرکزی صفحہ -->
+<section class="page" id="quran"><h2 class="section-title">قرآن مجید</h2><div class="grid"><button class="tile" onclick="show('qread')"><span class="em">📖</span><strong>قرآن مجید پڑھیں</strong></button><button class="tile" onclick="show('qtrans')"><span class="em">🌙</span><strong>ترجمہ منتخب کریں</strong></button></div>
+<!-- ▣ 03-B شروع ▣ قرآن پڑھنے اور لائنوں کے انتخاب کا حصہ -->
+<div class="card hidden" id="qread">
+<!-- ▣ 03-C شروع ▣ مصحف کی لائنوں کے انتخاب کی فہرست، 16 لائن تجویدی الگ آپشن -->
+<h3>مصحف کی لائنیں منتخب کریں</h3><div class="grid" id="lineButtons"></div><p class="notice" id="lineMsg">اصل صفحات اور تجویدی رنگ مستند ماخذ سے شامل کرنا باقی ہیں۔</p>
+<!-- ▣ 03-C اختتام ▣ -->
+</div>
+<div class="card hidden" id="qtrans"><h3>ترجمے کی زبان</h3><select class="field"><option>اردو</option><option>پشتو</option><option>العربية</option><option>English</option></select><p class="notice">مستند تراجم کا ڈیٹا منسلک کرنا باقی ہے۔</p></div>
+<!-- ▣ 03-B اختتام ▣ -->
+</section>
+<!-- ▣ 03-A اختتام ▣ -->
+<!-- ▣ 03 اختتام ▣ -->
+
+
+<!-- ▣ 04 شروع ▣ حدیث کی کتب -->
 <section class="page" id="hadith"><h2 class="section-title">حدیث کی کتب</h2><input class="field" placeholder="کتاب تلاش کریں" oninput="filterBooks(this.value)"><div class="grid" id="books"></div><p class="notice">اصل حدیث متن، ابواب اور حوالہ جات کا ڈیٹا شامل کرنا باقی ہے۔</p></section>
-<!-- نمبر 05: اذکار اور ڈیجیٹل تسبیح -->
+<!-- ▣ 04 اختتام ▣ -->
+
+
+<!-- ▣ 05 شروع ▣ اذکار اور ڈیجیٹل تسبیح -->
 <section class="page" id="azkar"><h2 class="section-title">اذکار و دعائیں</h2><div class="grid" id="azkarTiles"></div><div class="card" style="text-align:center"><h3>ڈیجیٹل تسبیح</h3><div id="count" style="font-size:38px;color:var(--g)">0</div><button class="action" onclick="count++ ; document.getElementById('count').textContent=count">تسبیح کریں</button> <button class="action" onclick="count=0;document.getElementById('count').textContent=0">دوبارہ شروع</button></div></section>
-<!-- نمبر 06: آن لائن تعلیم -->
+<!-- ▣ 05 اختتام ▣ -->
+
+
+<!-- ▣ 06 شروع ▣ آن لائن تعلیم -->
 <section class="page" id="education"><div class="welcome"><h2>النور آن لائن ٹیچنگ سینٹر</h2><p>قرآن مجید کی آن لائن تعلیم</p></div><h3 class="section-title">ہمارے کورسز</h3><div class="grid" id="courses"></div></section>
-<!-- نمبر 07: شاپنگ سینٹر -->
+<!-- ▣ 06 اختتام ▣ -->
+
+
+<!-- ▣ 07 شروع ▣ شاپنگ سینٹر -->
 <section class="page" id="shopping"><h2 class="section-title">النور شاپنگ سینٹر</h2><p class="notice">یہ ابتدائی ڈیزائن ہے۔ مصنوعات اور مشترکہ آن لائن آرڈر سسٹم بعد میں منسلک ہوگا۔</p><div class="grid"><div class="tile"><span class="em">🛍️</span><strong>مصنوعات جلد شامل ہوں گی</strong></div><div class="tile"><span class="em">📦</span><strong>آرڈر کی سہولت بعد میں</strong></div></div></section>
-<!-- نمبر 08: مزید اسلامی سہولیات -->
+<!-- ▣ 07 اختتام ▣ -->
+
+
+<!-- ▣ 08 شروع ▣ مزید اسلامی سہولیات -->
 <section class="page" id="more"><h2 class="section-title">مزید سہولیات</h2><div class="grid" id="moreTiles"></div></section>
-</main><button class="floating" onclick="alert('رابطہ نمبر شامل کرنا باقی ہے')" aria-label="رابطہ">✉</button>
-<!-- نمبر 20: سات بٹنوں کی مستقل نیویگیشن -->
+<!-- ▣ 08 اختتام ▣ -->
+
+
+</main>
+<!-- ▣ 02 اختتام ▣ -->
+
+
+<button class="floating" onclick="alert('رابطہ نمبر شامل کرنا باقی ہے')" aria-label="رابطہ">✉</button>
+
+
+<!-- ▣ 20 شروع ▣ سات بٹنوں کی مستقل نیویگیشن -->
 <nav class="bottom-nav"><button class="nav-btn" data-page="quran" onclick="go('quran')"><span class="ico">📖</span><span>قرآن</span></button><button class="nav-btn" data-page="hadith" onclick="go('hadith')"><span class="ico">📚</span><span>حدیث</span></button><button class="nav-btn" data-page="azkar" onclick="go('azkar')"><span class="ico">📿</span><span>ذکر</span></button><button class="nav-btn home-nav selected" data-page="home" onclick="go('home')"><span class="ico">⌂</span><span>ہوم</span></button><button class="nav-btn" data-page="education" onclick="go('education')"><span class="ico">🎓</span><span>تعلیم</span></button><button class="nav-btn" data-page="shopping" onclick="go('shopping')"><span class="ico">🛍️</span><span>شاپنگ</span></button><button class="nav-btn" data-page="more" onclick="go('more')"><span class="ico">•••</span><span>مزید</span></button></nav>
-<!-- نمبر 21: سائیڈ مینیو -->
-<div class="drawer-back" id="drawerBack" onclick="if(event.target===this)closeMenu()"><aside class="drawer"><button class="close" onclick="closeMenu()">بند ✕</button><h2>نور الاسلام</h2><hr><h3>زبان</h3><select class="field"><option>اردو</option><option>English</option><option>پشتو</option><option>العربية</option></select><p class="muted">قرآن کے ترجمے کی زبان الگ منتخب ہوگی۔</p><h3>ڈیزائن</h3><p class="muted">شاہی سبز اور سنہری تھیم</p></aside></div><footer>نور الاسلام — قرآن و سنت کی روشنی</footer>
-<!-- نمبر 22: جاوا اسکرپٹ اور بٹنوں کے افعال -->
+<!-- ▣ 20 اختتام ▣ -->
+
+
+<!-- ▣ 21 شروع ▣ سائیڈ مینیو -->
+<div class="drawer-back" id="drawerBack" onclick="if(event.target===this)closeMenu()"><aside class="drawer"><button class="close" onclick="closeMenu()">بند ✕</button><h2>نور الاسلام</h2><hr><h3>زبان</h3><select class="field"><option>اردو</option><option>English</option><option>پشتو</option><option>العربية</option></select><p class="muted">قرآن کے ترجمے کی زبان الگ منتخب ہوگی۔</p><h3>ڈیزائن</h3><p class="muted">شاہی سبز اور سنہری تھیم</p></aside></div>
+<!-- ▣ 21 اختتام ▣ -->
+
+<footer>نور الاسلام — قرآن و سنت کی روشنی</footer>
+
+
+<!-- ▣ 22 شروع ▣ جاوا اسکرپٹ اور بٹنوں کے افعال -->
 <script>
 const names=['صحیح بخاری','صحیح مسلم','سنن ابی داؤد','جامع ترمذی','سنن نسائی','سنن ابن ماجہ','مؤطا امام مالک','مسند احمد'];
-// نمبر 22-A: قرآن مجید کی لائنوں کے الگ الگ انتخاب؛ 16 لائن تجویدی آپشن بھی شامل
+
+
+/* ▣ 22-A شروع ▣ قرآن مجید کی لائنوں کے الگ الگ انتخاب؛ 16 لائن تجویدی آپشن بھی شامل */
 const lines=[11,12,13,15,16,18];let count=0;
 function cards(id,items){document.getElementById(id).innerHTML=items.map(x=>`<button class="tile" onclick="alert('${x[0]}: مستند مواد شامل کرنا باقی ہے')"><span class="em">${x[1]}</span><strong>${x[0]}</strong></button>`).join('')}
 cards('books',names.map(x=>[x,'📚']));cards('azkarTiles',[['صبح کے اذکار','🌅'],['شام کے اذکار','🌇'],['روزانہ کی دعائیں','🤲'],['مسنون دعائیں','📿']]);cards('courses',[['قرآن ناظرہ','📖'],['تجوید کورس','✨'],['بچوں کی تعلیم','👦'],['بیرون ملک طلبہ','🌍']]);cards('moreTiles',[['قبلہ کی سمت','🧭'],['نماز کے اوقات','🕌'],['اسلامی کیلنڈر','📅'],['حج و عمرہ','🕋'],['تفسیر','📚'],['فقہ','⚖️']]);
 document.getElementById('lineButtons').innerHTML=lines.map(n=>`<button class="tile" onclick="document.getElementById('lineMsg').textContent='${n} لائن والا مصحف منتخب کیا گیا؛ اصل صفحات شامل کرنا باقی ہیں۔'"><strong>${n} لائن${n===16?' تجویدی':''}</strong></button>`).join('');
-// نمبر 22-B: صفحات کے درمیان آمدورفت
+/* ▣ 22-A اختتام ▣ */
+
+
+/* ▣ 22-B شروع ▣ صفحات کے درمیان آمدورفت */
 function go(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('selected',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'});closeMenu()}
 function show(id){document.getElementById(id).classList.toggle('hidden')}
 function filterBooks(q){document.querySelectorAll('#books .tile').forEach(b=>b.style.display=b.innerText.includes(q)?'':'none')}
-// نمبر 22-C: سائیڈ مینیو کھولنے اور بند کرنے کا کوڈ
+/* ▣ 22-B اختتام ▣ */
+
+
+/* ▣ 22-C شروع ▣ سائیڈ مینیو کھولنے اور بند کرنے کا کوڈ */
 function openMenu(){document.getElementById('drawerBack').classList.add('open')}function closeMenu(){document.getElementById('drawerBack').classList.remove('open')}
-// نمبر 22-D: آج کی ہجری اور عیسوی تاریخ دکھانے کا کوڈ
+/* ▣ 22-C اختتام ▣ */
+
+
+/* ▣ 22-D شروع ▣ آج کی ہجری اور عیسوی تاریخ دکھانے کا کوڈ */
 const now=new Date();document.getElementById('dateG').textContent=now.toLocaleDateString('ur-PK',{weekday:'long',year:'numeric',month:'long',day:'numeric'});try{document.getElementById('dateH').textContent=new Intl.DateTimeFormat('ur-PK-u-ca-islamic',{year:'numeric',month:'long',day:'numeric'}).format(now)}catch(e){document.getElementById('dateH').textContent='اسلامی تاریخ'}
+/* ▣ 22-D اختتام ▣ */
 </script>
-<!-- نمبر 23: دستاویز کا اختتام -->
-</body></html>
+<!-- ▣ 22 اختتام ▣ -->
 
 
-
+<!-- ▣ 23 شروع ▣ دستاویز کا اختتام -->
+</body>
+</html>
+<!-- ▣ 23 اختتام ▣ -->
