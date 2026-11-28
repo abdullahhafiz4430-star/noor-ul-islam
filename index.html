@@ -11,6 +11,7 @@
 :root{--g:#07543b;--deep:#033b2b;--gold:#d6b45f;--cream:#fbf7e9;--ink:#193c2e;--line:#e9dfc4;--shadow:0 7px 24px #173d2b14}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Nastaliq Urdu',serif;padding-bottom:94px}button{font:inherit;cursor:pointer}
 /* ▣ 01-A اختتام ▣ */
+
 /* ▣ 01-B شروع — ہیڈر کا مکمل ڈیزائن ▣ */
 
 header{
@@ -175,7 +176,59 @@ font-size:12px;
 margin:17px 0 0;
 }
 
+/* ہیڈر کے اندر باکس */
+
+.header-box-row{
+display:flex;
+align-items:center;
+gap:8px;
+direction:rtl;
+width:100%;
+margin-top:145px;
+position:relative;
+z-index:4;
+}
+
+.header-fixed-box{
+width:42px;
+min-width:42px;
+height:65px;
+border:1px solid #d6b45f;
+border-radius:5px;
+background:#ffffff0a;
+}
+
+.header-scroll-area{
+flex:1;
+min-width:0;
+overflow-x:auto;
+overflow-y:hidden;
+scrollbar-width:none;
+-webkit-overflow-scrolling:touch;
+}
+
+.header-scroll-area::-webkit-scrollbar{
+display:none;
+}
+
+.header-scroll-inner{
+display:flex;
+flex-direction:row;
+gap:8px;
+width:max-content;
+}
+
+.header-book-box{
+width:58px;
+min-width:58px;
+height:65px;
+border:1px solid #d6b45f;
+border-radius:5px;
+background:#ffffff0a;
+}
+
 /* ▣ 01-B اختتام ▣ */
+
 
 
 /* ▣ 02-A شروع ▣ تمام صفحات کی مشترکہ اسٹائلنگ */
